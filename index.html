@@ -377,16 +377,43 @@
       <p data-en="Less hassle. More clarity.">Mažiau rūpesčių. Daugiau aiškumo.</p>
     </div>
     <div class="footer-meta">
-      <a href="/cdn-cgi/l/email-protection#bed2dfdcdfcdfed0cbd1d3d7cac790d2ca"><span class="__cf_email__" data-cfemail="3f535e5d5e4c7f514a5052564b4611534b">[email&#160;protected]</span></a>
+      <a href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
       <span>© 2026 Nuomity</span>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  /* =====================================================================
+     WAITLIST FORM SETUP — replace the ID below with your Formspree form ID.
+     1. Create a free form at https://formspree.io  (or use Tally / Google Forms)
+     2. Copy the form ID from the endpoint, e.g. https://formspree.io/f/abcdwxyz
+     3. Paste just the ID ("abcdwxyz") between the quotes:
+  ===================================================================== */
+  var FORMSPREE_ID = 'YOUR_FORM_ID';
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
+
+  function submitWaitlist(form, onSuccess) {
+    var data = new FormData(form);
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        onSuccess();
+      } else {
+        alert('Nepavyko pateikti. Bandykite dar kartą.');
+      }
+    }).catch(function () {
+      alert('Nepavyko pateikti. Bandykite dar kartą.');
+    });
+  }
+
   document.getElementById('waitlist-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    this.closest('.waitlist-card').classList.add('submitted');
+    var card = this.closest('.waitlist-card');
+    submitWaitlist(this, function () { card.classList.add('submitted'); });
   });
   /* ---------- Nav CTA: show only when hero & waitlist CTAs are off-screen ---------- */
   (function () {
@@ -410,19 +437,15 @@
     targets.forEach(function (t) { io.observe(t); });
   })();
 
-  /* LinkedIn links — window.open() bypasses iframe sandbox that blocks target=_blank */
-  document.querySelectorAll('.team-linkedin').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.open(link.href, '_blank', 'noopener,noreferrer');
-    });
-  });
-
+  /* LinkedIn links open in a new tab natively (target=_blank rel=noopener) */
   document.getElementById('hero-waitlist-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    this.style.display = 'none';
-    document.querySelector('.hero-form-note').style.display = 'none';
-    document.querySelector('.hero-form-success').style.display = 'block';
+    var form = this;
+    submitWaitlist(form, function () {
+      form.style.display = 'none';
+      document.querySelector('.hero-form-note').style.display = 'none';
+      document.querySelector('.hero-form-success').style.display = 'block';
+    });
   });
 
   /* ---------- Language switch (LT / EN) ---------- */
