@@ -3,10 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title data-en="Nuomity. Rent with confidence.">Nuomity. Nuomokite užtikrintai.</title>
+<title data-en="nuomity. Rent with confidence.">nuomity. Nuomokite užtikrintai.</title>
+<meta name="description" content="Nuomok be brokerio. Surink paraiškas, patikrink nuomininkų mokumą ir pasirašyk sutartį elektroniniu būdu. Viskas vienoje vietoje." />
+<meta property="og:title" content="nuomity. Nuomokite užtikrintai." />
+<meta property="og:description" content="Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį. Viskas vienoje vietoje." />
+<meta property="og:image" content="https://nuomity.github.io/nuomity-landing/og-image.png" />
+<meta property="og:url" content="https://nuomity.github.io/nuomity-landing/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="lt_LT" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Sora:wght@600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="nuomity.css" />
 <style>
   /* Language toggle */
@@ -45,7 +53,7 @@
     align-items: center;
     gap: 12px;
   }
-  /* Nav CTA hidden until the hero & waitlist CTAs scroll out of view */
+  /* Nav CTA hidden while the hero (main) CTA is on screen */
   .nav-cta {
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   }
@@ -67,7 +75,7 @@
 <!-- ============ NAVBAR ============ -->
 <header class="nav" data-screen-label="Navbar">
   <div class="wrap nav-inner">
-    <a class="logo" href="#virsus" aria-label="Nuomity"><svg class="logo-svg" viewBox="0 0 264.09 64.04" xmlns="http://www.w3.org/2000/svg" role="img"><circle class="logo-accent" cx="259.42" cy="43.29" r="4.67"></circle><circle class="logo-ink" cx="188.02" cy="4.67" r="4.67"></circle><path class="logo-accent" d="M22.06,26.28c0,.08,0,.16-.02.24-.03.25-.13.47-.27.66l-.07.09-.7.98-12.47,17.64-.06.09c-.84,1.19-2.23,1.97-3.81,1.97-2.57,0-4.67-2.09-4.67-4.66V13.73h5.88l.27,2.41.08.7,1.56,14s0,.06,0,.09v.09c.09.77.75,1.38,1.55,1.38.35,0,.68-.11.94-.31l8.17-6.2.86-.65.26-.19h.01c.26-.2.58-.31.92-.31.86,0,1.55.7,1.55,1.56Z"></path><path class="logo-accent" d="M32.67,39.2v8.76h-6l-.19-2.73v-.23c-.02-.05-.02-.1-.02-.15l-1.09-15.58-.43-6.05c-.1-1.62-1.45-2.91-3.11-2.91-.72,0-1.38.24-1.91.65l-.07.06-2.61,1.96-4.43,3.34-.05.04c-.26.2-.59.32-.94.32-.86,0-1.56-.7-1.56-1.56,0-.43.18-.83.47-1.11l.1-.09,8.53-7.93.22-.21c1.39-1.28,3.24-2.07,5.29-2.07,4.3,0,7.77,3.48,7.77,7.77v17.69Z"></path><path class="logo-ink" d="M70.99,13.73v34.22h-7.08v-4.04c-1.12,1.41-2.58,2.52-4.38,3.32-1.8.81-3.72,1.21-5.74,1.21-2.69,0-5.1-.56-7.24-1.68-2.13-1.12-3.81-2.77-5.03-4.97-1.22-2.19-1.83-4.84-1.83-7.95V13.73h7.02v19.07c0,3.06.77,5.41,2.3,7.05,1.53,1.64,3.62,2.45,6.27,2.45s4.75-.82,6.3-2.45c1.55-1.63,2.33-3.98,2.33-7.05V13.73h7.08Z"></path><path class="logo-ink" d="M86.39,46.31c-2.61-1.47-4.66-3.54-6.15-6.21-1.49-2.67-2.24-5.76-2.24-9.28s.77-6.56,2.3-9.25c1.53-2.69,3.62-4.76,6.27-6.21,2.65-1.45,5.61-2.17,8.88-2.17s6.23.72,8.88,2.17c2.65,1.45,4.74,3.52,6.27,6.21,1.53,2.69,2.3,5.78,2.3,9.25s-.79,6.56-2.36,9.25c-1.57,2.69-3.72,4.77-6.43,6.24-2.71,1.47-5.7,2.2-8.97,2.2s-6.15-.73-8.76-2.2ZM100.27,41.06c1.59-.87,2.89-2.17,3.88-3.91.99-1.74,1.49-3.85,1.49-6.33s-.48-4.59-1.43-6.3c-.95-1.72-2.22-3.01-3.79-3.88-1.57-.87-3.27-1.3-5.09-1.3s-3.51.43-5.06,1.3c-1.55.87-2.78,2.16-3.69,3.88-.91,1.72-1.37,3.82-1.37,6.3,0,3.69.94,6.53,2.83,8.54,1.88,2.01,4.25,3.01,7.11,3.01,1.82,0,3.53-.43,5.12-1.3Z"></path><path class="logo-ink" d="M168.59,14.85c2.13,1.12,3.81,2.77,5.03,4.97,1.22,2.2,1.83,4.84,1.83,7.95v20.18h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.08V13.73h7.08v3.91c1.16-1.41,2.63-2.5,4.41-3.29,1.78-.79,3.68-1.18,5.71-1.18,2.73,0,5.18.58,7.33,1.74,2.15,1.16,3.81,2.84,4.97,5.03,1.04-2.07,2.65-3.72,4.84-4.94,2.19-1.22,4.55-1.83,7.08-1.83,2.69,0,5.1.56,7.24,1.68Z"></path><path class="logo-ink" d="M191.53,13.73v34.22h-7.08V13.73h7.08Z"></path><path class="logo-ink" d="M209.11,19.51v18.94c0,1.28.3,2.2.9,2.76.6.56,1.62.84,3.07.84h4.35v5.9h-5.59c-3.19,0-5.63-.75-7.33-2.24-1.7-1.49-2.55-3.91-2.55-7.27v-18.94h-4.04v-5.78h4.04V5.23h7.14v8.51h8.32v5.78h-8.32Z"></path><path class="logo-ink" d="M254.76,13.73l-20.99,50.31h-7.33l6.96-16.64-13.48-33.66h7.89l9.63,26.08,10-26.08h7.33Z"></path></svg></a>
+    <a class="logo" href="#virsus" aria-label="nuomity"><svg class="logo-svg" viewBox="0 0 264.09 64.04" width="132" height="32" xmlns="http://www.w3.org/2000/svg" role="img"><circle class="logo-accent" cx="259.42" cy="43.29" r="4.67"></circle><circle class="logo-ink" cx="188.02" cy="4.67" r="4.67"></circle><path class="logo-accent" d="M22.06,26.28c0,.08,0,.16-.02.24-.03.25-.13.47-.27.66l-.07.09-.7.98-12.47,17.64-.06.09c-.84,1.19-2.23,1.97-3.81,1.97-2.57,0-4.67-2.09-4.67-4.66V13.73h5.88l.27,2.41.08.7,1.56,14s0,.06,0,.09v.09c.09.77.75,1.38,1.55,1.38.35,0,.68-.11.94-.31l8.17-6.2.86-.65.26-.19h.01c.26-.2.58-.31.92-.31.86,0,1.55.7,1.55,1.56Z"></path><path class="logo-accent" d="M32.67,39.2v8.76h-6l-.19-2.73v-.23c-.02-.05-.02-.1-.02-.15l-1.09-15.58-.43-6.05c-.1-1.62-1.45-2.91-3.11-2.91-.72,0-1.38.24-1.91.65l-.07.06-2.61,1.96-4.43,3.34-.05.04c-.26.2-.59.32-.94.32-.86,0-1.56-.7-1.56-1.56,0-.43.18-.83.47-1.11l.1-.09,8.53-7.93.22-.21c1.39-1.28,3.24-2.07,5.29-2.07,4.3,0,7.77,3.48,7.77,7.77v17.69Z"></path><path class="logo-ink" d="M70.99,13.73v34.22h-7.08v-4.04c-1.12,1.41-2.58,2.52-4.38,3.32-1.8.81-3.72,1.21-5.74,1.21-2.69,0-5.1-.56-7.24-1.68-2.13-1.12-3.81-2.77-5.03-4.97-1.22-2.19-1.83-4.84-1.83-7.95V13.73h7.02v19.07c0,3.06.77,5.41,2.3,7.05,1.53,1.64,3.62,2.45,6.27,2.45s4.75-.82,6.3-2.45c1.55-1.63,2.33-3.98,2.33-7.05V13.73h7.08Z"></path><path class="logo-ink" d="M86.39,46.31c-2.61-1.47-4.66-3.54-6.15-6.21-1.49-2.67-2.24-5.76-2.24-9.28s.77-6.56,2.3-9.25c1.53-2.69,3.62-4.76,6.27-6.21,2.65-1.45,5.61-2.17,8.88-2.17s6.23.72,8.88,2.17c2.65,1.45,4.74,3.52,6.27,6.21,1.53,2.69,2.3,5.78,2.3,9.25s-.79,6.56-2.36,9.25c-1.57,2.69-3.72,4.77-6.43,6.24-2.71,1.47-5.7,2.2-8.97,2.2s-6.15-.73-8.76-2.2ZM100.27,41.06c1.59-.87,2.89-2.17,3.88-3.91.99-1.74,1.49-3.85,1.49-6.33s-.48-4.59-1.43-6.3c-.95-1.72-2.22-3.01-3.79-3.88-1.57-.87-3.27-1.3-5.09-1.3s-3.51.43-5.06,1.3c-1.55.87-2.78,2.16-3.69,3.88-.91,1.72-1.37,3.82-1.37,6.3,0,3.69.94,6.53,2.83,8.54,1.88,2.01,4.25,3.01,7.11,3.01,1.82,0,3.53-.43,5.12-1.3Z"></path><path class="logo-ink" d="M168.59,14.85c2.13,1.12,3.81,2.77,5.03,4.97,1.22,2.2,1.83,4.84,1.83,7.95v20.18h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.08V13.73h7.08v3.91c1.16-1.41,2.63-2.5,4.41-3.29,1.78-.79,3.68-1.18,5.71-1.18,2.73,0,5.18.58,7.33,1.74,2.15,1.16,3.81,2.84,4.97,5.03,1.04-2.07,2.65-3.72,4.84-4.94,2.19-1.22,4.55-1.83,7.08-1.83,2.69,0,5.1.56,7.24,1.68Z"></path><path class="logo-ink" d="M191.53,13.73v34.22h-7.08V13.73h7.08Z"></path><path class="logo-ink" d="M209.11,19.51v18.94c0,1.28.3,2.2.9,2.76.6.56,1.62.84,3.07.84h4.35v5.9h-5.59c-3.19,0-5.63-.75-7.33-2.24-1.7-1.49-2.55-3.91-2.55-7.27v-18.94h-4.04v-5.78h4.04V5.23h7.14v8.51h8.32v5.78h-8.32Z"></path><path class="logo-ink" d="M254.76,13.73l-20.99,50.31h-7.33l6.96-16.64-13.48-33.66h7.89l9.63,26.08,10-26.08h7.33Z"></path></svg></a>
     <nav class="nav-links">
       <a href="#kaip-veikia" data-en="How it works">Kaip veikia</a>
       <a href="#funkcijos" data-en="Features">Funkcijos</a>
@@ -75,26 +83,41 @@
       <a href="#duk" data-en="FAQ">DUK</a>
     </nav>
     <div class="nav-actions">
+      <div class="lang-toggle lang-toggle-desktop" role="group" aria-label="Kalba / Language">
+        <button type="button" data-lang="lt" aria-pressed="true">LT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-primary nav-cta" href="#virsus" data-en="Get early access">Gauk ankstyvą prieigą</a>
+      <button type="button" class="nav-burger" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilus meniu">
+    <a href="#kaip-veikia" data-en="How it works">Kaip veikia</a>
+    <a href="#funkcijos" data-en="Features">Funkcijos</a>
+    <a href="#komanda" data-en="Team">Komanda</a>
+    <a href="#duk" data-en="FAQ">DUK</a>
+    <div class="mobile-menu-foot">
       <div class="lang-toggle" role="group" aria-label="Kalba / Language">
         <button type="button" data-lang="lt" aria-pressed="true">LT</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn btn-primary nav-cta" href="#laukianciuju-sarasas"><span class="cta-full" data-en="Get early access">Gauti ankstyvą prieigą</span><span class="cta-short" data-en="Sign up">Prisijungti</span></a>
     </div>
-  </div>
+  </nav>
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="virsus" data-screen-label="Hero">
   <div class="wrap hero-inner">
-    <h1 data-en="Renting without a broker?">Nuomojate be brokerio?</h1>
-    <p class="hero-sub" data-en="Collect applications, screen tenants, and sign the lease. All in one place.">Surinkite paraiškas, patikrinkite nuomininkus ir pasirašykite sutartį. Viskas vienoje vietoje.</p>
+    <h1 data-en="Renting without a broker?">Nuoma be brokerio?</h1>
+    <p class="hero-sub" data-en="Collect applications, screen tenants, and sign the lease.<br />All in one place.">Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.<br />Viskas vienoje vietoje.</p>
     <form class="hero-form" id="hero-waitlist-form">
-      <input type="email" name="email" required="" placeholder="Jūsų el. paštas" data-en-placeholder="Your email" aria-label="Jūsų el. paštas" data-en-aria="Your email" />
-      <button class="btn btn-primary" type="submit" data-en="Get early access">Gauti ankstyvą prieigą</button>
+      <input type="email" name="email" required="" placeholder="El. paštas" data-en-placeholder="Email" aria-label="El. paštas" data-en-aria="Email" />
+      <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
     </form>
-    <p class="hero-form-note" data-en="First 50 get early access. Your feedback shapes what we build first.">Pirmieji 50 gauna ankstyvą prieigą. Jūsų atsiliepimai lems, ką kuriame pirmiausia.</p>
-    <p class="hero-form-success" data-en="Thanks! You'll get access first.">Ačiū! Gausite prieigą pirmieji.</p>
+    <p class="hero-form-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
+    <p class="hero-form-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
   </div>
 </section>
 
@@ -109,23 +132,23 @@
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3 data-en="Post your listing">Paskelbkite skelbimą</h3>
-        <p data-en="List your apartment on listing platforms or social media with your Nuomity application link in the description.">Skelbkite butą skelbimų platformose ar socialiniuose tinkluose su Nuomity paraiškos nuoroda aprašyme.</p>
+        <h3 data-en="Listing">Skelbimas</h3>
+        <p data-en="List your property on your chosen platforms, adding the „nuomity“ application link in the description.">Skelbk nekilnojamąjį turtą pasirinktose platformose, aprašyme pridėdamas „nuomity“ paraiškos nuorodą.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3 data-en="Review applications">Peržiūrėkite paraiškas</h3>
-        <p data-en="See who applied and choose which ones to screen.">Matote, kas pateikė paraišką, ir pasirenkate, kuriuos patikrinti.</p>
+        <h3 data-en="Applications">Paraiškos</h3>
+        <p data-en="See who applied and choose which ones to screen.">Matydamas paraiškas pateikusius asmenis, gali pasirinkti, kuriuos iš jų patikrinti.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3 data-en="Schedule a viewing">Suplanuokite apžiūrą</h3>
-        <p data-en="Set the available times and tenants pick the one that suits them.">Nustatote galimus laikus, nuomininkai patys pasirenka jiems tinkamą.</p>
+        <h3 data-en="Viewing">Apžiūra</h3>
+        <p data-en="Set the available times and tenants pick the one that suits them.">Nurodai galimus laikus, o nuomininkai savarankiškai pasirenka jiems tinkamiausią variantą.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <h3 data-en="Sign the lease">Pasirašykite sutartį</h3>
-        <p data-en="Pick your candidate and sign the lease electronically. It's legally binding.">Pasirenkate kandidatą ir pasirašote sutartį elektroniniu būdu. Ji galioja teisiškai.</p>
+        <h3 data-en="Contract">Sutartis</h3>
+        <p data-en="Once you pick a candidate, a legally binding lease is generated and signed electronically.">Pasirinkus kandidatą, sugeneruojama ir elektroniniu būdu pasirašoma teisiškai galiojanti nuomos sutartis.</p>
       </div>
     </div>
   </div>
@@ -149,28 +172,28 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" data-en="Features">Funkcijos</span>
-      <h2 data-en="What you get">Ką gaunate</h2>
+      <h2 data-en="Why &#8222;nuomity&#8220;?">Kodėl &#8222;nuomity&#8220;?</h2>
     </div>
 
     <div class="feature-row">
       <div class="feature-copy">
-        <span class="feature-kicker" data-en="Feature 1">Funkcija 1</span>
-        <h3 data-en="Solvency check">Mokumo patikrinimas</h3>
-        <p data-en="Every tenant you choose to screen goes through a solvency check. You decide based on facts, not a hunch.">Kiekvienas nuomininkas, kurį pasirenkate tikrinti, praeina mokumo patikrinimą. Sprendžiate pagal faktus, ne pagal nuojautą.</p>
+        <h3 data-en="Candidate screening">Kandidatų patikra</h3>
+        <p data-en="From everyone interested, pick the ones that suit you best, and find out before you even meet whether they can really afford the rent. That way you invite into your home only tenants you can already trust.">Iš visų susidomėjusių išsirinkite tuos, kurie jums atrodo patys tinkamiausi, ir dar prieš susitikimą sužinokite, ar žmogus tikrai galės susimokėti už nuomą. Taip į savo namus pasikviesite tik tuos nuomininkus, kuriais jau dabar galite drąsiai pasitikėti.</p>
       </div>
       <div class="feature-visual">
-        <div class="ui-card">
-          <div class="ui-card-head">
-            <div>
-              <div class="ui-card-title">G. K.</div>
-              <div class="ui-card-sub" data-en="Solvency check">Mokumo patikrinimas</div>
-            </div>
-            <span class="badge badge-ok"><span class="check-dot"></span><span data-en="Verified">Patikrinta</span></span>
+        <div class="ui-card ui-candidates">
+          <p class="ui-candidates-label" data-en="Screened candidates">Patikrinti kandidatai</p>
+          <div class="ui-candidate ui-candidate-ok">
+            <span class="ui-candidate-name">G. Kazlauskas</span>
+            <i class="ti ti-circle-check ui-candidate-icon" aria-hidden="true"></i>
           </div>
-          <div class="ui-check-list">
-            <div class="ui-check"><span class="tick">✓</span><span data-en="Identity verified">Tapatybė patvirtinta</span></div>
-            <div class="ui-check"><span class="tick">✓</span><span data-en="Income verified">Pajamos patvirtintos</span></div>
-            <div class="ui-check"><span class="tick">✓</span><span data-en="No debts found">Skolų nerasta</span></div>
+          <div class="ui-candidate ui-candidate-ok">
+            <span class="ui-candidate-name">M. Petrauskas</span>
+            <i class="ti ti-circle-check ui-candidate-icon" aria-hidden="true"></i>
+          </div>
+          <div class="ui-candidate ui-candidate-bad">
+            <span class="ui-candidate-name">J. Jonaitis</span>
+            <i class="ti ti-circle-x ui-candidate-icon" aria-hidden="true"></i>
           </div>
         </div>
       </div>
@@ -178,9 +201,8 @@
 
     <div class="feature-row flip">
       <div class="feature-copy">
-        <span class="feature-kicker" data-en="Feature 2">Funkcija 2</span>
-        <h3 data-en="Viewing scheduling">Apžiūros planavimas</h3>
-        <p data-en="Set the available viewing times and the tenant picks one. No calls, no back-and-forth.">Nustatote galimus apžiūros laikus, nuomininkas pasirenka pats. Jokių skambučių, jokių derinimų.</p>
+        <h3 data-en="Viewing times without the back-and-forth">Apžiūrų laikai be derinimų</h3>
+        <p data-en="Mark when you can show the place, and tenants pick a time that suits them. No more wasting evenings messaging and arranging each viewing separately.">Pažymėk, kada gali parodyti būstą, o nuomininkai patys pasirenka jiems tinkamą laiką. Nebereikės gaišti vakarų rašinėjant ir derinant kiekvieną apžiūrą atskirai.</p>
       </div>
       <div class="feature-visual">
         <div class="ui-card ui-card-calendar">
@@ -225,25 +247,36 @@
 
     <div class="feature-row">
       <div class="feature-copy">
-        <span class="feature-kicker" data-en="Feature 3">Funkcija 3</span>
-        <h3 data-en="Electronic lease">Elektroninė sutartis</h3>
-        <p data-en="The lease is signed electronically in minutes. Legally binding, no paper, no notary.">Sutartis pasirašoma elektroniniu būdu per kelias minutes. Galioja teisiškai, be popierių, be notaro.</p>
+        <h3 data-en="Custom e-lease">Individuali el. sutartis</h3>
+        <p data-en="We'll prepare a custom lease agreement that you sign online in minutes — no paper, no notary.">Parengsime individualią nuomos sutartį, kurią per kelias minutes pasirašysi internetu be jokių popierių ar notarų.</p>
       </div>
       <div class="feature-visual">
-        <div class="ui-card">
-          <div class="ui-card-head">
-            <div>
-              <div class="ui-card-title" data-en="Lease agreement">Nuomos sutartis</div>
-              <div class="ui-card-sub" data-en="Ready to sign">Paruošta pasirašyti</div>
-            </div>
-            <span class="badge badge-accent"><span class="check-dot"></span><span data-en="E-signature">El. parašas</span></span>
+        <div class="ui-card ui-contract">
+          <div class="ui-contract-head">
+            <span class="ui-contract-icon"><i class="ti ti-file-text" aria-hidden="true"></i></span>
+            <span class="ui-card-title" data-en="Lease agreement">Nuomos sutartis</span>
           </div>
-          <div class="ui-doc-line mid"></div>
-          <div class="ui-doc-line"></div>
-          <div class="ui-doc-line short"></div>
-          <div class="ui-sign-row">
-            <span class="ui-signature">G. Kazlauskas</span>
-            <span class="badge badge-ok"><span class="check-dot"></span><span data-en="Signed">Pasirašyta</span></span>
+
+          <div class="ui-contract-file">
+            <div class="ui-contract-file-left">
+              <i class="ti ti-file-type-pdf ui-pdf-icon" aria-hidden="true"></i>
+              <div>
+                <p class="ui-pdf-name">sutartis.pdf</p>
+                <p class="ui-pdf-meta" data-en="PDF · 4 pages">PDF · 4 psl.</p>
+              </div>
+            </div>
+            <i class="ti ti-download ui-pdf-download" aria-hidden="true"></i>
+          </div>
+
+          <div class="ui-sign-list">
+            <div class="ui-sign-item">
+              <span class="ui-sign-who"><i class="ti ti-circle-check" aria-hidden="true"></i><span data-en="Landlord">Nuomotojas</span></span>
+              <span class="ui-sign-status" data-en="Signed">Pasirašyta</span>
+            </div>
+            <div class="ui-sign-item">
+              <span class="ui-sign-who"><i class="ti ti-circle-check" aria-hidden="true"></i><span data-en="Tenant G. K.">Nuomininkas G. K.</span></span>
+              <span class="ui-sign-status" data-en="Signed">Pasirašyta</span>
+            </div>
           </div>
         </div>
       </div>
@@ -259,24 +292,28 @@
       <h2 data-en="This is just the beginning">Tai tik pradžia</h2>
     </div>
     <div class="kryptis-body">
-      <p class="kryptis-intro" data-en="One place for the entire rental deal. From the first application to the deposit return.">Viena vieta visam nuomos sandoriui. Nuo pirmos paraiškos iki užstato grąžinimo.</p>
+      <p class="kryptis-intro" data-en="The entire rental process in one place. From the first application to the deposit return.">Visas nuomos procesas vienoje vietoje. Nuo pirmos paraiškos iki užstato grąžinimo.</p>
       <div class="kryptis-timeline">
         <div class="kryptis-stage kryptis-stage-active">
           <div class="kryptis-stage-dot"></div>
-          <div class="kryptis-stage-label" data-en="In development">Kūriama</div>
-          <div class="kryptis-stage-text" data-en="Applications, solvency check, electronic lease">Paraiškos, mokumo patikrinimas, elektroninė sutartis</div>
+          <div class="kryptis-stage-label" data-en="Stage 1">1 etapas</div>
+          <div class="kryptis-stage-text" data-en="Candidate screening, viewing scheduling, e-lease">Kandidatų patikra, apžiūrų planavimas, el. sutartis</div>
         </div>
-        <div class="kryptis-stage">
-          <div class="kryptis-stage-dot"></div>
-          <div class="kryptis-stage-label" data-en="Next">Toliau</div>
-          <div class="kryptis-stage-text" data-en="Deposit protection, handover reports">Užstato apsauga, perdavimo aktai</div>
-        </div>
-        <div class="kryptis-stage">
-          <div class="kryptis-stage-dot"></div>
-          <div class="kryptis-stage-label" data-en="Later">Vėliau</div>
-          <div class="kryptis-stage-text" data-en="Rent payment management, dispute resolution">Nuomos mokėjimų valdymas, ginčų sprendimas</div>
+        <div class="kryptis-future">
+          <span class="kryptis-future-tag" data-en="You can shape this">Tai gali nulemti tu</span>
+          <div class="kryptis-stage">
+            <div class="kryptis-stage-dot"></div>
+            <div class="kryptis-stage-label" data-en="Stage 2">2 etapas</div>
+            <div class="kryptis-stage-text" data-en="Deposit protection, handover reports">Užstato apsauga, perdavimo aktai</div>
+          </div>
+          <div class="kryptis-stage">
+            <div class="kryptis-stage-dot"></div>
+            <div class="kryptis-stage-label" data-en="Stage 3">3 etapas</div>
+            <div class="kryptis-stage-text" data-en="Rent payment management, dispute resolution">Nuomos mokėjimų valdymas, ginčų sprendimas</div>
+          </div>
         </div>
       </div>
+      <p class="kryptis-note" data-en="These stages aren't set in stone yet. Join the waitlist and you'll help decide what we build next — and in what order.">Šie etapai dar nėra galutiniai. Prisijunk prie laukiančiųjų sąrašo ir galėsi nulemti, ką kuriame toliau ir kokia tvarka.</p>
     </div>
   </div>
 </section>
@@ -291,22 +328,22 @@
     <div class="faq-list">
       <details class="faq-item" open="">
         <summary><span data-en="Does joining the waitlist commit me to anything?">Ar registracija į laukiančiųjų sąrašą mane kažkam įpareigoja?</span><span class="faq-chevron"></span></summary>
-        <p data-en="No. An email address is all it takes — no contracts or payments are tied to signing up, and you can opt out at any time.">Ne. Užtenka el. pašto adreso, jokios sutartys ar mokėjimai nėra susiję su registracija, galite bet kada atsisakyti.</p>
+        <p data-en="No. An email address is all it takes — no contracts or payments are tied to signing up, and you can opt out at any time.">Ne. Užtenka el. pašto adreso, jokios sutartys ar mokėjimai nėra susiję su registracija, gali bet kada atsisakyti.</p>
       </details>
       <details class="faq-item">
-        <summary><span data-en="Why do I need Nuomity if I already rent out without major problems?">Kodėl man reikia Nuomity, jei nuomoju ir taip be didelių problemų?</span><span class="faq-chevron"></span></summary>
-        <p data-en="Without a tool, you pick a tenant on first impression, knowing nothing about their solvency. Nuomity lets you choose which candidates to screen and prepares a legally binding electronic lease that protects both parties.">Be jokio įrankio nuomininką renkatės pagal pirmą įspūdį, nežinodami nieko apie jo mokumą. Nuomity leidžia pasirinkti, kuriuos kandidatus tikrinti, ir paruošia teisiškai galiojančią elektroninę sutartį, apsaugančią abi šalis.</p>
+        <summary><span data-en="Why do I need „nuomity“ if I already rent out without major problems?">Kodėl man reikia „nuomity“, jei nuomoju ir taip be didelių problemų?</span><span class="faq-chevron"></span></summary>
+        <p data-en="Without a tool, you pick a tenant on first impression, knowing nothing about their solvency. „nuomity“ lets you choose which candidates to screen and prepares a legally binding electronic lease that protects both parties.">Be jokio įrankio nuomininką renkiesi pagal pirmą įspūdį, nežinodamas nieko apie jo mokumą. „nuomity“ leidžia pasirinkti, kuriuos kandidatus tikrinti, ir paruošia teisiškai galiojančią elektroninę sutartį, apsaugančią abi šalis.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="How is this different from a broker or listing groups?">Kuo tai skiriasi nuo brokerio ar skelbimų grupių?</span><span class="faq-chevron"></span></summary>
-        <p data-en="A broker does the process by hand; in listing groups you have to collect and assess applications yourself, with no solvency check. Nuomity automates the solvency check and lease signing that you'd otherwise do yourself or hand off to a broker.">Brokeris procesą atlieka rankomis, skelbimų grupėse paraiškas tenka rinkti ir vertinti patiems, mokumo patikrinimo nėra. Nuomity automatizuoja mokumo patikrinimą ir sutarties pasirašymą, kuriuos kitu atveju turėtumėte atlikti patys arba pavesti brokeriui.</p>
+        <p data-en="A broker does the process by hand; in listing groups you have to collect and assess applications yourself, with no solvency check. „nuomity“ automates the solvency check and lease signing that you'd otherwise do yourself or hand off to a broker.">Brokeris procesą atlieka rankomis, skelbimų grupėse paraiškas tenka rinkti ir vertinti pačiam, mokumo patikrinimo nėra. „nuomity“ automatizuoja mokumo patikrinimą ir sutarties pasirašymą, kuriuos kitu atveju turėtum atlikti pats arba pavesti brokeriui.</p>
       </details>
       <details class="faq-item">
-        <summary><span data-en="Is Nuomity already live, or is it still an idea?">Ar Nuomity jau veikia, ar tai dar idėja?</span><span class="faq-chevron"></span></summary>
+        <summary><span data-en="Is „nuomity“ already live, or is it still an idea?">Ar „nuomity“ jau veikia, ar tai dar idėja?</span><span class="faq-chevron"></span></summary>
         <p data-en="The product is currently in development. Waitlist members will be the first to get access once it's ready.">Šiuo metu produktas yra kūrimo stadijoje. Laukiančiųjų sąrašo nariai pirmieji gaus prieigą, kai produktas bus paruoštas.</p>
       </details>
       <details class="faq-item">
-        <summary><span data-en="When will I be able to start using Nuomity?">Kada galėsiu pradėti naudotis Nuomity?</span><span class="faq-chevron"></span></summary>
+        <summary><span data-en="When will I be able to start using „nuomity“?">Kada galėsiu pradėti naudotis „nuomity“?</span><span class="faq-chevron"></span></summary>
         <p data-en="We're not announcing a specific date publicly yet, but we're actively working to have the product ready as soon as possible. Waitlist members will be informed first.">Konkrečios datos kol kas viešai neskelbiame, tačiau aktyviai dirbame, kad produktas būtų paruoštas kiek galima greičiau. Laukiančiųjų sąrašo nariai informaciją gaus pirmieji.</p>
       </details>
       <details class="faq-item">
@@ -315,7 +352,7 @@
       </details>
       <details class="faq-item">
         <summary><span data-en="How is a tenant's solvency checked, and how much can I trust it?">Kaip tikrinamas nuomininko mokumas ir kiek tuo galima pasitikėti?</span><span class="faq-chevron"></span></summary>
-        <p data-en="The check is carried out through a professional credit information provider used by banks and financial institutions in Lithuania. You choose which candidate to order a check for; identity, income and debt history are verified.">Patikrinimas atliekamas per profesionalų kredito informacijos teikėją, su kuriuo dirba bankai ir finansų įstaigos Lietuvoje. Jūs patys pasirenkate, kuriam kandidatui užsakyti patikrinimą, tikrinama tapatybė, pajamos ir skolų istorija.</p>
+        <p data-en="The check is carried out through a professional credit information provider used by banks and financial institutions in Lithuania. You choose which candidate to order a check for; identity, income and debt history are verified.">Patikrinimas atliekamas per profesionalų kredito informacijos teikėją, su kuriuo dirba bankai ir finansų įstaigos Lietuvoje. Tu pats pasirenki, kuriam kandidatui užsakyti patikrinimą, tikrinama tapatybė, pajamos ir skolų istorija.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="Does an electronic lease have the same legal force as a paper one?">Ar elektroninė sutartis turi tokią pat teisinę galią kaip popierinė?</span><span class="faq-chevron"></span></summary>
@@ -329,13 +366,13 @@
 <section class="waitlist" id="laukianciuju-sarasas" data-screen-label="Waitlist CTA">
   <div class="wrap">
     <div class="waitlist-card">
-      <h2 data-en="Be the first to rent with confidence.">Būkite pirmieji, kurie nuomos užtikrintai.</h2>
+      <h2 data-en="Be the first to rent with confidence.">Būk pirmas, kuris nuomos užtikrintai.</h2>
       <form class="waitlist-form" id="waitlist-form">
-        <input type="email" name="email" required="" placeholder="Jūsų el. paštas" data-en-placeholder="Your email" aria-label="Jūsų el. paštas" data-en-aria="Your email" />
-        <button class="btn btn-primary" type="submit" data-en="Get early access">Gauti ankstyvą prieigą</button>
+        <input type="email" name="email" required="" placeholder="El. paštas" data-en-placeholder="Email" aria-label="El. paštas" data-en-aria="Email" />
+        <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
       </form>
-      <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes what we build first.">Pirmieji 50 gauna ankstyvą prieigą. Jūsų atsiliepimai lems, ką kuriame pirmiausia.</p>
-      <p class="waitlist-success" data-en="Thanks! You're on the waitlist.">Ačiū! Jūs esate laukiančiųjų sąraše.</p>
+      <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
+      <p class="waitlist-success" data-en="Thanks! You're on the waitlist.">Ačiū! Tu esi laukiančiųjų sąraše.</p>
     </div>
   </div>
 </section>
@@ -345,7 +382,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" data-en="Team">Komanda</span>
-      <h2 data-en="Meet us">Pažinkite mus</h2>
+      <h2 data-en="Meet the team">Susipažinkime</h2>
     </div>
     <div class="team-row team-row-reverse">
       <div class="team-photo-wrap"><img class="team-photo" src="team/dmitrijus_photo.jpg" alt="Dmitrijus Kirjanovas" /></div>
@@ -358,7 +395,7 @@
     </div>
 
     <div class="team-row">
-      <div class="team-photo-wrap"><img class="team-photo" src="team/edvinas_photo.jpg" alt="Edvin Dičkanec" /></div>
+      <div class="team-photo-wrap"><img class="team-photo team-photo-zoom" src="team/edvinas_photo.jpg" alt="Edvin Dičkanec" /></div>
       <div class="team-info">
         <p class="team-name">Edvin Dičkanec</p>
         <p class="team-role" data-en="Software, product" data-lt="Programinė įranga, produktas">Programinė įranga, produktas</p>
@@ -373,39 +410,51 @@
 <footer class="footer" data-screen-label="Footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <a class="logo" href="#virsus" aria-label="Nuomity"><svg class="logo-svg" viewBox="0 0 264.09 64.04" xmlns="http://www.w3.org/2000/svg" role="img"><circle class="logo-accent" cx="259.42" cy="43.29" r="4.67"></circle><circle class="logo-ink" cx="188.02" cy="4.67" r="4.67"></circle><path class="logo-accent" d="M22.06,26.28c0,.08,0,.16-.02.24-.03.25-.13.47-.27.66l-.07.09-.7.98-12.47,17.64-.06.09c-.84,1.19-2.23,1.97-3.81,1.97-2.57,0-4.67-2.09-4.67-4.66V13.73h5.88l.27,2.41.08.7,1.56,14s0,.06,0,.09v.09c.09.77.75,1.38,1.55,1.38.35,0,.68-.11.94-.31l8.17-6.2.86-.65.26-.19h.01c.26-.2.58-.31.92-.31.86,0,1.55.7,1.55,1.56Z"></path><path class="logo-accent" d="M32.67,39.2v8.76h-6l-.19-2.73v-.23c-.02-.05-.02-.1-.02-.15l-1.09-15.58-.43-6.05c-.1-1.62-1.45-2.91-3.11-2.91-.72,0-1.38.24-1.91.65l-.07.06-2.61,1.96-4.43,3.34-.05.04c-.26.2-.59.32-.94.32-.86,0-1.56-.7-1.56-1.56,0-.43.18-.83.47-1.11l.1-.09,8.53-7.93.22-.21c1.39-1.28,3.24-2.07,5.29-2.07,4.3,0,7.77,3.48,7.77,7.77v17.69Z"></path><path class="logo-ink" d="M70.99,13.73v34.22h-7.08v-4.04c-1.12,1.41-2.58,2.52-4.38,3.32-1.8.81-3.72,1.21-5.74,1.21-2.69,0-5.1-.56-7.24-1.68-2.13-1.12-3.81-2.77-5.03-4.97-1.22-2.19-1.83-4.84-1.83-7.95V13.73h7.02v19.07c0,3.06.77,5.41,2.3,7.05,1.53,1.64,3.62,2.45,6.27,2.45s4.75-.82,6.3-2.45c1.55-1.63,2.33-3.98,2.33-7.05V13.73h7.08Z"></path><path class="logo-ink" d="M86.39,46.31c-2.61-1.47-4.66-3.54-6.15-6.21-1.49-2.67-2.24-5.76-2.24-9.28s.77-6.56,2.3-9.25c1.53-2.69,3.62-4.76,6.27-6.21,2.65-1.45,5.61-2.17,8.88-2.17s6.23.72,8.88,2.17c2.65,1.45,4.74,3.52,6.27,6.21,1.53,2.69,2.3,5.78,2.3,9.25s-.79,6.56-2.36,9.25c-1.57,2.69-3.72,4.77-6.43,6.24-2.71,1.47-5.7,2.2-8.97,2.2s-6.15-.73-8.76-2.2ZM100.27,41.06c1.59-.87,2.89-2.17,3.88-3.91.99-1.74,1.49-3.85,1.49-6.33s-.48-4.59-1.43-6.3c-.95-1.72-2.22-3.01-3.79-3.88-1.57-.87-3.27-1.3-5.09-1.3s-3.51.43-5.06,1.3c-1.55.87-2.78,2.16-3.69,3.88-.91,1.72-1.37,3.82-1.37,6.3,0,3.69.94,6.53,2.83,8.54,1.88,2.01,4.25,3.01,7.11,3.01,1.82,0,3.53-.43,5.12-1.3Z"></path><path class="logo-ink" d="M168.59,14.85c2.13,1.12,3.81,2.77,5.03,4.97,1.22,2.2,1.83,4.84,1.83,7.95v20.18h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.08V13.73h7.08v3.91c1.16-1.41,2.63-2.5,4.41-3.29,1.78-.79,3.68-1.18,5.71-1.18,2.73,0,5.18.58,7.33,1.74,2.15,1.16,3.81,2.84,4.97,5.03,1.04-2.07,2.65-3.72,4.84-4.94,2.19-1.22,4.55-1.83,7.08-1.83,2.69,0,5.1.56,7.24,1.68Z"></path><path class="logo-ink" d="M191.53,13.73v34.22h-7.08V13.73h7.08Z"></path><path class="logo-ink" d="M209.11,19.51v18.94c0,1.28.3,2.2.9,2.76.6.56,1.62.84,3.07.84h4.35v5.9h-5.59c-3.19,0-5.63-.75-7.33-2.24-1.7-1.49-2.55-3.91-2.55-7.27v-18.94h-4.04v-5.78h4.04V5.23h7.14v8.51h8.32v5.78h-8.32Z"></path><path class="logo-ink" d="M254.76,13.73l-20.99,50.31h-7.33l6.96-16.64-13.48-33.66h7.89l9.63,26.08,10-26.08h7.33Z"></path></svg></a>
+      <a class="logo" href="#virsus" aria-label="nuomity"><svg class="logo-svg" viewBox="0 0 264.09 64.04" width="132" height="32" xmlns="http://www.w3.org/2000/svg" role="img"><circle class="logo-accent" cx="259.42" cy="43.29" r="4.67"></circle><circle class="logo-ink" cx="188.02" cy="4.67" r="4.67"></circle><path class="logo-accent" d="M22.06,26.28c0,.08,0,.16-.02.24-.03.25-.13.47-.27.66l-.07.09-.7.98-12.47,17.64-.06.09c-.84,1.19-2.23,1.97-3.81,1.97-2.57,0-4.67-2.09-4.67-4.66V13.73h5.88l.27,2.41.08.7,1.56,14s0,.06,0,.09v.09c.09.77.75,1.38,1.55,1.38.35,0,.68-.11.94-.31l8.17-6.2.86-.65.26-.19h.01c.26-.2.58-.31.92-.31.86,0,1.55.7,1.55,1.56Z"></path><path class="logo-accent" d="M32.67,39.2v8.76h-6l-.19-2.73v-.23c-.02-.05-.02-.1-.02-.15l-1.09-15.58-.43-6.05c-.1-1.62-1.45-2.91-3.11-2.91-.72,0-1.38.24-1.91.65l-.07.06-2.61,1.96-4.43,3.34-.05.04c-.26.2-.59.32-.94.32-.86,0-1.56-.7-1.56-1.56,0-.43.18-.83.47-1.11l.1-.09,8.53-7.93.22-.21c1.39-1.28,3.24-2.07,5.29-2.07,4.3,0,7.77,3.48,7.77,7.77v17.69Z"></path><path class="logo-ink" d="M70.99,13.73v34.22h-7.08v-4.04c-1.12,1.41-2.58,2.52-4.38,3.32-1.8.81-3.72,1.21-5.74,1.21-2.69,0-5.1-.56-7.24-1.68-2.13-1.12-3.81-2.77-5.03-4.97-1.22-2.19-1.83-4.84-1.83-7.95V13.73h7.02v19.07c0,3.06.77,5.41,2.3,7.05,1.53,1.64,3.62,2.45,6.27,2.45s4.75-.82,6.3-2.45c1.55-1.63,2.33-3.98,2.33-7.05V13.73h7.08Z"></path><path class="logo-ink" d="M86.39,46.31c-2.61-1.47-4.66-3.54-6.15-6.21-1.49-2.67-2.24-5.76-2.24-9.28s.77-6.56,2.3-9.25c1.53-2.69,3.62-4.76,6.27-6.21,2.65-1.45,5.61-2.17,8.88-2.17s6.23.72,8.88,2.17c2.65,1.45,4.74,3.52,6.27,6.21,1.53,2.69,2.3,5.78,2.3,9.25s-.79,6.56-2.36,9.25c-1.57,2.69-3.72,4.77-6.43,6.24-2.71,1.47-5.7,2.2-8.97,2.2s-6.15-.73-8.76-2.2ZM100.27,41.06c1.59-.87,2.89-2.17,3.88-3.91.99-1.74,1.49-3.85,1.49-6.33s-.48-4.59-1.43-6.3c-.95-1.72-2.22-3.01-3.79-3.88-1.57-.87-3.27-1.3-5.09-1.3s-3.51.43-5.06,1.3c-1.55.87-2.78,2.16-3.69,3.88-.91,1.72-1.37,3.82-1.37,6.3,0,3.69.94,6.53,2.83,8.54,1.88,2.01,4.25,3.01,7.11,3.01,1.82,0,3.53-.43,5.12-1.3Z"></path><path class="logo-ink" d="M168.59,14.85c2.13,1.12,3.81,2.77,5.03,4.97,1.22,2.2,1.83,4.84,1.83,7.95v20.18h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.08V13.73h7.08v3.91c1.16-1.41,2.63-2.5,4.41-3.29,1.78-.79,3.68-1.18,5.71-1.18,2.73,0,5.18.58,7.33,1.74,2.15,1.16,3.81,2.84,4.97,5.03,1.04-2.07,2.65-3.72,4.84-4.94,2.19-1.22,4.55-1.83,7.08-1.83,2.69,0,5.1.56,7.24,1.68Z"></path><path class="logo-ink" d="M191.53,13.73v34.22h-7.08V13.73h7.08Z"></path><path class="logo-ink" d="M209.11,19.51v18.94c0,1.28.3,2.2.9,2.76.6.56,1.62.84,3.07.84h4.35v5.9h-5.59c-3.19,0-5.63-.75-7.33-2.24-1.7-1.49-2.55-3.91-2.55-7.27v-18.94h-4.04v-5.78h4.04V5.23h7.14v8.51h8.32v5.78h-8.32Z"></path><path class="logo-ink" d="M254.76,13.73l-20.99,50.31h-7.33l6.96-16.64-13.48-33.66h7.89l9.63,26.08,10-26.08h7.33Z"></path></svg></a>
       <p data-en="Less hassle. More clarity.">Mažiau rūpesčių. Daugiau aiškumo.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/nuomity" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/people/Nuomity/61570968297280/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/nuomity/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+      </div>
     </div>
     <div class="footer-meta">
-      <a href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
-      <span>© 2026 Nuomity</span>
+      <span>© 2026 nuomity</span>
     </div>
+    <a class="footer-email" href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
   </div>
 </footer>
 
 <script>
   /* =====================================================================
-     WAITLIST FORM SETUP — replace the ID below with your Formspree form ID.
-     1. Create a free form at https://formspree.io  (or use Tally / Google Forms)
-     2. Copy the form ID from the endpoint, e.g. https://formspree.io/f/abcdwxyz
-     3. Paste just the ID ("abcdwxyz") between the quotes:
+     WAITLIST FORM — sends email to Cloudflare Worker, which adds the
+     contact to Brevo and triggers the confirmation email.
   ===================================================================== */
-  var FORMSPREE_ID = 'YOUR_FORM_ID';
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/' + FORMSPREE_ID;
+  var WORKER_ENDPOINT = 'https://nuomity-waitlist.dmitrijus.workers.dev/';
 
   function submitWaitlist(form, onSuccess) {
-    var data = new FormData(form);
-    fetch(FORMSPREE_ENDPOINT, {
+    var input = form.querySelector('input[type="email"]');
+    var btn = form.querySelector('button[type="submit"]');
+    var email = input ? input.value.trim() : '';
+    var btnLabel = btn ? btn.innerHTML : '';
+
+    if (btn) { btn.disabled = true; btn.innerHTML = 'Siunčiama...'; }
+
+    fetch(WORKER_ENDPOINT, {
       method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email })
     }).then(function (res) {
-      if (res.ok) {
-        onSuccess();
-      } else {
-        alert('Nepavyko pateikti. Bandykite dar kartą.');
-      }
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        if (res.ok && data.success) {
+          onSuccess();
+        } else {
+          if (btn) { btn.disabled = false; btn.innerHTML = btnLabel; }
+          alert('Nepavyko pateikti. Patikrinkite el. paštą ir bandykite dar kartą.');
+        }
+      });
     }).catch(function () {
+      if (btn) { btn.disabled = false; btn.innerHTML = btnLabel; }
       alert('Nepavyko pateikti. Bandykite dar kartą.');
     });
   }
@@ -415,29 +464,7 @@
     var card = this.closest('.waitlist-card');
     submitWaitlist(this, function () { card.classList.add('submitted'); });
   });
-  /* ---------- Nav CTA: show only when hero & waitlist CTAs are off-screen ---------- */
-  (function () {
-    var navCta = document.querySelector('.nav-cta');
-    if (!navCta) return;
-    var targets = [
-      document.getElementById('hero-waitlist-form'),
-      document.getElementById('waitlist-form')
-    ].filter(Boolean);
-    if (!targets.length) return;
 
-    var visible = {};
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        visible[entry.target.id] = entry.isIntersecting;
-      });
-      var anyVisible = targets.some(function (t) { return visible[t.id]; });
-      navCta.classList.toggle('cta-hidden', anyVisible);
-    }, { threshold: 0 });
-
-    targets.forEach(function (t) { io.observe(t); });
-  })();
-
-  /* LinkedIn links open in a new tab natively (target=_blank rel=noopener) */
   document.getElementById('hero-waitlist-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var form = this;
@@ -447,6 +474,73 @@
       document.querySelector('.hero-form-success').style.display = 'block';
     });
   });
+
+  /* ---------- Nav CTA: show only once the hero (main) CTA scrolls out of view; clicking it returns to that CTA ---------- */
+  (function () {
+    var navCta = document.querySelector('.nav-cta');
+    var heroForm = document.getElementById('hero-waitlist-form');
+    if (!navCta || !heroForm) return;
+
+    var io = new IntersectionObserver(function (entries) {
+      navCta.classList.toggle('cta-hidden', entries[0].isIntersecting);
+    }, { threshold: 0 });
+
+    io.observe(heroForm);
+  })();
+
+  /* ---------- Mobile hamburger menu ---------- */
+  (function () {
+    var burger = document.querySelector('.nav-burger');
+    var menu = document.getElementById('mobile-menu');
+    if (!burger || !menu) return;
+
+    function closeMenu() {
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+
+    burger.addEventListener('click', function () {
+      var isOpen = menu.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+  })();
+
+  /* ---------- Kryptis timeline: single continuous connector line (both layouts) ---------- */
+  function positionKryptisLine() {
+    var tl = document.querySelector('.kryptis-timeline');
+    if (!tl) return;
+    var dots = tl.querySelectorAll('.kryptis-stage-dot');
+    if (dots.length < 2) return;
+    var tlr = tl.getBoundingClientRect();
+    var first = dots[0].getBoundingClientRect();
+    var last = dots[dots.length - 1].getBoundingClientRect();
+    var x1 = (first.left + first.width / 2) - tlr.left;
+    var y1 = (first.top + first.height / 2) - tlr.top;
+    var x2 = (last.left + last.width / 2) - tlr.left;
+    var y2 = (last.top + last.height / 2) - tlr.top;
+    var vertical = Math.abs(y2 - y1) > Math.abs(x2 - x1);
+    if (vertical) {
+      tl.style.setProperty('--kline-x', (x1 - 1).toFixed(1) + 'px');
+      tl.style.setProperty('--kline-y', y1.toFixed(1) + 'px');
+      tl.style.setProperty('--kline-w', '2px');
+      tl.style.setProperty('--kline-h', (y2 - y1).toFixed(1) + 'px');
+    } else {
+      tl.style.setProperty('--kline-x', x1.toFixed(1) + 'px');
+      tl.style.setProperty('--kline-y', (y1 - 1).toFixed(1) + 'px');
+      tl.style.setProperty('--kline-w', (x2 - x1).toFixed(1) + 'px');
+      tl.style.setProperty('--kline-h', '2px');
+    }
+  }
+  window.addEventListener('load', positionKryptisLine);
+  window.addEventListener('resize', positionKryptisLine);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(positionKryptisLine); }
+  positionKryptisLine();
 
   /* ---------- Language switch (LT / EN) ---------- */
   (function () {
@@ -476,6 +570,9 @@
         el.setAttribute('aria-label', en ? el.getAttribute('data-en-aria') : el.getAttribute('data-lt-aria'));
       });
       document.documentElement.lang = en ? 'en' : 'lt';
+      if (typeof positionKryptisLine === 'function') {
+        requestAnimationFrame(positionKryptisLine);
+      }
       document.querySelectorAll('.lang-toggle button').forEach(function (b) {
         b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
       });
