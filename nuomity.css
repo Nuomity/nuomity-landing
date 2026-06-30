@@ -1337,9 +1337,6 @@ a { color: inherit; }
   position: relative;
   margin-top: -18px;
   padding: 18px 14px;
-  border: 1.5px dashed var(--accent-border);
-  border-radius: 16px;
-  background: var(--accent-softer);
 }
 
 .kryptis-future .kryptis-stage { max-width: none; }
@@ -1421,10 +1418,12 @@ a { color: inherit; }
   object-fit: cover;
   object-position: center center;
   display: block;
+  transform: scale(1.28);
+  transform-origin: center top;
 }
 
 .team-photo-zoom {
-  transform: scale(1.18);
+  transform: scale(1.42);
   transform-origin: center top;
 }
 
