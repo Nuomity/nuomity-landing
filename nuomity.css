@@ -132,12 +132,16 @@ a { color: inherit; }
 }
 
 .nav-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 24px;
   height: 72px;
 }
+
+.nav-inner .logo { justify-self: start; }
+.nav-links { justify-self: center; }
+.nav-actions { justify-self: end; }
 
 .logo {
   font-family: var(--font-logo);
@@ -286,7 +290,7 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-  padding: 88px 0 80px;
+  padding: 68px 0 60px;
   background: #FFFFFF;
   overflow: hidden;
 }
@@ -592,11 +596,11 @@ a { color: inherit; }
 
 /* ---------- Sections ---------- */
 
-.section { padding: 80px 0; background: #FFFFFF; }
+.section { padding: 60px 0; background: #FFFFFF; }
 
 .section-head {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 44px;
 }
 
 .section-head .eyebrow {
@@ -650,6 +654,8 @@ a { color: inherit; }
 
 .step h3 { font-size: 21px; line-height: 1.3; margin-bottom: 10px; }
 .step p { color: var(--ink-2); font-size: 16px; }
+.step { text-align: center; }
+.step .step-num { margin-left: auto; margin-right: auto; }
 
 /* ---------- Features (alternating) ---------- */
 
@@ -1119,12 +1125,11 @@ a { color: inherit; }
   padding: 0 24px 22px;
   color: var(--ink-2);
   font-size: 16px;
-  max-width: 60ch;
 }
 
 /* ---------- Waitlist CTA ---------- */
 
-.waitlist { padding: 80px 0; background: #FFFFFF; }
+.waitlist { padding: 60px 0; background: #FFFFFF; }
 
 .waitlist-card {
   background: linear-gradient(180deg, var(--accent-soft), #FFFFFF 90%);
@@ -1247,11 +1252,11 @@ a { color: inherit; }
 .kryptis {
   background: var(--paper);
   border-block: 1px solid var(--line);
-  padding: 80px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
-.kryptis .section-head { margin-bottom: 40px; }
+.kryptis .section-head { margin-bottom: 32px; }
 
 .kryptis-body {
   max-width: 880px;
@@ -1513,8 +1518,9 @@ a { color: inherit; }
 
 @media (max-width: 640px) {
   .team-row, .team-row-reverse { flex-direction: column; }
-  .team-photo-wrap { width: 260px; height: 260px; max-width: 100%; margin: 0; align-self: center; }
-  .team-photo { width: 100%; height: 100%; object-position: center center; }
+  .team-photo-wrap { width: 100%; height: 320px; max-width: 100%; margin: 0; align-self: stretch; }
+  .team-photo { width: 100%; height: 100%; object-fit: cover; object-position: center center; transform: scale(1.28); transform-origin: center top; }
+  .team-photo-zoom { transform: scale(1.42); transform-origin: center top; }
   .team-row-reverse .team-info { text-align: left; }
   .team-row-reverse .team-linkedin { flex-direction: row; }
   .team-info { padding: 20px 20px 24px; }
@@ -1531,11 +1537,10 @@ a { color: inherit; }
 }
 
 .footer-inner {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
   gap: 32px;
-  flex-wrap: wrap;
 }
 
 .footer-brand p {
@@ -1576,6 +1581,7 @@ a { color: inherit; }
   font-size: 15px;
   color: var(--ink-3);
   text-align: center;
+  justify-self: center;
 }
 
 .footer-email {
@@ -1583,6 +1589,7 @@ a { color: inherit; }
   color: var(--ink-2);
   text-decoration: none;
   font-weight: 500;
+  justify-self: end;
 }
 .footer-email:hover { color: var(--accent-ink); }
 
@@ -1648,7 +1655,7 @@ a { color: inherit; }
   .hero-form { flex-direction: column; }
   .waitlist-form { flex-direction: column; }
   .ui-slot-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .footer-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
   .footer-meta { text-align: left; }
   .wrap { padding: 0 20px; }
   .waitlist-card { padding: 48px 22px; }
@@ -1662,4 +1669,45 @@ a { color: inherit; }
   .nav-burger { width: 40px; height: 40px; }
   .ui-cal-day, .ui-cal-dow { font-size: 10px; }
   .ui-cal-slot { font-size: 11px; padding: 5px 2px; }
+}
+
+/* ---------- Cookie consent banner ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: calc(100% - 32px);
+  max-width: 520px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-pop);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cookie-banner[hidden] { display: none; }
+
+.cookie-text {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.cookie-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cookie-banner .btn { padding: 10px 18px; font-size: 14.5px; }
+
+@media (max-width: 480px) {
+  .cookie-banner { bottom: 12px; padding: 16px; }
+  .cookie-actions { flex-direction: column; }
+  .cookie-actions .btn { width: 100%; }
 }
