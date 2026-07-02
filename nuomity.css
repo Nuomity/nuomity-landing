@@ -320,8 +320,8 @@ a { color: inherit; }
 
 .hero-sub {
   margin-top: 24px;
-  max-width: 58ch;
-  font-size: 19px;
+  max-width: none;
+  font-size: 18px;
   color: var(--ink-2);
 }
 
@@ -384,7 +384,7 @@ a { color: inherit; }
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 18px;
-  color: var(--accent-ink);
+  color: var(--accent);
   margin-top: 28px;
 }
 
