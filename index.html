@@ -7,8 +7,8 @@
 <meta name="description" content="Nuomok be brokerio. Surink paraiškas, patikrink nuomininkų mokumą ir pasirašyk sutartį elektroniniu būdu. Viskas vienoje vietoje." />
 <meta property="og:title" content="Nuomity. Nuomokite užtikrintai." />
 <meta property="og:description" content="Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį. Viskas vienoje vietoje." />
-<meta property="og:image" content="https://nuomity.github.io/nuomity-landing/og-image.png" />
-<meta property="og:url" content="https://nuomity.github.io/nuomity-landing/" />
+<meta property="og:image" content="https://nuomity.lt/og-image.png" />
+<meta property="og:url" content="https://nuomity.lt/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="lt_LT" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -110,14 +110,31 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="virsus" data-screen-label="Hero">
   <div class="wrap hero-inner">
-    <h1 data-en="Renting without a broker?">Nuoma be brokerio?</h1>
+    <div class="hero-copy">
+    <h1 class="hero-rise">
+      <span class="hero-rise-static" data-en="Renting without">Nuoma be</span>
+      <span class="hero-rise-line"><span class="hero-rise-word" id="hero-rise-word">brokerio</span></span>
+    </h1>
     <p class="hero-sub" data-en="Collect applications, screen tenants, and sign the lease.<br />All in one place.">Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.<br />Viskas vienoje vietoje.</p>
     <form class="hero-form" id="hero-waitlist-form">
       <input type="email" name="email" required="" placeholder="El. paštas" data-en-placeholder="Email" aria-label="El. paštas" data-en-aria="Email" />
       <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
     </form>
     <p class="hero-form-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
+    <p class="hero-form-consent" data-en='By submitting you agree to the <a href="/privatumo-politika/">privacy policy</a>.'>Spausdamas sutinki su <a href="/privatumo-politika/">privatumo politika</a>.</p>
     <p class="hero-form-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
+
+    <!-- Waitlist counter: hidden until >=15 real registrants; <50 shows progress, >=50 shows plain count -->
+    <div class="wl-counter" id="wl-counter" hidden>
+      <div class="wl-counter-slots">
+        <span class="wl-counter-lead" id="wl-counter-lead"></span>
+        <span class="wl-counter-meta" id="wl-counter-meta"></span>
+      </div>
+      <div class="wl-counter-bar"><span class="wl-counter-fill" id="wl-counter-fill"></span></div>
+    </div>
+    </div>
+
+    <!-- Animated product preview: applications drop in, landlord screens, verdicts appear -->
   </div>
 </section>
 
@@ -177,23 +194,33 @@
 
     <div class="feature-row">
       <div class="feature-copy">
-        <h3 data-en="Candidate screening">Kandidatų patikra</h3>
-        <p data-en="From everyone interested, pick the ones that suit you best, and find out before you even meet whether they can really afford the rent. That way you invite into your home only tenants you can already trust.">Iš visų susidomėjusių išsirink tuos, kurie tau atrodo tinkamiausi. Dar prieš susitikimą sužinok, ar žmogus tikrai galės susimokėti už nuomą. Taip į savo namus pasikviesi tik tuos kandidatus, kuriais jau gali drąsiai pasitikėti.</p>
+        <h3 data-en="Don't guess who'll be a good tenant.">Nespėliok, kas bus geras nuomininkas.</h3>
+        <p data-en="Find out before you even meet. Pick the most suitable candidates and spend your time only on those who match your expectations.">Sužinok tai dar prieš susitikimą. Atsirink tinkamiausius kandidatus ir skirk laiką tik tiems, kurie atitinka tavo lūkesčius.</p>
       </div>
       <div class="feature-visual">
-        <div class="ui-card ui-candidates">
-          <p class="ui-candidates-label" data-en="Screened candidates">Patikrinti kandidatai</p>
-          <div class="ui-candidate ui-candidate-ok">
-            <span class="ui-candidate-name">G. Kazlauskas</span>
-            <i class="ti ti-circle-check ui-candidate-icon" aria-hidden="true"></i>
+        <div class="ui-card ha-card" id="feat-anim">
+          <p class="ha-label" data-en="Candidates">Kandidatai <span class="ha-count" id="ha-count">0 paraiškos</span></p>
+
+          <div class="ha-cand" id="ha-c0">
+            <div class="ha-cand-top">
+              <span class="ha-cand-name"><i class="ti ti-circle-check ha-verdict" aria-hidden="true"></i>G. Kazlauskas</span>
+              <button class="ha-chk" id="ha-chk0" type="button" tabindex="-1"><i class="ti ti-shield-search" aria-hidden="true"></i><span data-en="Screen">Tikrinti</span></button>
+            </div>
+            <button class="ha-view" id="ha-view0" type="button" tabindex="-1"><i class="ti ti-calendar-plus" aria-hidden="true"></i><span data-en="Offer viewing">Siūlyti apžiūrą</span></button>
           </div>
-          <div class="ui-candidate ui-candidate-ok">
-            <span class="ui-candidate-name">M. Petrauskas</span>
-            <i class="ti ti-circle-check ui-candidate-icon" aria-hidden="true"></i>
+
+          <div class="ha-cand" id="ha-c1">
+            <div class="ha-cand-top">
+              <span class="ha-cand-name"><i class="ti ti-circle-x ha-verdict" aria-hidden="true"></i>M. Petrauskas</span>
+              <button class="ha-chk" id="ha-chk1" type="button" tabindex="-1"><i class="ti ti-shield-search" aria-hidden="true"></i><span data-en="Screen">Tikrinti</span></button>
+            </div>
           </div>
-          <div class="ui-candidate ui-candidate-bad">
-            <span class="ui-candidate-name">J. Jonaitis</span>
-            <i class="ti ti-circle-x ui-candidate-icon" aria-hidden="true"></i>
+
+          <div class="ha-cand" id="ha-c2">
+            <div class="ha-cand-top">
+              <span class="ha-cand-name"><i class="ti ti-circle-check ha-verdict" aria-hidden="true"></i>J. Jonaitis</span>
+              <button class="ha-chk" id="ha-chk2" type="button" tabindex="-1"><i class="ti ti-shield-search" aria-hidden="true"></i><span data-en="Screen">Tikrinti</span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -201,11 +228,11 @@
 
     <div class="feature-row flip">
       <div class="feature-copy">
-        <h3 data-en="Viewing times without the back-and-forth">Apžiūros laikas be derybų</h3>
-        <p data-en="Mark when you can show the place, and tenants pick a time that suits them. No more wasting evenings messaging and arranging each viewing separately.">Pažymėk, kada gali aprodyti būstą, o kandidatai patys pasirinks jiems tinkamą laiką. Nebereikės gaišti rašinėjant ir derinant kiekvieną apžiūrą atskirai.</p>
+        <h3 data-en="Stop wasting time coordinating every viewing.">Nebegaįšk laiko derindamas kiekvieną apžiūrą.</h3>
+        <p data-en="Mark when you can show the place, and candidates pick a time that suits them. No long back-and-forth or coordinating.">Pažymėk, kada gali aprodyti būstą, o kandidatai patys pasirinks tinkamą laiką. Jokių ilgų susirašinėjimų ar derinimų.</p>
       </div>
       <div class="feature-visual">
-        <div class="ui-card ui-card-calendar">
+        <div class="ui-card ui-card-calendar" id="anim-cal">
           <div class="ui-cal-header">
             <span class="ui-cal-title">2 k. butas, Žirmūnai</span>
             <i class="ui-cal-icon"></i>
@@ -220,9 +247,9 @@
             <span class="ui-cal-dow">Št</span>
             <span class="ui-cal-dow">Sk</span>
 
-            <span class="ui-cal-day ui-cal-day-available">22</span>
-            <span class="ui-cal-day ui-cal-day-selected">23</span>
-            <span class="ui-cal-day ui-cal-day-available">24</span>
+            <span class="ui-cal-day ui-cal-day-available" data-cal="d22">22</span>
+            <span class="ui-cal-day ui-cal-day-selected" data-cal="d23">23</span>
+            <span class="ui-cal-day ui-cal-day-available" data-cal="d24">24</span>
             <span class="ui-cal-day">25</span>
             <span class="ui-cal-day">26</span>
             <span class="ui-cal-day">27</span>
@@ -232,14 +259,18 @@
           <p class="ui-cal-date-label" data-en="Tuesday, June 23" data-lt="Antradienis, birželio 23">Antradienis, birželio 23</p>
 
           <div class="ui-cal-slots">
-            <span class="ui-cal-slot">09:00</span>
-            <span class="ui-cal-slot ui-cal-slot-selected">10:00</span>
-            <span class="ui-cal-slot">15:00</span>
+            <span class="ui-cal-slot" data-cal="s0">09:00</span>
+            <span class="ui-cal-slot ui-cal-slot-selected" data-cal="s1">10:00</span>
+            <span class="ui-cal-slot" data-cal="s2">15:00</span>
           </div>
 
-          <div class="ui-confirm-badge">
-            <span class="ui-confirm-dot"></span>
-            <span data-en="Tue 23, 10:00 — confirmed" data-lt="An. 23 d., 10:00 – patvirtinta">An. 23 d., 10:00 – patvirtinta</span>
+          <div class="ui-cal-footer">
+            <button class="ui-confirm-btn" id="cal-confirm-btn" type="button" tabindex="-1"><i class="ti ti-check" aria-hidden="true"></i><span data-en="Confirm viewing" data-lt="Patvirtinti apžiūrą">Patvirtinti apžiūrą</span></button>
+
+            <div class="ui-confirm-badge" id="cal-confirm-badge">
+              <span class="ui-confirm-dot"></span>
+              <span data-en="Tue 23, 10:00 — confirmed" data-lt="An. 23 d., 10:00 – patvirtinta">An. 23 d., 10:00 – patvirtinta</span>
+            </div>
           </div>
         </div>
       </div>
@@ -247,33 +278,54 @@
 
     <div class="feature-row">
       <div class="feature-copy">
-        <h3 data-en="Custom e-lease">Individuali el. sutartis</h3>
-        <p data-en="We'll prepare a custom lease agreement that you sign online in minutes — no paper, no notary.">Parengsime individualią nuomos sutartį, kurią per kelias minutes, kartu su nuomininku, pasirašysite internetu.</p>
+        <h3 data-en="No more hunting for a lease template online.">Nebeieškok nuomos sutarties internete.</h3>
+        <p data-en="We'll prepare a custom lease based on your rental terms. You and your tenant can sign it online in minutes.">Parengsime individualią nuomos sutartį pagal tavo nuomos sąlygas. Ją kartu su nuomininku galėsi per kelias minutes pasirašyti internetu.</p>
       </div>
       <div class="feature-visual">
-        <div class="ui-card ui-contract">
+        <div class="ui-card ui-contract" id="anim-contract">
           <div class="ui-contract-head">
             <span class="ui-contract-icon"><i class="ti ti-file-text" aria-hidden="true"></i></span>
             <span class="ui-card-title" data-en="Lease agreement">Nuomos sutartis</span>
           </div>
 
-          <div class="ui-contract-file">
-            <div class="ui-contract-file-left">
-              <i class="ti ti-file-type-pdf ui-pdf-icon" aria-hidden="true"></i>
-              <div>
-                <p class="ui-pdf-name">sutartis.pdf</p>
-                <p class="ui-pdf-meta" data-en="PDF · 4 pages">PDF · 4 psl.</p>
+          <div class="ui-contract-stage" id="contract-stage">
+            <div class="ui-doc-write" id="contract-doc">
+              <p class="ui-doc-h">Nuomos sutartis Nr. 2026/06</p>
+              <span class="ui-doc-rule"></span>
+              <span class="ui-doc-line ui-doc-seq"></span>
+              <span class="ui-doc-line ui-doc-seq"></span>
+              <span class="ui-doc-line ui-doc-seq ui-doc-line-mid"></span>
+              <span class="ui-doc-line ui-doc-seq"></span>
+              <span class="ui-doc-line ui-doc-seq"></span>
+              <span class="ui-doc-line ui-doc-seq ui-doc-line-short"></span>
+              <span class="ui-doc-line ui-doc-seq"></span>
+            </div>
+            <i class="ti ti-arrow-down ui-doc-pull" id="contract-pull" aria-hidden="true"></i>
+            <div class="ui-contract-file" id="contract-pdf">
+              <div class="ui-contract-file-top">
+                <div class="ui-contract-file-left">
+                  <i class="ti ti-file-type-pdf ui-pdf-icon" aria-hidden="true"></i>
+                  <div>
+                    <p class="ui-pdf-name">nuomos-sutartis.pdf</p>
+                    <p class="ui-pdf-meta" data-en="PDF · 4 pages">PDF · 4 psl.</p>
+                  </div>
+                </div>
+                <i class="ti ti-download ui-pdf-download" aria-hidden="true"></i>
+              </div>
+              <div class="ui-pdf-preview">
+                <span class="ui-pdf-pv-line"></span>
+                <span class="ui-pdf-pv-line"></span>
+                <span class="ui-pdf-pv-line ui-pdf-pv-short"></span>
               </div>
             </div>
-            <i class="ti ti-download ui-pdf-download" aria-hidden="true"></i>
           </div>
 
           <div class="ui-sign-list">
-            <div class="ui-sign-item">
+            <div class="ui-sign-item" data-sign="s0">
               <span class="ui-sign-who"><i class="ti ti-circle-check" aria-hidden="true"></i><span data-en="Landlord">Nuomotojas</span></span>
               <span class="ui-sign-status" data-en="Signed">Pasirašyta</span>
             </div>
-            <div class="ui-sign-item">
+            <div class="ui-sign-item" data-sign="s1">
               <span class="ui-sign-who"><i class="ti ti-circle-check" aria-hidden="true"></i><span data-en="Tenant G. K.">Nuomininkas G. K.</span></span>
               <span class="ui-sign-status" data-en="Signed">Pasirašyta</span>
             </div>
@@ -326,36 +378,24 @@
     </div>
     <div class="faq-list">
       <details class="faq-item" open="">
-        <summary><span data-en="Does joining the waitlist commit me to anything?">Ar registracija į laukiančiųjų sąrašą mane kažkam įpareigoja?</span><span class="faq-chevron"></span></summary>
-        <p data-en="No. An email address is all it takes — no contracts or payments are tied to signing up, and you can opt out at any time.">Ne. Užtenka el. pašto adreso. Jokių sutarčių ar mokėjimų, o iš sąrašo gali pasitraukti bet kada.</p>
+        <summary><span data-en="Does joining the waitlist commit me to anything?">Ar prisijungimas prie laukiančiųjų sąrašo mane kažkam įpareigoja?</span><span class="faq-chevron"></span></summary>
+        <p data-en="No. Signing up costs nothing and doesn't oblige you to use the platform. We'll simply let you know when „Nuomity“ is ready for its first users.">Ne. Registracija nieko nekainuoja ir neįpareigoja naudotis platforma. Tiesiog informuosime, kai „Nuomity“ bus pasiruošusi pirmiesiems naudotojams.</p>
       </details>
       <details class="faq-item">
-        <summary><span data-en="Why do I need „Nuomity“ if I already rent out without major problems?">Kodėl man reikia „Nuomity“, jei ir taip nuomoju be didelių problemų?</span><span class="faq-chevron"></span></summary>
-        <p data-en="Without a tool, you pick a tenant on first impression, knowing nothing about their solvency. „Nuomity“ lets you choose which candidates to screen and prepares a legally binding electronic lease that protects both parties.">Be įrankio nuomininką renkiesi pagal pirmą įspūdį, nieko nežinodamas apie jo mokumą. Su „Nuomity“ pats pasirenki, ką tikrinti, o sutartį pasirašai teisiškai ir saugiai.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span data-en="How is this different from a broker or listing groups?">Kuo tai skiriasi nuo brokerio ar skelbimų grupių?</span><span class="faq-chevron"></span></summary>
-        <p data-en="A broker does the process by hand; in listing groups you have to collect and assess applications yourself, with no solvency check. „Nuomity“ automates the solvency check and lease signing that you'd otherwise do yourself or hand off to a broker.">Brokeris viską daro rankomis, o grupėse paraiškas renki ir vertini pats, mokumo niekas netikrina. „Nuomity“ tą patikrą ir sutarties pasirašymą atlieka už tave.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span data-en="Is „Nuomity“ already live, or is it still an idea?">Ar „Nuomity“ jau veikia, ar tai dar idėja?</span><span class="faq-chevron"></span></summary>
-        <p data-en="The product is currently in development. Waitlist members will be the first to get access once it's ready.">Kol kas dar kuriame. Laukiančiųjų sąrašo nariai prieigą gaus pirmieji.</p>
+        <summary><span data-en="Why use „Nuomity“ if the rental process already works?">Kodėl verta naudoti „Nuomity“, jei nuomos procesas ir dabar veikia?</span><span class="faq-chevron"></span></summary>
+        <p data-en="Even if renting works today, it's often based on guesswork. With „Nuomity“ you can check a candidate's solvency, securely sign an electronic lease, and manage the whole rental process in one place.">Net jei šiandien nuomos procesas veikia, jis dažnai paremtas spėjimais. Su „Nuomity“ galite patikrinti kandidato mokumą, saugiai pasirašyti elektroninę sutartį ir visą nuomos procesą valdyti vienoje vietoje.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="When will I be able to start using „Nuomity“?">Kada galėsiu pradėti naudotis „Nuomity“?</span><span class="faq-chevron"></span></summary>
-        <p data-en="We're not announcing a specific date publicly yet, but we're actively working to have the product ready as soon as possible. Waitlist members will be informed first.">Tikslios datos dar neskelbiame, bet dirbame, kad paleistume kuo greičiau. Apie startą pirmiausia pranešime sąrašo nariams.</p>
+        <p data-en="We're currently building the first version of the platform. Waitlist members will be the first to try it.">Šiuo metu kuriame pirmąją platformos versiją. Užsiregistravę laukiančiųjų sąraše būsite pirmieji, kurie galės ją išbandyti.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="What do I gain by signing up now instead of waiting for launch?">Kokia man nauda užsiregistruoti dabar, o ne produktui startavus?</span><span class="faq-chevron"></span></summary>
-        <p data-en="The first 50 members get early access to the product and a say in which features matter most.">Pirmieji 50 gauna ankstyvą prieigą ir gali nulemti, kokias funkcijas kursime toliau.</p>
+        <p data-en="The first 50 to join get early access to the platform. We'll also invite you to try new features sooner and take your suggestions into account as we keep developing „Nuomity“.">Pirmieji 50 prisijungusių gaus ankstyvą prieigą prie platformos. Taip pat kviesime jus išbandyti naujas funkcijas anksčiau ir atsižvelgsime į jūsų pasiūlymus toliau vystydami „Nuomity“.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="How is a tenant's solvency checked, and how much can I trust it?">Kaip tikrinamas kandidato mokumas ir kiek tuo galima pasitikėti?</span><span class="faq-chevron"></span></summary>
-        <p data-en="The check is carried out through a professional credit information provider used by banks and financial institutions in Lithuania. You choose which candidate to order a check for; identity, income and debt history are verified.">Mokumą tikriname per tą patį kredito informacijos teikėją, kuriuo pasitiki bankai. Pasirenki, kuriuos kandidatus tikrinti, o mes įvertiname jų pajamas ir skolų istoriją.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span data-en="Does an electronic lease have the same legal force as a paper one?">Ar elektroninė sutartis turi tokią pat teisinę galią kaip popierinė?</span><span class="faq-chevron"></span></summary>
-        <p data-en="Yes. An electronic signature that meets EU regulation requirements is legally equivalent to a handwritten signature, including for lease agreements.">Taip. ES reikalavimus atitinkantis elektroninis parašas teisiškai prilygsta parašui ranka, taip pat ir nuomos sutartyse.</p>
+        <p data-en="Candidate solvency is checked through a trusted credit information provider. You choose which candidates to screen, and before deciding you can see information about their income and credit history.">Kandidatų mokumas tikrinamas per patikimą kredito informacijos teikėją. Patys pasirenkate, kuriuos kandidatus tikrinti, o prieš priimdami sprendimą matote informaciją apie jų pajamas ir kredito istoriją.</p>
       </details>
     </div>
   </div>
@@ -371,7 +411,23 @@
         <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
       </form>
       <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
+      <p class="waitlist-consent" data-en='By submitting you agree to the <a href="/privatumo-politika/">privacy policy</a>.'>Spausdamas sutinki su <a href="/privatumo-politika/">privatumo politika</a>.</p>
       <p class="waitlist-success" data-en="Thanks! You're on the waitlist.">Ačiū! Tu esi laukiančiųjų sąraše.</p>
+
+      <!-- Share block: part of the CTA card -->
+      <div class="share-card share-in-cta">
+      <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam Nuomity būtų naudinga?</p>
+      <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
+      <div class="share-actions">
+        <button type="button" class="share-native" id="share-native" data-en="Share Nuomity"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink Nuomity</button>
+        <div class="share-buttons" id="share-buttons">
+          <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          <a class="share-btn" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <a class="share-btn" id="share-email" href="#" aria-label="El. paštas"><i class="ti ti-mail" aria-hidden="true"></i></a>
+          <button type="button" class="share-btn share-copy" id="share-copy"><i class="ti ti-link" aria-hidden="true"></i><span data-en="Copy link">Kopijuoti nuorodą</span></button>
+        </div>
+      </div>
+      </div>
     </div>
   </div>
 </section>
@@ -381,14 +437,22 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" data-en="Team">Komanda</span>
-      <h2 data-en="Meet the team">Susipažinkime</h2>
     </div>
+
+    <div class="founder-story">
+      <div class="founder-story-body">
+        <p class="founder-story-open" data-en="„Nuomity“ started from personal experience.">„Nuomity“ prasidėjo nuo asmeninės patirties.</p>
+        <p data-en="We were tenants ourselves more than once, so we saw up close how many needless problems the rental process itself creates. Unclear contracts, endless messaging, deposit disputes and constant mistrust hurt not only tenants but landlords too.">Patys ne kartą buvome nuomininkų vietoje, todėl iš arti pamatėme, kiek daug nereikalingų problemų sukuria pats nuomos procesas. Neaiškios sutartys, ilgi susirašinėjimai, ginčai dėl užstato ir nuolatinis nepasitikėjimas kenkia ne tik nuomininkams, bet ir nuomotojams.</p>
+        <p data-en="We realised the problem isn't people, but outdated processes. So we're building „Nuomity“ — a platform that helps make renting simpler, clearer and safer for both sides.">Supratome, kad problema slypi ne žmonėse, o pasenusiuose procesuose. Todėl kuriame „Nuomity“ – platformą, kuri padeda nuomos procesą padaryti paprastesnį, aiškesnį ir saugesnį abiem pusėms.</p>
+      </div>
+    </div>
+
     <div class="team-row team-row-reverse">
       <div class="team-photo-wrap"><img class="team-photo" src="team/dmitrijus_photo.jpg" alt="Dmitrijus Kirjanovas" /></div>
       <div class="team-info">
         <p class="team-name">Dmitrijus Kirjanovas</p>
         <p class="team-role" data-en="Sales, strategy, partnerships" data-lt="Pardavimai, strategija, partnerystės">Pardavimai, strategija, partnerystės</p>
-        <p class="team-bio" data-en="I want the complex rental journey from many candidate conversations to a secure signed lease to become one simple, accessible experience for everyone." data-lt="Siekiu, kad sudėtingas nuomos kelias, nuo pokalbių su kandidatais iki saugios sutarties pasirašymo, taptų viena paprasta ir visiems prieinama patirtimi.">Siekiu, kad sudėtingas nuomos kelias, nuo pokalbių su kandidatais iki saugios sutarties pasirašymo, taptų viena paprasta ir visiems prieinama patirtimi.</p>
+        <p class="team-bio" data-en="For more than 7 years I've worked in finance and business processes. I apply that experience to building „Nuomity“ so the rental process is simple, secure and convenient." data-lt="Daugiau nei 7 metus dirbu finansų ir verslo procesų srityje. Šią patirtį pritaikau kurdamas „Nuomity“, kad nuomos procesas būtų paprastas, saugus ir patogus.">Daugiau nei 7 metus dirbu finansų ir verslo procesų srityje. Šią patirtį pritaikau kurdamas „Nuomity“, kad nuomos procesas būtų paprastas, saugus ir patogus.</p>
         <a class="team-linkedin" href="https://www.linkedin.com/in/dmitrijus-kirjanovas-322b801a4/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
       </div>
     </div>
@@ -398,7 +462,7 @@
       <div class="team-info">
         <p class="team-name">Edvin Dičkanec</p>
         <p class="team-role" data-en="Software, product" data-lt="Programinė įranga, produktas">Programinė įranga, produktas</p>
-        <p class="team-bio" data-en="I build the technical platform so every application and contract reaches its goal without friction." data-lt="Kuriu techninę platformos dalį, siekdamas, kad kiekviena paraiška ir sutartis pasiektų klientus be jokių trikdžių.">Kuriu techninę platformos dalį, siekdamas, kad kiekviena paraiška ir sutartis pasiektų klientus be jokių trikdžių.</p>
+        <p class="team-bio" data-en="I'm a software engineer with over 6 years building reliable backend systems. At „Nuomity“ I'm responsible for the platform's technical side, so every application and contract works fast, securely and without glitches." data-lt="Esu programinės įrangos inžinierius, jau virš 6 metų kuriantis patikimas backend sistemas. „Nuomity“ atsakingas už techninę platformos dalį, kad kiekviena paraiška ir sutartis veiktų greitai, saugiai ir be trikdžių.">Esu programinės įrangos inžinierius, jau virš 6 metų kuriantis patikimas backend sistemas. „Nuomity“ atsakingas už techninę platformos dalį, kad kiekviena paraiška ir sutartis veiktų greitai, saugiai ir be trikdžių.</p>
         <a class="team-linkedin" href="https://www.linkedin.com/in/edvin-dichkanec/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
       </div>
     </div>
@@ -420,7 +484,7 @@
     <div class="footer-meta">
       <span>© 2026 Nuomity</span>
     </div>
-    <a class="footer-email" href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
+    <a class="footer-email" href="/cdn-cgi/l/email-protection#d0bcb1b2b1a390bea5bfbdb9a4a9febca4"><span class="__cf_email__" data-cfemail="214d40434052614f544e4c4855580f4d55">[email&#160;protected]</span></a>
   </div>
 </footer>
 
@@ -433,7 +497,7 @@
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   /* =====================================================================
      WAITLIST FORM — sends email to Cloudflare Worker, which adds the
      contact to Brevo and triggers the confirmation email.
@@ -519,6 +583,410 @@
     });
   })();
 
+  /* ---------- Waitlist counter ----------
+     Fetches real registrant count from the Worker's /count endpoint.
+     Behaviour: hidden while count < 15; 15-49 shows "X vietų iš 50" + progress;
+     >= 50 shows a plain "50+" count. Any failure => stays hidden (page unaffected).
+     NOTE: requires a GET /count route on the Worker returning { count: <int> } from Brevo.
+  */
+  (function () {
+    var TOTAL = 50, SHOW_FROM = 15;
+    var el = document.getElementById('wl-counter');
+    if (!el) return;
+    var lead = document.getElementById('wl-counter-lead');
+    var meta = document.getElementById('wl-counter-meta');
+    var fill = document.getElementById('wl-counter-fill');
+    var bar = el.querySelector('.wl-counter-bar');
+
+    function isEn() { return document.documentElement.lang === 'en'; }
+
+    function render(count) {
+      if (typeof count !== 'number' || count < SHOW_FROM) { el.hidden = true; return; }
+      if (count >= TOTAL) {
+        lead.textContent = isEn() ? TOTAL + '+ landlords already on the list' : TOTAL + '+ nuomotojų jau sąraše';
+        meta.textContent = '';
+        if (bar) bar.style.display = 'none';
+      } else {
+        var left = TOTAL - count;
+        lead.innerHTML = isEn()
+          ? '<b>' + left + '</b> of ' + TOTAL + ' early-access spots left'
+          : 'Liko <b>' + left + '</b> vietų iš ' + TOTAL;
+        meta.textContent = isEn() ? count + ' taken' : count + ' užimta';
+        if (bar) bar.style.display = '';
+        fill.style.width = Math.round((count / TOTAL) * 100) + '%';
+      }
+      el.hidden = false;
+    }
+
+    fetch(WORKER_ENDPOINT.replace(/\/?$/, '/') + 'count', { method: 'GET' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (d && typeof d.count === 'number') render(d.count); })
+      .catch(function () { /* stay hidden */ });
+  })();
+
+  /* ---------- Hero word-rise ----------
+     "Nuoma be" stays fixed; the second line rotates words. Letters rise
+     in from the bottom starting at the front (left->right); when leaving,
+     letters rise out through the top starting at the back (right->left).
+     prefers-reduced-motion => static first word, no motion.
+  */
+  (function () {
+    var el = document.getElementById('hero-rise-word');
+    if (!el) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var sets = {
+      lt: ['brokerio', 'rūpesčių', 'staigmenų', 'sumaišties'],
+      en: ['a broker', 'the worry', 'surprises', 'confusion']
+    };
+    var IN_STEP = 32, OUT_STEP = 30, IN_DUR = 500, OUT_DUR = 420, HOLD = 2600;
+    var i = 0, busy = false, timer = null;
+    function curLang() { return document.documentElement.lang === 'en' ? 'en' : 'lt'; }
+
+    function renderIn(w) {
+      el.innerHTML = '';
+      w.split('').forEach(function (c, idx) {
+        var s = document.createElement('span');
+        s.className = 'rise-ch rise-in';
+        s.textContent = c;
+        s.style.animationDelay = (idx * IN_STEP) + 'ms';
+        el.appendChild(s);
+      });
+    }
+
+    function transition() {
+      if (busy) return;
+      busy = true;
+      var chars = el.querySelectorAll('.rise-ch');
+      var n = chars.length;
+      chars.forEach(function (s, idx) {
+        s.className = 'rise-ch rise-out';
+        s.style.animationDelay = ((n - 1 - idx) * OUT_STEP) + 'ms';
+      });
+      var exitTime = (n - 1) * OUT_STEP + OUT_DUR;
+      setTimeout(function () {
+        var words = sets[curLang()];
+        i = (i + 1) % words.length;
+        renderIn(words[i]);
+        busy = false;
+      }, exitTime);
+    }
+
+    function start() {
+      renderIn(sets[curLang()][i]);
+      timer = setInterval(transition, HOLD);
+    }
+
+    window.restartTypewriter = function (lang) {
+      if (timer) { clearInterval(timer); timer = null; }
+      busy = false;
+      var words = sets[lang === 'en' ? 'en' : 'lt'];
+      if (i >= words.length) i = 0;
+      if (reduce) { el.textContent = words[i]; return; }
+      renderIn(words[i]);
+      timer = setInterval(transition, HOLD);
+    };
+
+    if (reduce) { el.textContent = sets[curLang()][0]; }
+    else { setTimeout(start, 700); }
+  })();
+
+  /* ---------- Animation queue controller ----------
+     Features become visible close together (same section), which would
+     otherwise fire all their animations at once. This controller lets
+     each animation register instead of self-triggering: when an element
+     scrolls into view it joins a queue, and the controller plays them
+     one at a time in document order with a gap, so the page stays calm.
+  */
+  var AnimQueue = (function () {
+    var queue = [];
+    var running = false;
+    var pumpScheduled = false;
+    var GAP = 650;       // ms between the start of one animation and the next
+    var COLLECT = 120;   // ms window to gather near-simultaneous entries before first play
+
+    function doPump() {
+      pumpScheduled = false;
+      if (running || queue.length === 0) return;
+      running = true;
+      queue.sort(function (a, b) { return a.top - b.top; });
+      var next = queue.shift();
+      next.run();
+      setTimeout(function () { running = false; doPump(); }, GAP);
+    }
+
+    function pump() {
+      if (running) return;
+      if (!pumpScheduled) {
+        pumpScheduled = true;
+        setTimeout(doPump, COLLECT);
+      }
+    }
+
+    return {
+      register: function (el, run, threshold) {
+        var fired = false;
+        var io = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting && !fired) {
+            fired = true;
+            io.disconnect();
+            queue.push({ el: el, run: run, top: el.getBoundingClientRect().top + window.scrollY });
+            pump();
+          }
+        }, { threshold: threshold || 0.4 });
+        io.observe(el);
+      }
+    };
+  })();
+
+  /* ---------- Feature 1: candidate screening animation ----------
+     Plays once when feature 1 scrolls into view, then buttons remain
+     interactive. Respects prefers-reduced-motion: users with motion
+     disabled see the final state instantly.
+  */
+  (function () {
+    var anim = document.getElementById('feat-anim');
+    if (!anim) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timers = [];
+
+    function clear() { timers.forEach(clearTimeout); timers = []; }
+    function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
+
+    var countEl = document.getElementById('ha-count');
+    var counts = { lt: ['0 paraiškos','1 paraiška','2 paraiškos','3 paraiškos'], en: ['0 applications','1 application','2 applications','3 applications'] };
+    function lang() { return document.documentElement.lang === 'en' ? 'en' : 'lt'; }
+
+    function resetState() {
+      clear();
+      ['ha-c0','ha-c1','ha-c2'].forEach(function (id) {
+        var c = document.getElementById(id); c.className = 'ha-cand';
+      });
+      var screenLabel = lang() === 'en' ? 'Screen' : 'Tikrinti';
+      ['ha-chk0','ha-chk1','ha-chk2'].forEach(function (id) {
+        var b = document.getElementById(id); b.classList.remove('gone', 'checking');
+        b.innerHTML = '<i class="ti ti-shield-search" aria-hidden="true"></i>' + screenLabel;
+      });
+      var vb = document.getElementById('ha-view0'); if (vb) vb.classList.remove('show');
+      if (countEl) countEl.textContent = counts[lang()][0];
+    }
+
+    function verdictState() {
+      clear();
+      ['ha-c0','ha-c1','ha-c2'].forEach(function (id) { document.getElementById(id).classList.add('in'); });
+      document.getElementById('ha-c0').className = 'ha-cand in ok';
+      document.getElementById('ha-c1').className = 'ha-cand in bad';
+      document.getElementById('ha-chk0').classList.add('gone');
+      document.getElementById('ha-chk1').classList.add('gone');
+      document.getElementById('ha-view0').classList.add('show');
+      if (countEl) countEl.textContent = counts[lang()][3];
+    }
+
+    function setChecking(id) {
+      var b = document.getElementById(id);
+      var checkingLabel = lang() === 'en' ? 'Screening' : 'Tikrinama';
+      b.innerHTML = '<i class="ti ti-loader-2 ha-spin" aria-hidden="true"></i>' + checkingLabel;
+      document.getElementById(id.replace('ha-chk','ha-c')).classList.add('checking');
+    }
+
+    function play() {
+      resetState();
+      if (reduce) { verdictState(); return; }
+      var c = counts[lang()];
+      ['ha-c0','ha-c1','ha-c2'].forEach(function (id, i) {
+        at(400 + i * 350, function () {
+          document.getElementById(id).classList.add('in');
+          if (countEl) countEl.textContent = c[i + 1];
+        });
+      });
+      at(1700, function () { setChecking('ha-chk0'); });
+      at(2300, function () {
+        document.getElementById('ha-c0').className = 'ha-cand in ok';
+        document.getElementById('ha-chk0').classList.add('gone');
+        document.getElementById('ha-view0').classList.add('show');
+      });
+      at(3300, function () { setChecking('ha-chk1'); });
+      at(3900, function () {
+        document.getElementById('ha-c1').className = 'ha-cand in bad';
+        document.getElementById('ha-chk1').classList.add('gone');
+      });
+    }
+
+    // Interactive: clicking a candidate's "Tikrinti" screens just that one.
+    var verdicts = { 'ha-chk0': 'ok', 'ha-chk1': 'bad', 'ha-chk2': 'ok' };
+    ['ha-chk0','ha-chk1','ha-chk2'].forEach(function (id) {
+      document.getElementById(id).addEventListener('click', function () {
+        clear();
+        var cid = id.replace('ha-chk','ha-c');
+        setChecking(id);
+        setTimeout(function () {
+          document.getElementById(cid).className = 'ha-cand in ' + verdicts[id];
+          document.getElementById(id).classList.add('gone');
+          if (verdicts[id] === 'ok') {
+            var vb = document.getElementById(cid.replace('ha-c', 'ha-view'));
+            if (vb) vb.classList.add('show');
+          }
+        }, reduce ? 0 : 700);
+      });
+    });
+
+    if (reduce) { verdictState(); return; }
+    AnimQueue.register(anim, play, 0.35);
+  })();
+
+  /* ---------- Feature 2: viewing calendar animation ----------
+     Available days light up (landlord sets times), a slot is picked,
+     a "Patvirtinti" button appears and is pressed, becoming the
+     confirmed badge. Plays once on scroll-in. Reduced motion => final.
+  */
+  (function () {
+    var card = document.getElementById('anim-cal');
+    if (!card) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var q = function (sel) { return card.querySelector(sel); };
+    var timers = [];
+    var at = function (ms, fn) { timers.push(setTimeout(fn, ms)); };
+
+    if (reduce) return;
+    card.classList.add('anim-armed');
+
+    function play() {
+      var d22 = q('[data-cal="d22"]'), d23 = q('[data-cal="d23"]'), d24 = q('[data-cal="d24"]');
+      var s1 = q('[data-cal="s1"]');
+      var btn = document.getElementById('cal-confirm-btn');
+      var badge = document.getElementById('cal-confirm-badge');
+
+      // 1) only the top bar shows; then the grid fades in
+      at(400, function () { card.classList.add('cal-reveal-grid'); });
+      // 2) 22, 23, 24 become the accent (available) colour, in order
+      at(850, function () { d22.classList.add('cal-lit'); });
+      at(1050, function () { d23.classList.add('cal-lit'); });
+      at(1250, function () { d24.classList.add('cal-lit'); });
+      // 3) press on 23 -> darker selected colour, and the slots appear (accent)
+      at(1650, function () { d23.classList.add('cal-press'); card.classList.add('cal-reveal-slots'); });
+      at(1800, function () { d23.classList.remove('cal-press'); d23.classList.add('cal-selected'); });
+      // 4) press on 10:00 -> darkens
+      at(2350, function () { s1.classList.add('cal-press'); });
+      at(2510, function () { s1.classList.remove('cal-press'); s1.classList.add('cal-slot-selected'); });
+      // 5) confirm button appears, is pressed (held a beat so it reads), becomes the confirmed badge
+      at(3050, function () { btn.classList.add('cal-btn-show'); });
+      at(3950, function () { btn.classList.add('cal-btn-press'); });
+      at(4450, function () { btn.classList.remove('cal-btn-show', 'cal-btn-press'); badge.classList.add('cal-badge-show'); card.classList.remove('anim-armed'); });
+    }
+
+    AnimQueue.register(card, play, 0.4);
+  })();
+
+  /* ---------- Feature 3: contract animation ----------
+     Text writes in line by line, the document is sucked into a
+     nuomos-sutartis.pdf card that fills the space, then both parties
+     sign in sequence. Reduced motion => final signed state.
+  */
+  (function () {
+    var card = document.getElementById('anim-contract');
+    if (!card) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timers = [];
+    var at = function (ms, fn) { timers.push(setTimeout(fn, ms)); };
+
+    if (reduce) return;
+    card.classList.add('anim-armed');
+
+    function statusEl(sign) { return sign.querySelector('.ui-sign-status'); }
+    function setWaiting(sign) { statusEl(sign).textContent = document.documentElement.lang === 'en' ? 'Pending' : 'Laukiama'; }
+    function setLoading(sign) { statusEl(sign).innerHTML = '<i class="ti ti-loader-2 ui-sign-spin" aria-hidden="true"></i>'; }
+    function setSigned(sign) {
+      statusEl(sign).textContent = document.documentElement.lang === 'en' ? 'Signed' : 'Pasirašyta';
+      sign.classList.add('sign-done');
+    }
+
+    function play() {
+      var doc = document.getElementById('contract-doc');
+      var pull = document.getElementById('contract-pull');
+      var pdf = document.getElementById('contract-pdf');
+      var stage = document.getElementById('contract-stage');
+      var h = doc.querySelector('.ui-doc-h');
+      var rule = doc.querySelector('.ui-doc-rule');
+      var lines = doc.querySelectorAll('.ui-doc-line');
+      var signs = card.querySelectorAll('.ui-sign-item');
+
+      signs.forEach(setWaiting);
+
+      // Title appears first, a rule draws under it, then the body lines are
+      // "written" one after another with a caret riding the active line.
+      at(250, function () { h.classList.add('doc-in'); });
+      at(600, function () { rule.classList.add('doc-in'); });
+      var t = 950, step = 190;
+      lines.forEach(function (l) {
+        var d = t;
+        at(d, function () {
+          lines.forEach(function (x) { x.classList.remove('line-active'); });
+          l.classList.add('line-active');
+          l.classList.add('doc-in');
+        });
+        t += step;
+      });
+      at(t + 250, function () { lines.forEach(function (x) { x.classList.remove('line-active'); }); });
+
+      // Finished document is pulled into the compact PDF card
+      var suckAt = t + 500;
+      at(suckAt, function () { doc.classList.add('doc-suck'); pull.classList.add('pull-go'); });
+      at(suckAt + 320, function () { pdf.classList.add('pdf-show'); stage.classList.add('stage-collapsed'); });
+
+      // Both parties sign in sequence — each tick only lights up when signed
+      var s = suckAt + 1200;
+      at(s, function () { signs[0].classList.add('sign-reveal'); });
+      at(s + 180, function () { signs[1].classList.add('sign-reveal'); });
+      at(s + 650, function () { setLoading(signs[0]); });
+      at(s + 1350, function () { setSigned(signs[0]); });
+      at(s + 2050, function () { setLoading(signs[1]); });
+      at(s + 2750, function () { setSigned(signs[1]); card.classList.remove('anim-armed'); });
+    }
+
+    AnimQueue.register(card, play, 0.4);
+  })();
+
+  /* ---------- Share ---------- */
+  (function () {
+    var SHARE_URL = 'https://nuomity.lt/';
+    var SHARE_TITLE = 'Nuomity';
+    var SHARE_TEXT_LT = 'Nuoma be brokerio. Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.';
+    var SHARE_TEXT_EN = 'Rent without a broker. Collect applications, screen tenants, sign the lease.';
+    function text() { return document.documentElement.lang === 'en' ? SHARE_TEXT_EN : SHARE_TEXT_LT; }
+    function u(src) { return SHARE_URL + '?utm_source=' + src + '&utm_medium=share'; }
+
+    var nativeBtn = document.getElementById('share-native');
+    var buttons = document.getElementById('share-buttons');
+    var li = document.getElementById('share-linkedin');
+    var fb = document.getElementById('share-facebook');
+    var mail = document.getElementById('share-email');
+    var copy = document.getElementById('share-copy');
+
+    if (navigator.share && nativeBtn) {
+      nativeBtn.hidden = false;
+      nativeBtn.addEventListener('click', function () {
+        navigator.share({ title: SHARE_TITLE, text: text(), url: u('native') }).catch(function () {});
+      });
+    }
+
+    if (li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(u('linkedin'));
+    if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(u('facebook'));
+    if (mail) mail.href = 'mailto:?subject=' + encodeURIComponent(SHARE_TITLE) + '&body=' + encodeURIComponent(text() + ' ' + u('email'));
+
+    if (copy) {
+      copy.addEventListener('click', function () {
+        var label = copy.querySelector('span');
+        var en = document.documentElement.lang === 'en';
+        function done() {
+          if (label) label.textContent = en ? 'Copied' : 'Nukopijuota';
+          setTimeout(function () { if (label) label.textContent = en ? 'Copy link' : 'Kopijuoti nuorodą'; }, 1800);
+        }
+        var link = u('copy');
+        if (navigator.clipboard) navigator.clipboard.writeText(link).then(done, done);
+        else { var t = document.createElement('textarea'); t.value = link; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+      });
+    }
+  })();
+
   /* ---------- Kryptis timeline: single continuous connector line (both layouts) ---------- */
   function positionKryptisLine() {
     var tl = document.querySelector('.kryptis-timeline');
@@ -580,6 +1048,9 @@
       document.documentElement.lang = en ? 'en' : 'lt';
       if (typeof positionKryptisLine === 'function') {
         requestAnimationFrame(positionKryptisLine);
+      }
+      if (typeof window.restartTypewriter === 'function') {
+        window.restartTypewriter(en ? 'en' : 'lt');
       }
       document.querySelectorAll('.lang-toggle button').forEach(function (b) {
         b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
