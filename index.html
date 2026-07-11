@@ -11,10 +11,12 @@
 <meta property="og:url" content="https://nuomity.lt/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="lt_LT" />
+<meta property="og:site_name" content="Nuomity" />
 <meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://nuomity.lt/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;family=Quicksand:wght@600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="nuomity.css" />
 <style>
   /* Language toggle */
@@ -121,7 +123,7 @@
       <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
     </form>
     <p class="hero-form-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
-    <p class="hero-form-consent" data-en='By submitting you agree to the <a href="/privatumo-politika/">privacy policy</a>.'>Spausdamas sutinki su <a href="/privatumo-politika/">privatumo politika</a>.</p>
+    <p class="hero-form-consent" data-en='By submitting you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Spausdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
     <p class="hero-form-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
 
     <!-- Waitlist counter: hidden until >=15 real registrants; <50 shows progress, >=50 shows plain count -->
@@ -179,7 +181,7 @@
       <img class="partner-logo" src="logos/mobile-id.png" alt="Mobile-ID" />
       <img class="partner-logo" src="logos/smart-id.png" alt="Smart-ID" />
       <img class="partner-logo" src="logos/dokobit.png" alt="Dokobit by Signicat" />
-      <img class="partner-logo" src="logos/scorify.png" alt="Scorify" />
+      <img class="partner-logo" src="logos/krediidiregister.jpg" alt="Krediidiregister" style="height: 54px; max-width: 240px;" />
     </div>
   </div>
 </section>
@@ -205,14 +207,15 @@
             <div class="ha-cand-top">
               <span class="ha-cand-name"><i class="ti ti-circle-check ha-verdict" aria-hidden="true"></i>G. Kazlauskas</span>
               <button class="ha-chk" id="ha-chk0" type="button" tabindex="-1"><i class="ti ti-shield-search" aria-hidden="true"></i><span data-en="Screen">Tikrinti</span></button>
+              <button class="ha-view" id="ha-view0" type="button" tabindex="-1"><i class="ti ti-calendar-plus" aria-hidden="true"></i><span data-en="Offer viewing">Siūlyti apžiūrą</span></button>
             </div>
-            <button class="ha-view" id="ha-view0" type="button" tabindex="-1"><i class="ti ti-calendar-plus" aria-hidden="true"></i><span data-en="Offer viewing">Siūlyti apžiūrą</span></button>
           </div>
 
           <div class="ha-cand" id="ha-c1">
             <div class="ha-cand-top">
               <span class="ha-cand-name"><i class="ti ti-circle-x ha-verdict" aria-hidden="true"></i>M. Petrauskas</span>
               <button class="ha-chk" id="ha-chk1" type="button" tabindex="-1"><i class="ti ti-shield-search" aria-hidden="true"></i><span data-en="Screen">Tikrinti</span></button>
+              <button class="ha-view" id="ha-view1" type="button" tabindex="-1"><i class="ti ti-calendar-plus" aria-hidden="true"></i><span data-en="Offer viewing">Siūlyti apžiūrą</span></button>
             </div>
           </div>
 
@@ -220,6 +223,7 @@
             <div class="ha-cand-top">
               <span class="ha-cand-name"><i class="ti ti-circle-check ha-verdict" aria-hidden="true"></i>J. Jonaitis</span>
               <button class="ha-chk" id="ha-chk2" type="button" tabindex="-1"><i class="ti ti-shield-search" aria-hidden="true"></i><span data-en="Screen">Tikrinti</span></button>
+              <button class="ha-view" id="ha-view2" type="button" tabindex="-1"><i class="ti ti-calendar-plus" aria-hidden="true"></i><span data-en="Offer viewing">Siūlyti apžiūrą</span></button>
             </div>
           </div>
         </div>
@@ -293,14 +297,9 @@
               <p class="ui-doc-h">Nuomos sutartis Nr. 2026/06</p>
               <span class="ui-doc-rule"></span>
               <span class="ui-doc-line ui-doc-seq"></span>
-              <span class="ui-doc-line ui-doc-seq"></span>
               <span class="ui-doc-line ui-doc-seq ui-doc-line-mid"></span>
-              <span class="ui-doc-line ui-doc-seq"></span>
-              <span class="ui-doc-line ui-doc-seq"></span>
               <span class="ui-doc-line ui-doc-seq ui-doc-line-short"></span>
-              <span class="ui-doc-line ui-doc-seq"></span>
             </div>
-            <i class="ti ti-arrow-down ui-doc-pull" id="contract-pull" aria-hidden="true"></i>
             <div class="ui-contract-file" id="contract-pdf">
               <div class="ui-contract-file-top">
                 <div class="ui-contract-file-left">
@@ -411,15 +410,15 @@
         <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
       </form>
       <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
-      <p class="waitlist-consent" data-en='By submitting you agree to the <a href="/privatumo-politika/">privacy policy</a>.'>Spausdamas sutinki su <a href="/privatumo-politika/">privatumo politika</a>.</p>
+      <p class="waitlist-consent" data-en='By submitting you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Spausdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
       <p class="waitlist-success" data-en="Thanks! You're on the waitlist.">Ačiū! Tu esi laukiančiųjų sąraše.</p>
 
       <!-- Share block: part of the CTA card -->
       <div class="share-card share-in-cta">
-      <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam Nuomity būtų naudinga?</p>
+      <p class="share-title" data-en="Know a landlord who'd find „Nuomity“ useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudinga?</p>
       <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
       <div class="share-actions">
-        <button type="button" class="share-native" id="share-native" data-en="Share Nuomity"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink Nuomity</button>
+        <button type="button" class="share-native" id="share-native" data-en="Share „Nuomity“"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink „Nuomity“</button>
         <div class="share-buttons" id="share-buttons">
           <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
           <a class="share-btn" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
@@ -437,11 +436,11 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" data-en="Team">Komanda</span>
+      <h2 data-en="From experience to „Nuomity“">Nuo patirties iki „Nuomity“</h2>
     </div>
 
     <div class="founder-story">
       <div class="founder-story-body">
-        <p class="founder-story-open" data-en="„Nuomity“ started from personal experience.">„Nuomity“ prasidėjo nuo asmeninės patirties.</p>
         <p data-en="We were tenants ourselves more than once, so we saw up close how many needless problems the rental process itself creates. Unclear contracts, endless messaging, deposit disputes and constant mistrust hurt not only tenants but landlords too.">Patys ne kartą buvome nuomininkų vietoje, todėl iš arti pamatėme, kiek daug nereikalingų problemų sukuria pats nuomos procesas. Neaiškios sutartys, ilgi susirašinėjimai, ginčai dėl užstato ir nuolatinis nepasitikėjimas kenkia ne tik nuomininkams, bet ir nuomotojams.</p>
         <p data-en="We realised the problem isn't people, but outdated processes. So we're building „Nuomity“ — a platform that helps make renting simpler, clearer and safer for both sides.">Supratome, kad problema slypi ne žmonėse, o pasenusiuose procesuose. Todėl kuriame „Nuomity“ – platformą, kuri padeda nuomos procesą padaryti paprastesnį, aiškesnį ir saugesnį abiem pusėms.</p>
       </div>
@@ -462,7 +461,7 @@
       <div class="team-info">
         <p class="team-name">Edvin Dičkanec</p>
         <p class="team-role" data-en="Software, product" data-lt="Programinė įranga, produktas">Programinė įranga, produktas</p>
-        <p class="team-bio" data-en="I'm a software engineer with over 6 years building reliable backend systems. At „Nuomity“ I'm responsible for the platform's technical side, so every application and contract works fast, securely and without glitches." data-lt="Esu programinės įrangos inžinierius, jau virš 6 metų kuriantis patikimas backend sistemas. „Nuomity“ atsakingas už techninę platformos dalį, kad kiekviena paraiška ir sutartis veiktų greitai, saugiai ir be trikdžių.">Esu programinės įrangos inžinierius, jau virš 6 metų kuriantis patikimas backend sistemas. „Nuomity“ atsakingas už techninę platformos dalį, kad kiekviena paraiška ir sutartis veiktų greitai, saugiai ir be trikdžių.</p>
+        <p class="team-bio" data-en="I'm a software engineer with over 6 years building reliable backend systems. At „Nuomity“ I'm responsible for the platform's technical side, so every process works fast, securely and without glitches." data-lt="Esu programinės įrangos inžinierius, jau virš 6 metų kuriantis patikimas backend sistemas. „Nuomity“ atsakingas už techninę platformos dalį, kad kiekvienas procesas veiktų greitai, saugiai ir be trikdžių.">Esu programinės įrangos inžinierius, jau virš 6 metų kuriantis patikimas backend sistemas. „Nuomity“ atsakingas už techninę platformos dalį, kad kiekvienas procesas veiktų greitai, saugiai ir be trikdžių.</p>
         <a class="team-linkedin" href="https://www.linkedin.com/in/edvin-dichkanec/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
       </div>
     </div>
@@ -599,6 +598,13 @@
     var bar = el.querySelector('.wl-counter-bar');
 
     function isEn() { return document.documentElement.lang === 'en'; }
+    // Lithuanian noun form for "vieta" after a number: 1->vieta, 2-9->vietos, 0/11-19->vietų
+    function vietaForm(n) {
+      var t = n % 10, h = n % 100;
+      if (t === 1 && h !== 11) return 'vieta';
+      if (t >= 2 && t <= 9 && !(h >= 11 && h <= 19)) return 'vietos';
+      return 'vietų';
+    }
 
     function render(count) {
       if (typeof count !== 'number' || count < SHOW_FROM) { el.hidden = true; return; }
@@ -609,8 +615,8 @@
       } else {
         var left = TOTAL - count;
         lead.innerHTML = isEn()
-          ? '<b>' + left + '</b> of ' + TOTAL + ' early-access spots left'
-          : 'Liko <b>' + left + '</b> vietų iš ' + TOTAL;
+          ? '<b>' + left + '</b> of ' + TOTAL + ' early-access ' + (left === 1 ? 'spot' : 'spots') + ' left'
+          : 'Liko <b>' + left + '</b> ' + vietaForm(left) + ' iš ' + TOTAL;
         meta.textContent = isEn() ? count + ' taken' : count + ' užimta';
         if (bar) bar.style.display = '';
         fill.style.width = Math.round((count / TOTAL) * 100) + '%';
@@ -691,11 +697,9 @@
   })();
 
   /* ---------- Animation queue controller ----------
-     Features become visible close together (same section), which would
-     otherwise fire all their animations at once. This controller lets
-     each animation register instead of self-triggering: when an element
-     scrolls into view it joins a queue, and the controller plays them
-     one at a time in document order with a gap, so the page stays calm.
+     Each animation registers here and only enters the queue once its
+     card reaches the centre of the viewport; the controller then plays
+     them one at a time in document order with a gap, so the page stays calm.
   */
   var AnimQueue = (function () {
     var queue = [];
@@ -723,7 +727,7 @@
     }
 
     return {
-      register: function (el, run, threshold) {
+      register: function (el, run) {
         var fired = false;
         var io = new IntersectionObserver(function (entries) {
           if (entries[0].isIntersecting && !fired) {
@@ -732,7 +736,7 @@
             queue.push({ el: el, run: run, top: el.getBoundingClientRect().top + window.scrollY });
             pump();
           }
-        }, { threshold: threshold || 0.4 });
+        }, { rootMargin: '-46% 0px -46% 0px', threshold: 0 });
         io.observe(el);
       }
     };
@@ -767,6 +771,7 @@
         b.innerHTML = '<i class="ti ti-shield-search" aria-hidden="true"></i>' + screenLabel;
       });
       var vb = document.getElementById('ha-view0'); if (vb) vb.classList.remove('show');
+      ['ha-view0','ha-view1','ha-view2'].forEach(function (id) { var v = document.getElementById(id); if (v) v.classList.remove('show'); });
       if (countEl) countEl.textContent = counts[lang()][0];
     }
 
@@ -901,7 +906,6 @@
 
     function play() {
       var doc = document.getElementById('contract-doc');
-      var pull = document.getElementById('contract-pull');
       var pdf = document.getElementById('contract-pdf');
       var stage = document.getElementById('contract-stage');
       var h = doc.querySelector('.ui-doc-h');
@@ -929,7 +933,7 @@
 
       // Finished document is pulled into the compact PDF card
       var suckAt = t + 500;
-      at(suckAt, function () { doc.classList.add('doc-suck'); pull.classList.add('pull-go'); });
+      at(suckAt, function () { doc.classList.add('doc-suck'); });
       at(suckAt + 320, function () { pdf.classList.add('pdf-show'); stage.classList.add('stage-collapsed'); });
 
       // Both parties sign in sequence — each tick only lights up when signed

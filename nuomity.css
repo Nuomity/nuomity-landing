@@ -27,11 +27,11 @@
   --radius-sm: calc(var(--radius) * 0.55);
 
   --font-head: "Poppins", "Helvetica Neue", sans-serif;
-  --font-body: "Hanken Grotesk", "Helvetica Neue", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", sans-serif;
   --font-logo: "Quicksand", "Helvetica Neue", sans-serif;
 
-  --shadow-card: 0 1px 2px rgba(16, 24, 38, 0.04), 0 8px 24px rgba(16, 24, 38, 0.06);
-  --shadow-pop: 0 2px 4px rgba(16, 24, 38, 0.05), 0 20px 48px rgba(16, 24, 38, 0.10);
+  --shadow-card: 0 1px 2px rgba(38, 64, 145, 0.05), 0 10px 28px rgba(38, 64, 145, 0.09);
+  --shadow-pop: 0 2px 6px rgba(38, 64, 145, 0.06), 0 24px 56px rgba(38, 64, 145, 0.14);
 }
 
 /* ---- Green theme ---- */
@@ -50,7 +50,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  min-height: 100vh;
+  background: linear-gradient(140deg, #FFFFFF 0%, #F4F8FE 38%, #E3ECFB 72%, #D3E0F8 100%);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 17px;
@@ -125,10 +127,11 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 8px 24px rgba(16, 24, 38, 0.05);
 }
 
 .nav-inner {
@@ -141,7 +144,58 @@ a { color: inherit; }
 
 .nav-inner .logo { justify-self: start; }
 .nav-links { justify-self: center; }
-.nav-actions { justify-self: end; }
+.nav-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Nav CTA hidden while the hero (main) CTA is on screen */
+.nav-cta {
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+.nav-cta.cta-hidden {
+  opacity: 0;
+  transform: translateY(-6px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ---------- Language toggle ---------- */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px;
+  background: #FFFFFF;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.lang-toggle button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+  padding: 6px 12px;
+  border-radius: 999px;
+  line-height: 1;
+  transition: background 0.16s ease, color 0.16s ease;
+}
+.lang-toggle button:hover { color: var(--ink); }
+.lang-toggle button[aria-pressed="true"] {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+@media (max-width: 600px) {
+  .lang-toggle button { padding: 6px 10px; font-size: 12px; }
+}
 
 .logo {
   font-family: var(--font-logo);
@@ -291,7 +345,7 @@ a { color: inherit; }
 .hero {
   position: relative;
   padding: 68px 0 60px;
-  background: #FFFFFF;
+  background: transparent;
   overflow: hidden;
 }
 
@@ -334,7 +388,8 @@ a { color: inherit; }
   margin-top: 24px;
   max-width: none;
   font-size: 18px;
-  color: var(--ink-2);
+  color: var(--ink);
+  font-weight: 400;
 }
 
 .hero-ctas {
@@ -608,7 +663,7 @@ a { color: inherit; }
 
 /* ---------- Sections ---------- */
 
-.section { padding: 60px 0; background: #FFFFFF; }
+.section { padding: 60px 0; background: transparent; }
 
 .section-head {
   text-align: center;
@@ -619,14 +674,15 @@ a { color: inherit; }
   display: inline-block;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-transform: none;
   color: var(--accent-ink);
-  background: var(--accent-soft);
+  background: #FFFFFF;
   border: 1px solid var(--accent-border);
   border-radius: 999px;
   padding: 6px 14px;
   margin-bottom: 18px;
+  box-shadow: 0 1px 3px rgba(38, 64, 145, 0.08);
 }
 
 .section-head h2 {
@@ -671,7 +727,7 @@ a { color: inherit; }
 
 /* ---------- Features (alternating) ---------- */
 
-.features { background: #FFFFFF; border-block: 1px solid var(--line); }
+.features { background: transparent; border-block: 1px solid var(--line); }
 
 .feature-row {
   display: grid;
@@ -714,13 +770,24 @@ a { color: inherit; }
 }
 
 .feature-visual {
-  background: var(--accent-softer);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: none;
   border-radius: var(--radius-lg);
   padding: 40px;
   display: grid;
   place-items: center;
   min-height: 340px;
+}
+
+/* Feature animations are display-only: the user cannot press the mock
+   controls, but the auto-play (class-driven) animation still runs. */
+.feature-visual button,
+.feature-visual .ha-chk,
+.feature-visual .ha-view,
+.feature-visual .ui-cal-day,
+.feature-visual .ui-cal-slot,
+.feature-visual .ui-slot {
+  pointer-events: none;
 }
 
 .ui-card {
@@ -1138,10 +1205,10 @@ a { color: inherit; }
 
 /* ---------- Waitlist CTA ---------- */
 
-.waitlist { padding: 60px 0; background: #FFFFFF; }
+.waitlist { padding: 60px 0; background: transparent; }
 
 .waitlist-card {
-  background: linear-gradient(180deg, var(--accent-soft), #FFFFFF 90%);
+  background: #FFFFFF;
   border: 1px solid var(--accent-border);
   border-radius: calc(var(--radius-lg) * 1.3);
   box-shadow: var(--shadow-card);
@@ -1214,7 +1281,7 @@ a { color: inherit; }
 
 .partners {
   padding: 36px 0;
-  background: var(--paper);
+  background: #FFFFFF;
   border-block: 1px solid var(--line);
 }
 
@@ -1259,7 +1326,7 @@ a { color: inherit; }
 /* ---------- Roadmap / kryptis ---------- */
 
 .kryptis {
-  background: var(--paper);
+  background: #FFFFFF;
   border-block: 1px solid var(--line);
   padding: 60px 0;
   text-align: center;
@@ -1325,6 +1392,11 @@ a { color: inherit; }
 .kryptis-stage-active .kryptis-stage-dot {
   background: var(--accent);
   border-color: var(--accent);
+}
+
+.kryptis-future .kryptis-stage-dot {
+  background: #C4CAD4;
+  border-color: #C4CAD4;
 }
 
 .kryptis-stage:not(:last-child)::after {
@@ -1398,7 +1470,7 @@ a { color: inherit; }
 
 /* ---------- Team ---------- */
 
-.team { background: #FFFFFF; }
+.team { background: transparent; }
 
 .team-row {
   display: flex;
@@ -1606,12 +1678,20 @@ a { color: inherit; }
 
 @media (max-width: 980px) {
   .nav-links { display: none; }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media (max-width: 920px) {
   .feature-row { grid-template-columns: 1fr; gap: 32px; padding: 56px 0; }
   .feature-row.flip .feature-copy { order: 1; }
   .feature-row.flip .feature-visual { order: 2; }
+  .feature-copy { text-align: center; }
+  .feature-copy p { max-width: 46ch; margin-left: auto; margin-right: auto; }
+  .feature-kicker { justify-content: center; }
   .steps { grid-template-columns: 1fr; }
   .mockup-body { grid-template-columns: 1fr; }
   .mockup-side { border-right: none; border-bottom: 1px solid var(--line); flex-direction: row; flex-wrap: wrap; }
@@ -1664,8 +1744,11 @@ a { color: inherit; }
   .hero-form { flex-direction: column; }
   .waitlist-form { flex-direction: column; }
   .ui-slot-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
-  .footer-meta { text-align: left; }
+  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; }
+  .footer-meta { text-align: center; }
+  .footer-email { justify-self: center; }
+  .hero-form .btn, .waitlist-form .btn { align-self: center; width: auto; min-width: 0; }
   .wrap { padding: 0 20px; }
   .waitlist-card { padding: 48px 22px; }
 }
@@ -1784,6 +1867,7 @@ a { color: inherit; }
   align-items: center;
   gap: 8px;
   min-width: 0;
+  white-space: nowrap;
 }
 
 .ha-cand-name .ha-verdict {
@@ -1825,12 +1909,12 @@ a { color: inherit; }
 .ha-cand.checking .ha-chk { color: var(--accent-ink); background: var(--accent-soft); border-color: var(--accent); }
 
 .ha-view {
-  margin-top: 11px;
+  margin-top: 0;
   background: var(--accent);
   color: #FFFFFF;
   border: none;
   border-radius: 999px;
-  padding: 8px 15px;
+  padding: 6px 13px;
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 12px;
@@ -1838,10 +1922,13 @@ a { color: inherit; }
   display: none;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
   box-shadow: 0 4px 12px color-mix(in oklab, var(--accent) 28%, transparent);
   animation: ha-pop 0.34s ease;
 }
 
+/* Appears in the same slot the "Tikrinti" button occupied — no extra row, no white space, no resize */
 .ha-view.show { display: inline-flex; }
 .ha-view:hover { background: var(--accent-ink); }
 
@@ -1910,7 +1997,8 @@ a { color: inherit; }
 
 .hero-form-consent a,
 .waitlist-consent a {
-  color: var(--ink-3);
+  color: var(--accent-ink);
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -2091,34 +2179,69 @@ a { color: inherit; }
 }
 
 /* =====================================================================
-   FOUNDER STORY (intro to Komanda; lead-in accent + body text)
+   FOUNDER STORY (intro to Komanda; editorial quote-statement layout)
 ===================================================================== */
 .founder-story {
-  max-width: 600px;
-  margin: 0 auto 44px;
+  max-width: 720px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+.founder-story-lead {
+  margin-bottom: 26px;
+}
+.founder-story-body {
+  position: relative;
+  padding: 42px 56px;
+}
+.founder-story-body::before,
+.founder-story-body::after {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 52px;
+}
+.founder-story-body::before {
+  left: 0;
+  bottom: 0;
+  border-left: 4px solid var(--accent);
+  border-bottom: 4px solid var(--accent);
+  border-radius: 0 0 0 9px;
+}
+.founder-story-body::after {
+  right: 0;
+  top: 0;
+  border-right: 4px solid var(--accent);
+  border-top: 4px solid var(--accent);
+  border-radius: 0 9px 0 0;
 }
 .founder-story-body p {
-  font-size: 15px;
-  line-height: 1.64;
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--ink-2);
-  margin: 0 0 13px;
+  margin: 0 0 15px;
+  text-align: left;
 }
 .founder-story-body p:last-child { margin-bottom: 0; }
-.founder-story-body p.founder-story-open {
+.founder-story-open {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 22px;
-  line-height: 1.28;
-  letter-spacing: -0.01em;
-  color: var(--accent);
-  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .founder-story {
-    margin-bottom: 30px;
+    margin-bottom: 52px;
   }
-  .founder-story-body p.founder-story-open { font-size: 20px; }
+  .founder-story-lead { margin-bottom: 18px; }
+  .founder-story-open { font-size: 25px; }
+  .founder-story-body { padding: 28px 30px; }
+  .founder-story-body::before,
+  .founder-story-body::after { width: 34px; height: 34px; }
 }
 
 /* =====================================================================
@@ -2178,7 +2301,8 @@ a { color: inherit; }
 /* =====================================================================
    FEATURE 3 — CONTRACT ANIMATION
 ===================================================================== */
-.ui-contract-stage { position: relative; margin-bottom: 14px; min-height: 178px; transition: min-height 0.45s ease 0.25s; }
+/* Fixed at the END (compact PDF) size from the very start, so the card is the same size at the beginning as at the end while the doc collapses into the PDF */
+.ui-contract-stage { position: relative; margin-bottom: 14px; min-height: 116px; }
 
 .ui-doc-write {
   border: 1px solid var(--line);
@@ -2195,8 +2319,6 @@ a { color: inherit; }
 .ui-doc-line-mid { width: 74%; }
 .ui-doc-line:last-child { margin-bottom: 0; }
 
-.ui-doc-pull { position: absolute; left: 50%; top: 4px; transform: translateX(-50%); font-size: 15px; color: var(--accent); opacity: 0; }
-
 .ui-contract-file { flex-direction: column; align-items: stretch; gap: 11px; }
 .ui-contract-file-top { display: flex; align-items: center; justify-content: space-between; }
 .ui-pdf-preview { display: flex; flex-direction: column; gap: 5px; padding-top: 11px; border-top: 1px solid var(--line); }
@@ -2207,6 +2329,7 @@ a { color: inherit; }
 .ui-contract.anim-armed .ui-doc-h { opacity: 0; transform: translateY(-4px); }
 .ui-contract.anim-armed .ui-doc-rule { transform: scaleX(0); }
 .ui-contract.anim-armed .ui-doc-line { width: 0; }
+.ui-contract.anim-armed .ui-doc-write { position: absolute; left: 0; right: 0; top: 0; }
 
 /* Reveal states are scoped under .anim-armed so they out-specify the hidden state and actually show during the animation */
 .ui-contract.anim-armed .ui-doc-h.doc-in { opacity: 1; transform: translateY(0); transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -2230,10 +2353,7 @@ a { color: inherit; }
 .ui-contract.anim-armed .ui-sign-item { opacity: 0; transform: translateY(6px); transition: opacity 0.3s ease, transform 0.3s ease, background 0.4s ease, border-color 0.4s ease; }
 
 .ui-doc-write.doc-suck { position: absolute; left: 0; right: 0; top: 0; transform: scale(0.12) translateY(46px); opacity: 0; }
-.ui-doc-pull.pull-go { animation: doc-pull 0.5s ease; }
-@keyframes doc-pull { 0% { opacity: 0; transform: translate(-50%, -14px); } 40% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, 4px); } }
 .ui-contract-file.pdf-show { position: relative !important; opacity: 1 !important; transform: scale(1) !important; }
-.ui-contract-stage.stage-collapsed { min-height: 96px; }
 
 .ui-sign-item.sign-reveal { opacity: 1 !important; transform: translateY(0) !important; }
 

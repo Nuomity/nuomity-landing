@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-en="Privacy Policy — Nuomity">Privatumo politika — Nuomity</title>
+<meta name="description" content="Nuomity privatumo politika: kaip tvarkome laukiančiųjų sąrašo el. pašto adresus ir svetainės statistikos duomenis." data-en-content="Nuomity privacy policy: how we handle waitlist email addresses and website analytics data." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://nuomity.lt/privatumo-politika/" />
+<meta property="og:title" content="Privatumo politika — Nuomity" />
+<meta property="og:description" content="Nuomity privatumo politika: kaip tvarkome laukiančiųjų sąrašo el. pašto adresus ir svetainės statistikos duomenis." />
+<meta property="og:url" content="https://nuomity.lt/privatumo-politika/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="lt_LT" />
+<meta property="og:site_name" content="Nuomity" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Poppins:wght@600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../nuomity.css" />
+<link rel="icon" type="image/svg+xml" href="../logos/nuomity-icon.svg" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PrivacyPolicy",
+  "name": "Nuomity privatumo politika",
+  "url": "https://nuomity.lt/privatumo-politika/",
+  "inLanguage": ["lt", "en"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nuomity, MB",
+    "email": "labas@nuomity.lt",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Perkūnkiemio g. 19",
+      "addressLocality": "Vilnius",
+      "addressCountry": "LT"
+    }
+  }
+}
+</script>
+
+<style>
+/* ============ Privatumo politika — page-specific layout ============ */
+/* Uses nuomity.css tokens (--accent, --ink, --paper, --card, --line, fonts). */
+
+:root {
+  --legal-max: 1120px;
+  --toc-width: 268px;
+}
+
+/* Dark mode: derive a dark palette from the existing tokens. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #EEF1F6;
+    --ink-2: #C4CBD6;
+    --ink-3: #9BA4B2;
+    --paper: #0E1420;
+    --card: #161E2C;
+    --line: #27303F;
+    --accent-soft: color-mix(in oklab, var(--accent) 22%, #0E1420);
+    --accent-softer: color-mix(in oklab, var(--accent) 12%, #0E1420);
+    --accent-border: color-mix(in oklab, var(--accent) 40%, #0E1420);
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+  body { background: var(--paper); color: var(--ink); }
+  .legal-toc { background: var(--card); }
+  .legal-article { background: var(--card); }
+  .legal-hero { border-bottom-color: var(--line); }
+  .logo.on-dark .logo-word,
+  .logo .logo-ink { fill: var(--ink); }
+}
+
+/* ---------- Hero ---------- */
+.legal-hero {
+  padding: 116px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-hero .eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-bottom: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  .legal-hero .eyebrow { color: var(--accent-2); }
+}
+.legal-hero h1 {
+  font-size: clamp(34px, 5vw, 52px);
+  margin-bottom: 16px;
+}
+.legal-hero .legal-lede {
+  max-width: 640px;
+  font-size: 18px;
+  color: var(--ink-2);
+}
+.legal-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 7px 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--ink-3);
+  background: var(--card);
+}
+.legal-updated i { color: var(--accent); }
+
+/* ---------- Layout: sticky ToC + content ---------- */
+.legal-layout {
+  display: grid;
+  grid-template-columns: var(--toc-width) minmax(0, 1fr);
+  gap: 56px;
+  padding: 48px 0 40px;
+  align-items: start;
+}
+
+.legal-toc {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  padding: 22px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+}
+.legal-toc h2 {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 14px;
+}
+.legal-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: toc;
+}
+.legal-toc li { margin: 0; }
+.legal-toc a {
+  display: flex;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 14.5px;
+  line-height: 1.35;
+  color: var(--ink-2);
+  text-decoration: none;
+  counter-increment: toc;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.legal-toc a::before {
+  content: counter(toc);
+  flex: 0 0 auto;
+  min-width: 20px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+.legal-toc a:hover {
+  background: var(--accent-softer);
+  color: var(--ink);
+}
+.legal-toc a[aria-current="true"] {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+.legal-toc a[aria-current="true"]::before { color: var(--accent); }
+@media (prefers-color-scheme: dark) {
+  .legal-toc a[aria-current="true"] { color: var(--ink); }
+}
+
+/* ---------- Content ---------- */
+.legal-content { min-width: 0; }
+
+.legal-article {
+  padding: 30px 32px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+  scroll-margin-top: 100px;
+}
+.legal-article > h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+.legal-article > h2 .legal-num {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.legal-article h3 {
+  font-size: 17px;
+  margin: 22px 0 8px;
+  color: var(--ink);
+}
+.legal-article p { margin: 0 0 14px; color: var(--ink-2); }
+.legal-article p:last-child { margin-bottom: 0; }
+.legal-article ul {
+  margin: 0 0 14px;
+  padding-left: 0;
+  list-style: none;
+}
+.legal-article ul li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 9px;
+  color: var(--ink-2);
+}
+.legal-article ul li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.legal-article a[href^="mailto"],
+.legal-article a[href^="http"] {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+@media (prefers-color-scheme: dark) {
+  .legal-article a[href^="mailto"],
+  .legal-article a[href^="http"] { color: var(--accent-2); }
+}
+
+/* Definition table */
+.legal-deflist {
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.legal-deflist > div {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-deflist > div:last-child { border-bottom: none; }
+.legal-deflist dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+.legal-deflist dd { margin: 0; color: var(--ink-2); }
+
+/* Rights grid */
+.legal-rights {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.legal-right {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--accent-softer);
+}
+.legal-right h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+.legal-right p { margin: 0; font-size: 14.5px; }
+
+/* Callout */
+.legal-note {
+  display: flex;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  margin-bottom: 14px;
+}
+.legal-note i { color: var(--accent); font-size: 20px; flex: 0 0 auto; margin-top: 1px; }
+.legal-note p { margin: 0; color: var(--ink); font-size: 15px; }
+
+/* Back link */
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent-ink);
+  text-decoration: none;
+}
+@media (prefers-color-scheme: dark) { .legal-back { color: var(--accent-2); } }
+.legal-back:hover { text-decoration: underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .legal-toc {
+    position: static;
+    max-height: none;
+    top: auto;
+  }
+  .legal-hero { padding-top: 104px; }
+  .legal-article { padding: 24px 20px; }
+  .legal-deflist > div { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" data-screen-label="Navbar">
+  <div class="wrap nav-inner">
+    <a class="logo" href="../#virsus" aria-label="nuomity"><svg class="logo-svg" viewBox="0 0 264.09 64.04" width="132" height="32" xmlns="http://www.w3.org/2000/svg" role="img"><circle class="logo-accent" cx="259.42" cy="43.29" r="4.67"></circle><circle class="logo-ink" cx="188.02" cy="4.67" r="4.67"></circle><path class="logo-accent" d="M22.06,26.28c0,.08,0,.16-.02.24-.03.25-.13.47-.27.66l-.07.09-.7.98-12.47,17.64-.06.09c-.84,1.19-2.23,1.97-3.81,1.97-2.57,0-4.67-2.09-4.67-4.66V13.73h5.88l.27,2.41.08.7,1.56,14s0,.06,0,.09v.09c.09.77.75,1.38,1.55,1.38.35,0,.68-.11.94-.31l8.17-6.2.86-.65.26-.19h.01c.26-.2.58-.31.92-.31.86,0,1.55.7,1.55,1.56Z"></path><path class="logo-accent" d="M32.67,39.2v8.76h-6l-.19-2.73v-.23c-.02-.05-.02-.1-.02-.15l-1.09-15.58-.43-6.05c-.1-1.62-1.45-2.91-3.11-2.91-.72,0-1.38.24-1.91.65l-.07.06-2.61,1.96-4.43,3.34-.05.04c-.26.2-.59.32-.94.32-.86,0-1.56-.7-1.56-1.56,0-.43.18-.83.47-1.11l.1-.09,8.53-7.93.22-.21c1.39-1.28,3.24-2.07,5.29-2.07,4.3,0,7.77,3.48,7.77,7.77v17.69Z"></path><path class="logo-ink" d="M70.99,13.73v34.22h-7.08v-4.04c-1.12,1.41-2.58,2.52-4.38,3.32-1.8.81-3.72,1.21-5.74,1.21-2.69,0-5.1-.56-7.24-1.68-2.13-1.12-3.81-2.77-5.03-4.97-1.22-2.19-1.83-4.84-1.83-7.95V13.73h7.02v19.07c0,3.06.77,5.41,2.3,7.05,1.53,1.64,3.62,2.45,6.27,2.45s4.75-.82,6.3-2.45c1.55-1.63,2.33-3.98,2.33-7.05V13.73h7.08Z"></path><path class="logo-ink" d="M86.39,46.31c-2.61-1.47-4.66-3.54-6.15-6.21-1.49-2.67-2.24-5.76-2.24-9.28s.77-6.56,2.3-9.25c1.53-2.69,3.62-4.76,6.27-6.21,2.65-1.45,5.61-2.17,8.88-2.17s6.23.72,8.88,2.17c2.65,1.45,4.74,3.52,6.27,6.21,1.53,2.69,2.3,5.78,2.3,9.25s-.79,6.56-2.36,9.25c-1.57,2.69-3.72,4.77-6.43,6.24-2.71,1.47-5.7,2.2-8.97,2.2s-6.15-.73-8.76-2.2ZM100.27,41.06c1.59-.87,2.89-2.17,3.88-3.91.99-1.74,1.49-3.85,1.49-6.33s-.48-4.59-1.43-6.3c-.95-1.72-2.22-3.01-3.79-3.88-1.57-.87-3.27-1.3-5.09-1.3s-3.51.43-5.06,1.3c-1.55.87-2.78,2.16-3.69,3.88-.91,1.72-1.37,3.82-1.37,6.3,0,3.69.94,6.53,2.83,8.54,1.88,2.01,4.25,3.01,7.11,3.01,1.82,0,3.53-.43,5.12-1.3Z"></path><path class="logo-ink" d="M168.59,14.85c2.13,1.12,3.81,2.77,5.03,4.97,1.22,2.2,1.83,4.84,1.83,7.95v20.18h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.08V13.73h7.08v3.91c1.16-1.41,2.63-2.5,4.41-3.29,1.78-.79,3.68-1.18,5.71-1.18,2.73,0,5.18.58,7.33,1.74,2.15,1.16,3.81,2.84,4.97,5.03,1.04-2.07,2.65-3.72,4.84-4.94,2.19-1.22,4.55-1.83,7.08-1.83,2.69,0,5.1.56,7.24,1.68Z"></path><path class="logo-ink" d="M191.53,13.73v34.22h-7.08V13.73h7.08Z"></path><path class="logo-ink" d="M209.11,19.51v18.94c0,1.28.3,2.2.9,2.76.6.56,1.62.84,3.07.84h4.35v5.9h-5.59c-3.19,0-5.63-.75-7.33-2.24-1.7-1.49-2.55-3.91-2.55-7.27v-18.94h-4.04v-5.78h4.04V5.23h7.14v8.51h8.32v5.78h-8.32Z"></path><path class="logo-ink" d="M254.76,13.73l-20.99,50.31h-7.33l6.96-16.64-13.48-33.66h7.89l9.63,26.08,10-26.08h7.33Z"></path></svg></a>
+    <nav class="nav-links">
+      <a href="../#kaip-veikia" data-en="How it works">Kaip veikia</a>
+      <a href="../#funkcijos" data-en="Features">Funkcijos</a>
+      <a href="../#komanda" data-en="Team">Komanda</a>
+      <a href="../#duk" data-en="FAQ">DUK</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-cta" href="../#virsus" data-en="Get early access">Gauk ankstyvą prieigą</a>
+      <div class="lang-toggle lang-toggle-desktop" role="group" aria-label="Kalba / Language">
+        <button type="button" data-lang="lt" aria-pressed="true">LT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="nav-burger" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobilus meniu">
+    <a href="../#kaip-veikia" data-en="How it works">Kaip veikia</a>
+    <a href="../#funkcijos" data-en="Features">Funkcijos</a>
+    <a href="../#komanda" data-en="Team">Komanda</a>
+    <a href="../#duk" data-en="FAQ">DUK</a>
+    <div class="mobile-menu-foot">
+      <div class="lang-toggle" role="group" aria-label="Kalba / Language">
+        <button type="button" data-lang="lt" aria-pressed="true">LT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="legal-hero" aria-labelledby="page-title">
+  <div class="wrap">
+    <h1 id="page-title" data-en="Privacy Policy">Privatumo politika</h1>
+    <p class="legal-lede" data-en="This policy explains what data we collect through the nuomity.lt website and how we handle it. At this stage Nuomity operates only as a landing page with a waitlist, so this policy covers exactly that and nothing more.">Ši politika paaiškina, kokius duomenis renkame per svetainę nuomity.lt ir kaip juos tvarkome. Šiuo metu Nuomity veikia tik kaip pristatymo puslapis su laukiančiųjų sąrašu, todėl politika apima būtent tai ir nieko daugiau.</p>
+    <span class="legal-updated"><i class="ti ti-calendar-event" aria-hidden="true"></i><span data-en="Last updated: 8 July 2026">Paskutinį kartą atnaujinta: 2026 m. liepos 8 d.</span></span>
+  </div>
+</section>
+
+<!-- ============ MAIN ============ -->
+<main class="wrap">
+  <div class="legal-layout">
+
+    <!-- Table of contents -->
+    <nav class="legal-toc" aria-label="Turinys">
+      <h2 data-en="Contents">Turinys</h2>
+      <ol>
+        <li><a href="#duomenu-valdytojas" data-en="Data controller">Duomenų valdytojas</a></li>
+        <li><a href="#apimtis" data-en="Scope of this policy">Politikos apimtis</a></li>
+        <li><a href="#savokos" data-en="Definitions">Sąvokos</a></li>
+        <li><a href="#kokius-duomenis" data-en="What data we collect">Kokius duomenis renkame</a></li>
+        <li><a href="#teisinis-pagrindas" data-en="Legal basis">Teisinis pagrindas</a></li>
+        <li><a href="#tikslai" data-en="Purposes">Tvarkymo tikslai</a></li>
+        <li><a href="#slapukai" data-en="Cookies & analytics">Slapukai ir statistika</a></li>
+        <li><a href="#gavejai" data-en="Recipients & processors">Gavėjai ir tvarkytojai</a></li>
+        <li><a href="#perdavimai" data-en="International transfers">Perdavimai už ES ribų</a></li>
+        <li><a href="#saugojimas" data-en="Data retention">Saugojimo terminai</a></li>
+        <li><a href="#sauga" data-en="Security">Duomenų sauga</a></li>
+        <li><a href="#tavo-teises" data-en="Your rights">Jūsų teisės</a></li>
+        <li><a href="#automatizuoti" data-en="Automated decisions">Automatizuoti sprendimai</a></li>
+        <li><a href="#nepilnameciai" data-en="Children">Nepilnamečiai</a></li>
+        <li><a href="#pakeitimai" data-en="Changes">Politikos pakeitimai</a></li>
+        <li><a href="#kontaktai" data-en="Contact">Kontaktai</a></li>
+      </ol>
+    </nav>
+
+    <!-- Content -->
+    <div class="legal-content">
+
+      <article class="legal-article" id="duomenu-valdytojas">
+        <h2><span class="legal-num">1</span><span data-en="Data controller">Duomenų valdytojas</span></h2>
+        <p data-en="The data controller responsible for your personal data is:">Už Jūsų asmens duomenis atsakingas duomenų valdytojas yra:</p>
+        <div class="legal-deflist">
+          <div><dt data-en="Company">Įmonė</dt><dd>Nuomity, MB</dd></div>
+          <div><dt data-en="Address">Adresas</dt><dd>Perkūnkiemio g. 19, Vilnius, <span data-en="Lithuania">Lietuva</span></dd></div>
+          <div><dt data-en="Email">El. paštas</dt><dd><a href="mailto:labas@nuomity.lt">labas@nuomity.lt</a></dd></div>
+        </div>
+        <p data-en="We have not appointed a Data Protection Officer (DPO), as our processing does not meet the criteria that require one under the GDPR. For any data protection question, write to us at the email address above.">Duomenų apsaugos pareigūno (DAP) neskyrėme, nes mūsų vykdomas duomenų tvarkymas neatitinka BDAR nustatytų kriterijų, kada jis privalomas. Visais duomenų apsaugos klausimais rašykite mums aukščiau nurodytu el. pašto adresu.</p>
+      </article>
+
+      <article class="legal-article" id="apimtis">
+        <h2><span class="legal-num">2</span><span data-en="Scope of this policy">Politikos apimtis</span></h2>
+        <div class="legal-note">
+          <i class="ti ti-info-circle" aria-hidden="true"></i>
+          <p data-en="Nuomity is not live as a product yet. Today the website is only a landing page where you can join a waitlist. This policy describes only the data processing that actually happens now.">Nuomity kaip produktas dar neveikia. Šiuo metu svetainė yra tik pristatymo puslapis, kuriame galite užsirašyti į laukiančiųjų sąrašą. Ši politika aprašo tik tą duomenų tvarkymą, kuris realiai vyksta dabar.</p>
+        </div>
+        <p data-en="When we launch the full product (tenant applications, tenant screening, viewing scheduling and electronic lease signing), the processing will change significantly. Before that happens, we will publish an updated privacy policy covering those features. We do not describe them here, because doing so would suggest processing that is not taking place.">Kai paleisime pilną produktą (nuomininkų paraiškas, kandidatų patikrą, apžiūrų planavimą ir elektroninį sutarčių pasirašymą), duomenų tvarkymas iš esmės pasikeis. Prieš tai paskelbsime atnaujintą privatumo politiką, kuri apims šias funkcijas. Čia jų neaprašome, nes tai reikštų nurodyti tvarkymą, kuris nevyksta.</p>
+      </article>
+
+      <article class="legal-article" id="savokos">
+        <h2><span class="legal-num">3</span><span data-en="Definitions">Sąvokos</span></h2>
+        <div class="legal-deflist">
+          <div><dt data-en="Personal data">Asmens duomenys</dt><dd data-en="Any information relating to an identified or identifiable person, such as an email address.">Bet kokia informacija apie fizinį asmenį, kurį galima nustatyti, pavyzdžiui, el. pašto adresas.</dd></div>
+          <div><dt data-en="Processing">Tvarkymas</dt><dd data-en="Any operation performed on personal data, such as collecting, storing or deleting it.">Bet koks veiksmas su asmens duomenimis, pavyzdžiui, rinkimas, saugojimas ar ištrynimas.</dd></div>
+          <div><dt data-en="Controller">Valdytojas</dt><dd data-en="The party that decides why and how personal data is processed. That is Nuomity, MB.">Šalis, kuri sprendžia, kodėl ir kaip tvarkomi asmens duomenys. Tai yra Nuomity, MB.</dd></div>
+          <div><dt data-en="Processor">Tvarkytojas</dt><dd data-en="A party that processes data on our behalf under our instructions, such as our email platform.">Šalis, kuri tvarko duomenis mūsų vardu pagal mūsų nurodymus, pavyzdžiui, mūsų el. pašto platforma.</dd></div>
+          <div><dt data-en="GDPR">BDAR</dt><dd data-en="Regulation (EU) 2016/679, the General Data Protection Regulation.">Reglamentas (ES) 2016/679, Bendrasis duomenų apsaugos reglamentas.</dd></div>
+        </div>
+      </article>
+
+      <article class="legal-article" id="kokius-duomenis">
+        <h2><span class="legal-num">4</span><span data-en="What data we collect">Kokius duomenis renkame</span></h2>
+
+        <h3 data-en="Data you give us">Duomenys, kuriuos pateiki pats</h3>
+        <p data-en="When you join the waitlist, we collect one thing: your email address. There are no other fields in the form. You give it voluntarily, and nothing on the site requires it except joining the waitlist.">Kai užsirašote į laukiančiųjų sąrašą, renkame vieną dalyką: Jūsų el. pašto adresą. Formoje jokių kitų laukų nėra. Jį pateikiate savanoriškai, ir svetainėje jis nereikalingas niekur kitur, tik norint prisijungti prie laukiančiųjų sąrašo.</p>
+
+        <h3 data-en="Data collected automatically">Automatiškai renkami duomenys</h3>
+        <p data-en="If, and only if, you agree via the cookie banner, our analytics tools collect anonymous usage data (for example, pages viewed and approximate, non-precise location derived from your IP address). Until you agree, no analytics data is collected. See section 7 for detail.">Jei ir tik jei sutinkate per slapukų juostą, mūsų statistikos įrankiai renka anoniminius naudojimo duomenis (pavyzdžiui, peržiūrėtus puslapius ir apytikslę, netikslią vietą pagal Jūsų IP adresą). Kol nesutinkate, jokie statistikos duomenys nerenkami. Plačiau žr. 7 skyrių.</p>
+
+        <h3 data-en="What we do NOT collect">Ko NErenkame</h3>
+        <p data-en="At this stage we do not collect names, phone numbers, payment data, identity documents, credit or solvency data, or any special category (sensitive) data. Those relate to the future product, not to the waitlist.">Šiuo metu nerenkame vardų, telefono numerių, mokėjimo duomenų, asmens tapatybės dokumentų, kreditingumo ar mokumo duomenų ir jokių specialių kategorijų (jautrių) duomenų. Jie susiję su būsimu produktu, o ne su laukiančiųjų sąrašu.</p>
+      </article>
+
+      <article class="legal-article" id="teisinis-pagrindas">
+        <h2><span class="legal-num">5</span><span data-en="Legal basis">Teisinis pagrindas</span></h2>
+        <ul>
+          <li data-en="Your email address on the waitlist — your consent (GDPR Art. 6(1)(a)). You give it when you submit the form and you can withdraw it at any time.">El. pašto adresas laukiančiųjų sąraše — Jūsų sutikimas (BDAR 6 str. 1 d. a punktas). Jį duodate pateikdami formą ir galite bet kada atšaukti.</li>
+          <li data-en="Analytics cookies — your consent (GDPR Art. 6(1)(a) together with the ePrivacy rules). Collected only after you accept in the cookie banner.">Statistikos slapukai — Jūsų sutikimas (BDAR 6 str. 1 d. a punktas kartu su e. privatumo taisyklėmis). Renkami tik Jums sutikus slapukų juostoje.</li>
+        </ul>
+      </article>
+
+      <article class="legal-article" id="tikslai">
+        <h2><span class="legal-num">6</span><span data-en="Purposes of processing">Tvarkymo tikslai</span></h2>
+        <ul>
+          <li data-en="To keep you on the waitlist and send you a small number of messages about early access and the product launch.">Įtraukti Jus į laukiančiųjų sąrašą ir siųsti nedidelį kiekį žinučių apie ankstyvą prieigą bei produkto startą.</li>
+          <li data-en="To understand, in aggregate and anonymously, how the website is used, so we can improve it. This happens only with your consent.">Suprasti apibendrintai ir anonimiškai, kaip naudojama svetainė, kad galėtume ją tobulinti. Tai vyksta tik su Jūsų sutikimu.</li>
+        </ul>
+        <p data-en="We do not use your email for advertising by third parties, and we do not sell it to anyone.">Jūsų el. pašto nenaudojame trečiųjų šalių reklamai ir niekam jo neparduodame.</p>
+      </article>
+
+      <article class="legal-article" id="slapukai">
+        <h2><span class="legal-num">7</span><span data-en="Cookies and analytics">Slapukai ir statistika</span></h2>
+        <p data-en="The site uses a prior-consent model: no analytics or tracking runs until you press „Accept“ in the cookie banner. If you press „Decline“, or ignore the banner, none of these tools load.">Svetainė taiko išankstinio sutikimo modelį: jokia statistika ar sekimas neveikia, kol nepaspaudžiate „Sutinku“ slapukų juostoje. Jei paspaudžiate „Atsisakyti“ arba juostos nepaisote, šie įrankiai neįkeliami.</p>
+        <p data-en="A single technical entry in your browser (local storage key „nuomity_consent“) remembers your choice so we do not ask again on every visit. This is strictly necessary and does not track you.">Vienas techninis įrašas Jūsų naršyklėje (vietinės atminties raktas „nuomity_consent“) įsimena Jūsų pasirinkimą, kad neklaustume kaskart apsilankius. Jis būtinas ir Jūsų nesekia.</p>
+        <p data-en="If you agree, we use two analytics tools to measure site usage anonymously:">Jei sutinkate, naudojame du statistikos įrankius, kad anonimiškai matuotume svetainės naudojimą:</p>
+        <ul>
+          <li data-en="A website analytics tool that measures visits and traffic sources.">Svetainės statistikos įrankį, kuris matuoja apsilankymus ir srauto šaltinius.</li>
+          <li data-en="A session-analytics tool that produces anonymous, aggregated interaction statistics.">Sesijų analizės įrankį, kuris teikia anoniminę, apibendrintą sąveikos statistiką.</li>
+        </ul>
+        <p data-en="You can withdraw your consent at any time by clearing your browser storage for this site, after which the banner will appear again.">Sutikimą galite bet kada atšaukti išvalę šios svetainės naršyklės atmintį, po to slapukų juosta pasirodys iš naujo.</p>
+      </article>
+
+      <article class="legal-article" id="gavejai">
+        <h2><span class="legal-num">8</span><span data-en="Recipients and processors">Gavėjai ir tvarkytojai</span></h2>
+        <p data-en="We do not share your email with other companies for their own use. We do rely on a small number of service providers who process data strictly on our behalf, under data processing agreements:">Jūsų el. pašto neperduodame kitoms įmonėms jų pačių tikslams. Tačiau pasitelkiame kelis paslaugų teikėjus, kurie tvarko duomenis griežtai mūsų vardu pagal duomenų tvarkymo sutartis:</p>
+        <ul>
+          <li data-en="Our email platform, which stores the waitlist and sends the messages. Its servers are located in the European Union.">Mūsų el. pašto platformą, kuri saugo laukiančiųjų sąrašą ir siunčia žinutes. Jos serveriai yra Europos Sąjungoje.</li>
+          <li data-en="Our website hosting provider, which serves the pages and, in doing so, briefly processes your IP address as part of normal web traffic.">Mūsų svetainės prieglobos teikėją, kuris pateikia puslapius ir tai darydamas trumpai tvarko Jūsų IP adresą kaip įprasto interneto srauto dalį.</li>
+          <li data-en="The analytics providers named in section 7, but only if you consent to cookies.">7 skyriuje nurodytus statistikos teikėjus, bet tik jei sutinkate su slapukais.</li>
+        </ul>
+        <p data-en="We may also disclose data if required by law or a lawful request from a competent authority.">Duomenis taip pat galime atskleisti, jei to reikalauja teisės aktai arba teisėtas kompetentingos institucijos prašymas.</p>
+      </article>
+
+      <article class="legal-article" id="perdavimai">
+        <h2><span class="legal-num">9</span><span data-en="International transfers">Perdavimai už ES ribų</span></h2>
+        <p data-en="Your waitlist email is stored on servers within the European Union, so it is not transferred outside the EU.">Jūsų laukiančiųjų sąrašo el. paštas saugomas serveriuose Europos Sąjungoje, todėl už ES ribų neperduodamas.</p>
+        <p data-en="The website hosting and the analytics tools (used only with your consent) are provided by companies based in the United States, so using them may involve transferring technical data such as your IP address to the USA. These transfers rely on the European Commission’s Standard Contractual Clauses and the providers’ own safeguards.">Svetainės prieglobą ir statistikos įrankius (naudojamus tik su Jūsų sutikimu) teikia JAV įsikūrusios įmonės, todėl juos naudojant gali būti perduodami techniniai duomenys, pavyzdžiui, Jūsų IP adresas, į JAV. Šie perdavimai grindžiami Europos Komisijos standartinėmis sutarčių sąlygomis ir pačių teikėjų taikomomis apsaugos priemonėmis.</p>
+      </article>
+
+      <article class="legal-article" id="saugojimas">
+        <h2><span class="legal-num">10</span><span data-en="Data retention">Saugojimo terminai</span></h2>
+        <ul>
+          <li data-en="Waitlist email — kept until you unsubscribe. Every message we send includes an unsubscribe link. When you unsubscribe, we remove your address from active use and delete it within a reasonable period.">Laukiančiųjų sąrašo el. paštas — saugomas, kol atsisakote prenumeratos. Kiekvienoje mūsų siunčiamoje žinutėje yra atsisakymo nuoroda. Kai atsisakote, adresą pašaliname iš aktyvaus naudojimo ir per protingą terminą ištriname.</li>
+          <li data-en="Analytics data — retained for the period set by the analytics tools, then aggregated or deleted. It is anonymous and cannot be traced back to you by us.">Statistikos duomenys — saugomi statistikos įrankių nustatytą laikotarpį, vėliau apibendrinami arba ištrinami. Jie anoniminiai ir mes negalime jų susieti su Jumis.</li>
+          <li data-en="Consent record — the technical entry that remembers your cookie choice stays in your browser until you clear it.">Sutikimo įrašas — techninis įrašas, įsimenantis Jūsų slapukų pasirinkimą, lieka Jūsų naršyklėje, kol jį išvalote.</li>
+        </ul>
+      </article>
+
+      <article class="legal-article" id="sauga">
+        <h2><span class="legal-num">11</span><span data-en="Security">Duomenų sauga</span></h2>
+        <p data-en="We use encrypted connections (HTTPS), keep the amount of data we hold to a minimum, and work only with service providers that apply appropriate technical and organisational safeguards. No online service can promise absolute security, but the very limited data we hold at this stage keeps the risk low.">Naudojame šifruotus ryšius (HTTPS), laikomų duomenų kiekį išlaikome minimalų ir dirbame tik su tais paslaugų teikėjais, kurie taiko tinkamas technines bei organizacines apsaugos priemones. Nė viena internetinė paslauga negali pažadėti absoliučios saugos, tačiau labai ribotas šiame etape saugomų duomenų kiekis mažina riziką.</p>
+      </article>
+
+      <article class="legal-article" id="tavo-teises">
+        <h2><span class="legal-num">12</span><span data-en="Your rights">Jūsų teisės</span></h2>
+        <p data-en="Under the GDPR you have the following rights regarding your personal data:">Pagal BDAR turite šias teises, susijusias su Jūsų asmens duomenimis:</p>
+        <div class="legal-rights">
+          <div class="legal-right"><h3 data-en="Access">Susipažinti</h3><p data-en="Ask what data we hold about you.">Sužinoti, kokius duomenis apie Jus turime.</p></div>
+          <div class="legal-right"><h3 data-en="Rectification">Ištaisyti</h3><p data-en="Correct inaccurate data.">Ištaisyti netikslius duomenis.</p></div>
+          <div class="legal-right"><h3 data-en="Erasure">Ištrinti</h3><p data-en="Ask us to delete your data.">Paprašyti ištrinti Jūsų duomenis.</p></div>
+          <div class="legal-right"><h3 data-en="Restriction">Apriboti</h3><p data-en="Ask us to limit processing.">Paprašyti apriboti tvarkymą.</p></div>
+          <div class="legal-right"><h3 data-en="Portability">Perkelti</h3><p data-en="Receive your data in a usable format.">Gauti savo duomenis patogiu formatu.</p></div>
+          <div class="legal-right"><h3 data-en="Objection">Nesutikti</h3><p data-en="Object to certain processing.">Nesutikti su tam tikru tvarkymu.</p></div>
+          <div class="legal-right"><h3 data-en="Withdraw consent">Atšaukti sutikimą</h3><p data-en="Withdraw consent at any time, with no effect on past processing.">Bet kada atšaukti sutikimą, nedarant įtakos ankstesniam tvarkymui.</p></div>
+          <div class="legal-right"><h3 data-en="Complaint">Skųstis</h3><p data-en="Lodge a complaint with the supervisory authority.">Pateikti skundą priežiūros institucijai.</p></div>
+        </div>
+        <p data-en="To exercise any of these, write to labas@nuomity.lt. We respond within one month. You can also complain to the State Data Protection Inspectorate (Valstybinė duomenų apsaugos inspekcija, vdai.lrv.lt), L. Sapiegos g. 17, Vilnius.">Norėdami pasinaudoti bet kuria iš šių teisių, rašykite labas@nuomity.lt. Atsakome per vieną mėnesį. Taip pat galite skųstis Valstybinei duomenų apsaugos inspekcijai (vdai.lrv.lt), L. Sapiegos g. 17, Vilnius.</p>
+      </article>
+
+      <article class="legal-article" id="automatizuoti">
+        <h2><span class="legal-num">13</span><span data-en="Automated decisions">Automatizuoti sprendimai</span></h2>
+        <p data-en="We do not carry out any automated decision-making or profiling that produces legal or similarly significant effects on you. Joining the waitlist involves no such processing.">Nevykdome jokio automatizuoto sprendimų priėmimo ar profiliavimo, kuris Jums sukeltų teisines ar panašiai reikšmingas pasekmes. Prisijungimas prie laukiančiųjų sąrašo tokio tvarkymo neapima.</p>
+      </article>
+
+      <article class="legal-article" id="nepilnameciai">
+        <h2><span class="legal-num">14</span><span data-en="Children">Nepilnamečiai</span></h2>
+        <p data-en="The website and the waitlist are meant for adults, primarily landlords and tenants. It is not directed at children, and we do not knowingly collect data from anyone under 16. If you believe a child has submitted their email, write to us and we will delete it.">Svetainė ir laukiančiųjų sąrašas skirti suaugusiems, visų pirma nuomotojams ir nuomininkams. Jis neskirtas vaikams, ir mes sąmoningai nerenkame jaunesnių nei 16 metų asmenų duomenų. Jei manote, kad vaikas pateikė savo el. paštą, parašykite mums ir jį ištrinsime.</p>
+      </article>
+
+      <article class="legal-article" id="pakeitimai">
+        <h2><span class="legal-num">15</span><span data-en="Changes to this policy">Politikos pakeitimai</span></h2>
+        <p data-en="We may update this policy, especially when the product launches and processing expands. The date at the top always shows the current version. For significant changes affecting people already on the waitlist, we will notify you by email.">Šią politiką galime atnaujinti, ypač kai bus paleistas produktas ir tvarkymas išsiplės. Data viršuje visada rodo galiojančią versiją. Apie reikšmingus pakeitimus, turinčius įtakos jau užsiregistravusiems, pranešime el. paštu.</p>
+      </article>
+
+      <article class="legal-article" id="kontaktai">
+        <h2><span class="legal-num">16</span><span data-en="Contact">Kontaktai</span></h2>
+        <p data-en="For any question about this policy or your data, contact us:">Bet kokiu klausimu dėl šios politikos ar Jūsų duomenų susisiekite su mumis:</p>
+        <div class="legal-deflist">
+          <div><dt data-en="Company">Įmonė</dt><dd>Nuomity, MB</dd></div>
+          <div><dt data-en="Address">Adresas</dt><dd>Perkūnkiemio g. 19, Vilnius, <span data-en="Lithuania">Lietuva</span></dd></div>
+          <div><dt data-en="Email">El. paštas</dt><dd><a href="mailto:labas@nuomity.lt">labas@nuomity.lt</a></dd></div>
+        </div>
+        <a class="legal-back" href="../#virsus"><i class="ti ti-arrow-left" aria-hidden="true"></i><span data-en="Back to home">Grįžti į pradžią</span></a>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="../#virsus" aria-label="nuomity"><svg class="logo-svg" viewBox="0 0 264.09 64.04" width="132" height="32" xmlns="http://www.w3.org/2000/svg" role="img"><circle class="logo-accent" cx="259.42" cy="43.29" r="4.67"></circle><circle class="logo-ink" cx="188.02" cy="4.67" r="4.67"></circle><path class="logo-accent" d="M22.06,26.28c0,.08,0,.16-.02.24-.03.25-.13.47-.27.66l-.07.09-.7.98-12.47,17.64-.06.09c-.84,1.19-2.23,1.97-3.81,1.97-2.57,0-4.67-2.09-4.67-4.66V13.73h5.88l.27,2.41.08.7,1.56,14s0,.06,0,.09v.09c.09.77.75,1.38,1.55,1.38.35,0,.68-.11.94-.31l8.17-6.2.86-.65.26-.19h.01c.26-.2.58-.31.92-.31.86,0,1.55.7,1.55,1.56Z"></path><path class="logo-accent" d="M32.67,39.2v8.76h-6l-.19-2.73v-.23c-.02-.05-.02-.1-.02-.15l-1.09-15.58-.43-6.05c-.1-1.62-1.45-2.91-3.11-2.91-.72,0-1.38.24-1.91.65l-.07.06-2.61,1.96-4.43,3.34-.05.04c-.26.2-.59.32-.94.32-.86,0-1.56-.7-1.56-1.56,0-.43.18-.83.47-1.11l.1-.09,8.53-7.93.22-.21c1.39-1.28,3.24-2.07,5.29-2.07,4.3,0,7.77,3.48,7.77,7.77v17.69Z"></path><path class="logo-ink" d="M70.99,13.73v34.22h-7.08v-4.04c-1.12,1.41-2.58,2.52-4.38,3.32-1.8.81-3.72,1.21-5.74,1.21-2.69,0-5.1-.56-7.24-1.68-2.13-1.12-3.81-2.77-5.03-4.97-1.22-2.19-1.83-4.84-1.83-7.95V13.73h7.02v19.07c0,3.06.77,5.41,2.3,7.05,1.53,1.64,3.62,2.45,6.27,2.45s4.75-.82,6.3-2.45c1.55-1.63,2.33-3.98,2.33-7.05V13.73h7.08Z"></path><path class="logo-ink" d="M86.39,46.31c-2.61-1.47-4.66-3.54-6.15-6.21-1.49-2.67-2.24-5.76-2.24-9.28s.77-6.56,2.3-9.25c1.53-2.69,3.62-4.76,6.27-6.21,2.65-1.45,5.61-2.17,8.88-2.17s6.23.72,8.88,2.17c2.65,1.45,4.74,3.52,6.27,6.21,1.53,2.69,2.3,5.78,2.3,9.25s-.79,6.56-2.36,9.25c-1.57,2.69-3.72,4.77-6.43,6.24-2.71,1.47-5.7,2.2-8.97,2.2s-6.15-.73-8.76-2.2ZM100.27,41.06c1.59-.87,2.89-2.17,3.88-3.91.99-1.74,1.49-3.85,1.49-6.33s-.48-4.59-1.43-6.3c-.95-1.72-2.22-3.01-3.79-3.88-1.57-.87-3.27-1.3-5.09-1.3s-3.51.43-5.06,1.3c-1.55.87-2.78,2.16-3.69,3.88-.91,1.72-1.37,3.82-1.37,6.3,0,3.69.94,6.53,2.83,8.54,1.88,2.01,4.25,3.01,7.11,3.01,1.82,0,3.53-.43,5.12-1.3Z"></path><path class="logo-ink" d="M168.59,14.85c2.13,1.12,3.81,2.77,5.03,4.97,1.22,2.2,1.83,4.84,1.83,7.95v20.18h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.02v-19.13c0-3.06-.77-5.41-2.3-7.05-1.53-1.63-3.62-2.45-6.27-2.45s-4.75.82-6.3,2.45c-1.55,1.64-2.33,3.99-2.33,7.05v19.13h-7.08V13.73h7.08v3.91c1.16-1.41,2.63-2.5,4.41-3.29,1.78-.79,3.68-1.18,5.71-1.18,2.73,0,5.18.58,7.33,1.74,2.15,1.16,3.81,2.84,4.97,5.03,1.04-2.07,2.65-3.72,4.84-4.94,2.19-1.22,4.55-1.83,7.08-1.83,2.69,0,5.1.56,7.24,1.68Z"></path><path class="logo-ink" d="M191.53,13.73v34.22h-7.08V13.73h7.08Z"></path><path class="logo-ink" d="M209.11,19.51v18.94c0,1.28.3,2.2.9,2.76.6.56,1.62.84,3.07.84h4.35v5.9h-5.59c-3.19,0-5.63-.75-7.33-2.24-1.7-1.49-2.55-3.91-2.55-7.27v-18.94h-4.04v-5.78h4.04V5.23h7.14v8.51h8.32v5.78h-8.32Z"></path><path class="logo-ink" d="M254.76,13.73l-20.99,50.31h-7.33l6.96-16.64-13.48-33.66h7.89l9.63,26.08,10-26.08h7.33Z"></path></svg></a>
+      <p data-en="Less hassle. More clarity.">Mažiau rūpesčių. Daugiau aiškumo.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/nuomity" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/people/Nuomity/61570968297280/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/nuomity/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 Nuomity</span>
+      <a href="../privatumo-politika/" data-en="Privacy Policy">Privatumo politika</a>
+    </div>
+    <a class="footer-email" href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
+  </div>
+</footer>
+
+<script>
+/* ---------- Mobile menu ---------- */
+(function () {
+  var burger = document.querySelector('.nav-burger');
+  var menu = document.getElementById('mobile-menu');
+  if (!burger || !menu) return;
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* ---------- Language switch (LT / EN) — same mechanism as landing ---------- */
+(function () {
+  var STORE_KEY = 'nuomity-lang';
+
+  document.querySelectorAll('[data-en]').forEach(function (el) {
+    el.setAttribute('data-lt', el.innerHTML);
+  });
+  document.querySelectorAll('[data-en-content]').forEach(function (el) {
+    el.setAttribute('data-lt-content', el.getAttribute('content') || '');
+  });
+
+  function applyLang(lang) {
+    var en = lang === 'en';
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      var val = en ? el.getAttribute('data-en') : el.getAttribute('data-lt');
+      if (val !== null) el.innerHTML = val;
+    });
+    document.querySelectorAll('[data-en-content]').forEach(function (el) {
+      el.setAttribute('content', en ? el.getAttribute('data-en-content') : el.getAttribute('data-lt-content'));
+    });
+    document.documentElement.lang = en ? 'en' : 'lt';
+    document.querySelectorAll('.lang-toggle button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(function (b) {
+    b.addEventListener('click', function () { applyLang(b.dataset.lang); });
+  });
+
+  var saved = 'lt';
+  try { saved = localStorage.getItem(STORE_KEY) || 'lt'; } catch (e) {}
+  if (saved === 'en') applyLang('en');
+})();
+
+/* ---------- ToC active-section highlight ---------- */
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.legal-toc a'));
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (target) map[id] = a;
+  });
+
+  function setCurrent(a) {
+    links.forEach(function (l) { l.removeAttribute('aria-current'); });
+    if (a) a.setAttribute('aria-current', 'true');
+  }
+
+  /* Clicking a link highlights exactly that link and briefly pauses the
+     scroll-spy, so the smooth scroll can't hand the highlight to a
+     neighbouring section before it settles. */
+  var lockUntil = 0;
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      setCurrent(a);
+      lockUntil = Date.now() + 900;
+    });
+  });
+
+  if (!('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function (entries) {
+    if (Date.now() < lockUntil) return;
+    var visible = entries.filter(function (e) { return e.isIntersecting; });
+    if (!visible.length) return;
+    /* Pick the topmost intersecting section for a stable, correct result. */
+    visible.sort(function (x, y) { return x.boundingClientRect.top - y.boundingClientRect.top; });
+    setCurrent(map[visible[0].target.id]);
+  }, { rootMargin: '-100px 0px -70% 0px' });
+  Object.keys(map).forEach(function (id) {
+    obs.observe(document.getElementById(id));
+  });
+})();
+</script>
+
+</body>
+</html>
