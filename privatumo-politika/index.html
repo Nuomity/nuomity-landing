@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
+<meta name="color-scheme" content="light" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title data-en="Privacy Policy — Nuomity">Privatumo politika — Nuomity</title>
+<title data-en="Privacy policy — Nuomity">Privatumo politika — Nuomity</title>
 <meta name="description" content="Nuomity privatumo politika: kaip tvarkome laukiančiųjų sąrašo el. pašto adresus ir svetainės statistikos duomenis." data-en-content="Nuomity privacy policy: how we handle waitlist email addresses and website analytics data." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://nuomity.lt/privatumo-politika/" />
@@ -51,28 +52,6 @@
   --toc-width: 268px;
 }
 
-/* Dark mode: derive a dark palette from the existing tokens. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #EEF1F6;
-    --ink-2: #C4CBD6;
-    --ink-3: #9BA4B2;
-    --paper: #0E1420;
-    --card: #161E2C;
-    --line: #27303F;
-    --accent-soft: color-mix(in oklab, var(--accent) 22%, #0E1420);
-    --accent-softer: color-mix(in oklab, var(--accent) 12%, #0E1420);
-    --accent-border: color-mix(in oklab, var(--accent) 40%, #0E1420);
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
-  }
-  body { background: var(--paper); color: var(--ink); }
-  .legal-toc { background: var(--card); }
-  .legal-article { background: var(--card); }
-  .legal-hero { border-bottom-color: var(--line); }
-  .logo.on-dark .logo-word,
-  .logo .logo-ink { fill: var(--ink); }
-}
-
 /* ---------- Hero ---------- */
 .legal-hero {
   padding: 116px 0 40px;
@@ -87,9 +66,6 @@
   text-transform: uppercase;
   color: var(--accent-ink);
   margin-bottom: 14px;
-}
-@media (prefers-color-scheme: dark) {
-  .legal-hero .eyebrow { color: var(--accent-2); }
 }
 .legal-hero h1 {
   font-size: clamp(34px, 5vw, 52px);
@@ -181,9 +157,6 @@
   font-weight: 600;
 }
 .legal-toc a[aria-current="true"]::before { color: var(--accent); }
-@media (prefers-color-scheme: dark) {
-  .legal-toc a[aria-current="true"] { color: var(--ink); }
-}
 
 /* ---------- Content ---------- */
 .legal-content { min-width: 0; }
@@ -243,10 +216,6 @@
   color: var(--accent-ink);
   text-decoration: underline;
   text-underline-offset: 2px;
-}
-@media (prefers-color-scheme: dark) {
-  .legal-article a[href^="mailto"],
-  .legal-article a[href^="http"] { color: var(--accent-2); }
 }
 
 /* Definition table */
@@ -316,7 +285,6 @@
   color: var(--accent-ink);
   text-decoration: none;
 }
-@media (prefers-color-scheme: dark) { .legal-back { color: var(--accent-2); } }
 .legal-back:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
@@ -377,7 +345,7 @@
 <!-- ============ HERO ============ -->
 <section class="legal-hero" aria-labelledby="page-title">
   <div class="wrap">
-    <h1 id="page-title" data-en="Privacy Policy">Privatumo politika</h1>
+    <h1 id="page-title" data-en="Privacy policy">Privatumo politika</h1>
     <p class="legal-lede" data-en="This policy explains what data we collect through the nuomity.lt website and how we handle it. At this stage Nuomity operates only as a landing page with a waitlist, so this policy covers exactly that and nothing more.">Ši politika paaiškina, kokius duomenis renkame per svetainę nuomity.lt ir kaip juos tvarkome. Šiuo metu Nuomity veikia tik kaip pristatymo puslapis su laukiančiųjų sąrašu, todėl politika apima būtent tai ir nieko daugiau.</p>
     <span class="legal-updated"><i class="ti ti-calendar-event" aria-hidden="true"></i><span data-en="Last updated: 8 July 2026">Paskutinį kartą atnaujinta: 2026 m. liepos 8 d.</span></span>
   </div>
@@ -575,11 +543,13 @@
         <a href="https://www.instagram.com/nuomity/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
       </div>
     </div>
-    <div class="footer-meta">
-      <span>© 2026 Nuomity</span>
-      <a href="../privatumo-politika/" data-en="Privacy Policy">Privatumo politika</a>
+  </div>
+  <div class="wrap">
+    <div class="footer-bar">
+      <a class="footer-email" href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
+      <span class="footer-copy">© 2026 Nuomity</span>
+      <a class="footer-legal" href="../privatumo-politika/" data-en="Privacy policy">Privatumo politika</a>
     </div>
-    <a class="footer-email" href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
   </div>
 </footer>
 
