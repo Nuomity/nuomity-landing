@@ -506,7 +506,7 @@
   </div>
   <div class="wrap">
     <div class="footer-bar">
-      <a class="footer-email" href="mailto:labas@nuomity.lt">labas@nuomity.lt</a>
+      <a class="footer-email" href="/cdn-cgi/l/email-protection#335f52515240735d465c5e5a474a1d5f47"><span class="__cf_email__" data-cfemail="a3cfc2c1c2d0e3cdd6cccecad7da8dcfd7">[email&#160;protected]</span></a>
       <span class="footer-copy">© 2026 Nuomity</span>
       <a class="footer-legal" href="privatumo-politika/" data-en="Privacy policy">Privatumo politika</a>
     </div>
@@ -522,7 +522,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   /* =====================================================================
      WAITLIST FORM — sends email to Cloudflare Worker, which adds the
      contact to Brevo and triggers the confirmation email.
@@ -556,16 +556,6 @@
     });
   }
 
-  function revealShare() {
-    var s = document.getElementById('pasidalink');
-    if (!s) return;
-    s.classList.remove('share-highlight');
-    var y = s.getBoundingClientRect().top + window.pageYOffset - 72;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-    /* re-trigger the pulse after the scroll settles */
-    window.setTimeout(function () { s.classList.add('share-highlight'); }, 480);
-  }
-
   document.getElementById('waitlist-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var card = this.closest('.waitlist-card');
@@ -579,7 +569,6 @@
       form.style.display = 'none';
       document.querySelector('.hero-form-note').style.display = 'none';
       document.querySelector('.hero-form-success').style.display = 'block';
-      revealShare();
     });
   });
 
