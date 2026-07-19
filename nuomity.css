@@ -1280,7 +1280,12 @@ a { color: inherit; }
 }
 
 .waitlist-card.submitted .waitlist-form,
-.waitlist-card.submitted .waitlist-note { display: none; }
+.waitlist-card.submitted .waitlist-note,
+.waitlist-card.submitted .waitlist-consent { display: none; }
+
+/* Share block that appears in place of the waitlist CTA once submitted */
+.waitlist-card .wl-share { display: none; }
+.waitlist-card.submitted .wl-share { display: block; margin: 34px auto 0; text-align: center; }
 
 .waitlist-card.submitted .waitlist-success { display: block; }
 
@@ -2050,6 +2055,15 @@ a { color: inherit; }
   border: none;
   border-top: 1px solid var(--accent-border);
   border-radius: 0;
+}
+
+/* Standalone share section (after the team section) */
+.share-section { padding: 8px 0 76px; }
+.share-section .share-card { margin: 0 auto; scroll-margin-top: 80px; }
+.share-highlight { animation: share-pulse 1.5s ease; }
+@keyframes share-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  25% { box-shadow: 0 0 0 6px color-mix(in oklab, var(--accent) 24%, transparent); }
 }
 
 .share-title {

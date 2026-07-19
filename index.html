@@ -14,6 +14,9 @@
 <meta property="og:site_name" content="Nuomity" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://nuomity.lt/" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Nuomity","alternateName":"Nuomity.lt","url":"https://nuomity.lt/"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700&amp;family=Quicksand:wght@600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
@@ -69,7 +72,10 @@
     .lang-toggle button { padding: 6px 10px; font-size: 12px; }
   }
 </style>
-<link rel="icon" type="image/svg+xml" href="logos/nuomity-icon.svg" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="logos/nuomity-favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="logos/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="logos/favicon-180.png" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 </head>
 <body>
@@ -412,18 +418,16 @@
       <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
       <p class="waitlist-consent" data-en='By joining you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prisijungdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
       <p class="waitlist-success" data-en="Thanks! You're on the waitlist.">Ačiū! Tu esi laukiančiųjų sąraše.</p>
-
-      <!-- Share block: part of the CTA card -->
-      <div class="share-card share-in-cta">
-      <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudinga?</p>
+      <div class="share-card wl-share">
+      <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudingas?</p>
       <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
       <div class="share-actions">
-        <button type="button" class="share-native" id="share-native" data-en="Share Nuomity"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink „Nuomity“</button>
-        <div class="share-buttons" id="share-buttons">
-          <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
-          <a class="share-btn" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
-          <a class="share-btn" id="share-email" href="#" aria-label="El. paštas"><i class="ti ti-mail" aria-hidden="true"></i></a>
-          <button type="button" class="share-btn share-copy" id="share-copy"><i class="ti ti-link" aria-hidden="true"></i><span data-en="Copy link">Kopijuoti nuorodą</span></button>
+        <button type="button" class="share-native" data-en="Share Nuomity"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink „Nuomity“</button>
+        <div class="share-buttons">
+          <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <a class="share-btn share-email" href="#" aria-label="El. paštas"><i class="ti ti-mail" aria-hidden="true"></i></a>
+          <button type="button" class="share-btn share-copy"><i class="ti ti-link" aria-hidden="true"></i><span data-en="Copy link">Kopijuoti nuorodą</span></button>
         </div>
       </div>
       </div>
@@ -465,6 +469,25 @@
         <a class="team-linkedin" href="https://www.linkedin.com/in/edvin-dichkanec/" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ SHARE ============ -->
+<section class="section share-section" id="pasidalink" data-screen-label="Share">
+  <div class="wrap">
+      <div class="share-card">
+      <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudingas?</p>
+      <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
+      <div class="share-actions">
+        <button type="button" class="share-native" data-en="Share Nuomity"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink „Nuomity“</button>
+        <div class="share-buttons">
+          <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <a class="share-btn share-email" href="#" aria-label="El. paštas"><i class="ti ti-mail" aria-hidden="true"></i></a>
+          <button type="button" class="share-btn share-copy"><i class="ti ti-link" aria-hidden="true"></i><span data-en="Copy link">Kopijuoti nuorodą</span></button>
+        </div>
+      </div>
+      </div>
   </div>
 </section>
 
@@ -533,6 +556,16 @@
     });
   }
 
+  function revealShare() {
+    var s = document.getElementById('pasidalink');
+    if (!s) return;
+    s.classList.remove('share-highlight');
+    var y = s.getBoundingClientRect().top + window.pageYOffset - 72;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    /* re-trigger the pulse after the scroll settles */
+    window.setTimeout(function () { s.classList.add('share-highlight'); }, 480);
+  }
+
   document.getElementById('waitlist-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var card = this.closest('.waitlist-card');
@@ -546,6 +579,7 @@
       form.style.display = 'none';
       document.querySelector('.hero-form-note').style.display = 'none';
       document.querySelector('.hero-form-success').style.display = 'block';
+      revealShare();
     });
   });
 
@@ -961,37 +995,38 @@
     function text() { return document.documentElement.lang === 'en' ? SHARE_TEXT_EN : SHARE_TEXT_LT; }
     function u(src) { return SHARE_URL + '?utm_source=' + src + '&utm_medium=share'; }
 
-    var nativeBtn = document.getElementById('share-native');
-    var buttons = document.getElementById('share-buttons');
-    var li = document.getElementById('share-linkedin');
-    var fb = document.getElementById('share-facebook');
-    var mail = document.getElementById('share-email');
-    var copy = document.getElementById('share-copy');
+    document.querySelectorAll('.share-card').forEach(function (card) {
+      var nativeBtn = card.querySelector('.share-native');
+      var li = card.querySelector('.share-linkedin');
+      var fb = card.querySelector('.share-facebook');
+      var mail = card.querySelector('.share-email');
+      var copy = card.querySelector('.share-copy');
 
-    if (navigator.share && nativeBtn) {
-      nativeBtn.hidden = false;
-      nativeBtn.addEventListener('click', function () {
-        navigator.share({ title: SHARE_TITLE, text: text(), url: u('native') }).catch(function () {});
-      });
-    }
+      if (navigator.share && nativeBtn) {
+        nativeBtn.hidden = false;
+        nativeBtn.addEventListener('click', function () {
+          navigator.share({ title: SHARE_TITLE, text: text(), url: u('native') }).catch(function () {});
+        });
+      }
 
-    if (li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(u('linkedin'));
-    if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(u('facebook'));
-    if (mail) mail.href = 'mailto:?subject=' + encodeURIComponent(SHARE_TITLE) + '&body=' + encodeURIComponent(text() + ' ' + u('email'));
+      if (li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(u('linkedin'));
+      if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(u('facebook'));
+      if (mail) mail.href = 'mailto:?subject=' + encodeURIComponent(SHARE_TITLE) + '&body=' + encodeURIComponent(text() + ' ' + u('email'));
 
-    if (copy) {
-      copy.addEventListener('click', function () {
-        var label = copy.querySelector('span');
-        var en = document.documentElement.lang === 'en';
-        function done() {
-          if (label) label.textContent = en ? 'Copied' : 'Nukopijuota';
-          setTimeout(function () { if (label) label.textContent = en ? 'Copy link' : 'Kopijuoti nuorodą'; }, 1800);
-        }
-        var link = u('copy');
-        if (navigator.clipboard) navigator.clipboard.writeText(link).then(done, done);
-        else { var t = document.createElement('textarea'); t.value = link; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
-      });
-    }
+      if (copy) {
+        copy.addEventListener('click', function () {
+          var label = copy.querySelector('span');
+          var en = document.documentElement.lang === 'en';
+          function done() {
+            if (label) label.textContent = en ? 'Copied' : 'Nukopijuota';
+            setTimeout(function () { if (label) label.textContent = en ? 'Copy link' : 'Kopijuoti nuorodą'; }, 1800);
+          }
+          var link = u('copy');
+          if (navigator.clipboard) navigator.clipboard.writeText(link).then(done, done);
+          else { var t = document.createElement('textarea'); t.value = link; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+        });
+      }
+    });
   })();
 
   /* ---------- Kryptis timeline: single continuous connector line (both layouts) ---------- */
