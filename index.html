@@ -131,6 +131,19 @@
     <p class="hero-form-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
     <p class="hero-form-consent" data-en='By joining you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prisijungdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
     <p class="hero-form-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
+    <div class="share-card hero-share">
+      <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudingas?</p>
+      <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
+      <div class="share-actions">
+        <button type="button" class="share-native" data-en="Share Nuomity"><i class="ti ti-share-2" aria-hidden="true"></i>Pasidalink „Nuomity“</button>
+        <div class="share-buttons">
+          <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+          <a class="share-btn share-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <a class="share-btn share-email" href="#" aria-label="El. paštas"><i class="ti ti-mail" aria-hidden="true"></i></a>
+          <button type="button" class="share-btn share-copy"><i class="ti ti-link" aria-hidden="true"></i><span data-en="Copy link">Kopijuoti nuorodą</span></button>
+        </div>
+      </div>
+    </div>
 
     <!-- Waitlist counter: hidden until >=15 real registrants; <50 shows progress, >=50 shows plain count -->
     <div class="wl-counter" id="wl-counter" hidden>
@@ -417,7 +430,7 @@
       </form>
       <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
       <p class="waitlist-consent" data-en='By joining you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prisijungdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
-      <p class="waitlist-success" data-en="Thanks! You're on the waitlist.">Ačiū! Tu esi laukiančiųjų sąraše.</p>
+      <p class="waitlist-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
       <div class="share-card wl-share">
       <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudingas?</p>
       <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
@@ -506,7 +519,7 @@
   </div>
   <div class="wrap">
     <div class="footer-bar">
-      <a class="footer-email" href="/cdn-cgi/l/email-protection#335f52515240735d465c5e5a474a1d5f47"><span class="__cf_email__" data-cfemail="a3cfc2c1c2d0e3cdd6cccecad7da8dcfd7">[email&#160;protected]</span></a>
+      <a class="footer-email" href="/cdn-cgi/l/email-protection#fd919c9f9c8ebd93889290948984d39189"><span class="__cf_email__" data-cfemail="0e626f6c6f7d4e607b6163677a7720627a">[email&#160;protected]</span></a>
       <span class="footer-copy">© 2026 Nuomity</span>
       <a class="footer-legal" href="privatumo-politika/" data-en="Privacy policy">Privatumo politika</a>
     </div>
@@ -568,7 +581,9 @@
     submitWaitlist(form, function () {
       form.style.display = 'none';
       document.querySelector('.hero-form-note').style.display = 'none';
+      document.querySelector('.hero-form-consent').style.display = 'none';
       document.querySelector('.hero-form-success').style.display = 'block';
+      document.querySelector('.hero-share').style.display = 'block';
     });
   });
 

@@ -1287,6 +1287,9 @@ a { color: inherit; }
 .waitlist-card .wl-share { display: none; }
 .waitlist-card.submitted .wl-share { display: block; margin: 34px auto 0; text-align: center; }
 
+/* Share block in the hero CTA (shown after signup, no scroll) */
+.hero-share { display: none; margin: 30px auto 0; text-align: center; }
+
 .waitlist-card.submitted .waitlist-success { display: block; }
 
 /* ---------- Partners strip ---------- */
