@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title data-en="Nuomity. Rent with confidence.">Nuomity. Nuomokite užtikrintai.</title>
-<meta name="description" content="Nuomok be brokerio. Surink paraiškas, patikrink nuomininkų mokumą ir pasirašyk sutartį elektroniniu būdu. Viskas vienoje vietoje." />
+<meta name="description" content="Nuomok užtikrintai. Surink paraiškas, patikrink nuomininkų mokumą ir pasirašyk sutartį elektroniniu būdu. Viskas vienoje vietoje." />
 <meta property="og:title" content="Nuomity. Nuomokite užtikrintai." />
 <meta property="og:description" content="Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį. Viskas vienoje vietoje." />
 <meta property="og:image" content="https://nuomity.lt/og-image.png" />
@@ -121,7 +121,7 @@
     <div class="hero-copy">
     <h1 class="hero-rise">
       <span class="hero-rise-static" data-en="Renting without">Nuoma be</span>
-      <span class="hero-rise-line"><span class="hero-rise-word" id="hero-rise-word">brokerio</span></span>
+      <span class="hero-rise-line"><span class="hero-rise-word" id="hero-rise-word">rūpesčių</span></span>
     </h1>
     <p class="hero-sub" data-en="Collect applications, screen tenants, and sign the lease.<br />All in one place.">Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.<br />Viskas vienoje vietoje.</p>
     <form class="hero-form" id="hero-waitlist-form">
@@ -682,8 +682,8 @@
     if (!el) return;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var sets = {
-      lt: ['brokerio', 'rūpesčių', 'staigmenų', 'sumaišties'],
-      en: ['a broker', 'the worry', 'surprises', 'confusion']
+      lt: ['rūpesčių', 'staigmenų', 'sumaišties'],
+      en: ['the worry', 'surprises', 'confusion']
     };
     var IN_STEP = 32, OUT_STEP = 30, IN_DUR = 500, OUT_DUR = 420, HOLD = 2600;
     var i = 0, busy = false, timer = null;
@@ -994,8 +994,8 @@
   (function () {
     var SHARE_URL = 'https://nuomity.lt/';
     var SHARE_TITLE = 'Nuomity';
-    var SHARE_TEXT_LT = 'Nuoma be brokerio. Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.';
-    var SHARE_TEXT_EN = 'Rent without a broker. Collect applications, screen tenants, sign the lease.';
+    var SHARE_TEXT_LT = 'Nuoma be rūpesčių. Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.';
+    var SHARE_TEXT_EN = 'Rent without the worry. Collect applications, screen tenants, sign the lease.';
     function text() { return document.documentElement.lang === 'en' ? SHARE_TEXT_EN : SHARE_TEXT_LT; }
     function u(src) { return SHARE_URL + '?utm_source=' + src + '&utm_medium=share'; }
 
