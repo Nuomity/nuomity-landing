@@ -91,7 +91,7 @@
       <a href="#duk" data-en="FAQ">DUK</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary nav-cta" href="#virsus" data-en="Get early access">Gauk ankstyvą prieigą</a>
+      <a class="btn btn-primary nav-cta" href="#virsus" data-en="Subscribe for updates">Prenumeruok naujienas</a>
       <div class="lang-toggle lang-toggle-desktop" role="group" aria-label="Kalba / Language">
         <button type="button" data-lang="lt" aria-pressed="true">LT</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -126,11 +126,11 @@
     <p class="hero-sub" data-en="Collect applications, screen tenants, and sign the lease.<br />All in one place.">Surink paraiškas, patikrink nuomininkus ir pasirašyk sutartį.<br />Viskas vienoje vietoje.</p>
     <form class="hero-form" id="hero-waitlist-form">
       <input type="email" name="email" required="" placeholder="El. paštas" data-en-placeholder="Email" aria-label="El. paštas" data-en-aria="Email" />
-      <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
+      <button class="btn btn-primary" type="submit" data-en="Subscribe">Prenumeruoti</button>
     </form>
-    <p class="hero-form-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
-    <p class="hero-form-consent" data-en='By joining you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prisijungdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
-    <p class="hero-form-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
+    <p class="hero-form-note" data-en="Follow the news: we'll tell you about Nuomity updates.">Sek naujienas: pranešime apie „Nuomity“ pokyčius.</p>
+    <p class="hero-form-consent" data-en='By subscribing you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prenumeruodamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
+    <p class="hero-form-success" data-en="Thanks! We'll keep you posted.">Ačiū! Informuosime apie naujienas.</p>
     <div class="share-card hero-share">
       <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudingas?</p>
       <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
@@ -145,14 +145,6 @@
       </div>
     </div>
 
-    <!-- Waitlist counter: hidden until >=15 real registrants; <50 shows progress, >=50 shows plain count -->
-    <div class="wl-counter" id="wl-counter" hidden>
-      <div class="wl-counter-slots">
-        <span class="wl-counter-lead" id="wl-counter-lead"></span>
-        <span class="wl-counter-meta" id="wl-counter-meta"></span>
-      </div>
-      <div class="wl-counter-bar"><span class="wl-counter-fill" id="wl-counter-fill"></span></div>
-    </div>
     </div>
 
     <!-- Animated product preview: applications drop in, landlord screens, verdicts appear -->
@@ -382,7 +374,7 @@
           </div>
         </div>
       </div>
-      <p class="kryptis-note" data-en="These stages aren't set in stone yet. Join the waitlist and you'll help decide what we build next — and in what order.">Šie etapai dar nėra galutiniai. Prisijunk prie laukiančiųjų sąrašo ir galėsi nulemti, ką ir kokia tvarka kursime toliau.</p>
+      <p class="kryptis-note" data-en="These stages aren't set in stone yet. Follow the news to see what we build next — and in what order.">Šie etapai dar nėra galutiniai. Sek naujienas ir sužinosi, ką ir kokia tvarka kuriame toliau.</p>
     </div>
   </div>
 </section>
@@ -396,8 +388,8 @@
     </div>
     <div class="faq-list">
       <details class="faq-item" open="">
-        <summary><span data-en="Does joining the waitlist commit me to anything?">Ar prisijungimas prie laukiančiųjų sąrašo mane kažkam įpareigoja?</span><span class="faq-chevron"></span></summary>
-        <p data-en="No. Signing up costs nothing and doesn't oblige you to use the platform. We'll simply let you know when Nuomity is ready for its first users.">Ne. Registracija nieko nekainuoja ir neįpareigoja naudotis platforma. Informuosime, kai „Nuomity“ bus paruošta pirmiesiems naudotojams.</p>
+        <summary><span data-en="Does subscribing commit me to anything?">Ar prenumerata mane kažkam įpareigoja?</span><span class="faq-chevron"></span></summary>
+        <p data-en="No. Subscribing costs nothing and doesn't oblige you to use the platform. We'll simply let you know when Nuomity is ready for its first users.">Ne. Prenumerata nieko nekainuoja ir neįpareigoja naudotis platforma. Informuosime, kai „Nuomity“ bus paruošta pirmiesiems naudotojams.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="Why use Nuomity if the rental process already works?">Kodėl verta naudoti „Nuomity“, jei nuomos procesas ir dabar veikia?</span><span class="faq-chevron"></span></summary>
@@ -405,11 +397,7 @@
       </details>
       <details class="faq-item">
         <summary><span data-en="When will I be able to start using Nuomity?">Kada galėsiu pradėti naudotis „Nuomity“?</span><span class="faq-chevron"></span></summary>
-        <p data-en="We're currently building the first version of the platform. Waitlist members will be the first to try it.">Šiuo metu kuriame pirmąją platformos versiją. Užsiregistravęs laukiančiųjų sąraše būsi pirmas, kuris ją išbandys.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span data-en="What do I gain by signing up now instead of waiting for launch?">Kokia man nauda užsiregistruoti dabar, o ne produktui startavus?</span><span class="faq-chevron"></span></summary>
-        <p data-en="The first 50 to join get early access to the platform. We'll also invite you to try new features sooner and take your suggestions into account as we keep developing Nuomity.">Pirmieji 50 prisijungusių gaus ankstyvą prieigą prie platformos. Taip pat kviesime išbandyti naujas funkcijas anksčiau ir atsižvelgsime į tavo pasiūlymus toliau vystydami „Nuomity“.</p>
+        <p data-en="We're currently building the first version of the platform. We share news in our newsletter, so subscribe to stay in the loop.">Šiuo metu kuriame pirmąją platformos versiją. Naujienas skelbiame naujienlaiškyje, todėl prenumeruok ir būsi informuotas.</p>
       </details>
       <details class="faq-item">
         <summary><span data-en="How is a tenant's solvency checked, and how much can I trust it?">Kaip tikrinamas kandidato mokumas ir kiek tuo galima pasitikėti?</span><span class="faq-chevron"></span></summary>
@@ -426,11 +414,11 @@
       <h2 data-en="Be the first to rent with confidence.">Būk pirmas, kuris nuomos be rūpesčių.</h2>
       <form class="waitlist-form" id="waitlist-form">
         <input type="email" name="email" required="" placeholder="El. paštas" data-en-placeholder="Email" aria-label="El. paštas" data-en-aria="Email" />
-        <button class="btn btn-primary" type="submit" data-en="Get early access">Gauk ankstyvą prieigą</button>
+        <button class="btn btn-primary" type="submit" data-en="Subscribe">Prenumeruoti</button>
       </form>
-      <p class="waitlist-note" data-en="First 50 get early access. Your feedback shapes our decisions.">Pirmieji 50 gauna ankstyvą prieigą. Tavo atsiliepimai lems mūsų sprendimus.</p>
-      <p class="waitlist-consent" data-en='By joining you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prisijungdamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
-      <p class="waitlist-success" data-en="Thanks! You'll get access first.">Ačiū! Gausi prieigą vienas pirmųjų.</p>
+      <p class="waitlist-note" data-en="Follow the news: we'll tell you about Nuomity updates.">Sek naujienas: pranešime apie „Nuomity“ pokyčius.</p>
+      <p class="waitlist-consent" data-en='By subscribing you agree to the <a href="privatumo-politika/">privacy policy</a>.'>Prenumeruodamas sutinki su <a href="privatumo-politika/">privatumo politika</a>.</p>
+      <p class="waitlist-success" data-en="Thanks! We'll keep you posted.">Ačiū! Informuosime apie naujienas.</p>
       <div class="share-card wl-share">
       <p class="share-title" data-en="Know a landlord who'd find Nuomity useful?">Pažįsti nuomotoją, kuriam „Nuomity“ būtų naudingas?</p>
       <p class="share-sub" data-en="Share it with them. The more landlords join, the better we can build a tool that solves real rental problems.">Pasidalink su juo. Kuo daugiau nuomotojų prisijungs, tuo geriau galėsime sukurti įrankį, kuris išspręs realias nuomos problemas.</p>
@@ -621,54 +609,6 @@
     menu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', closeMenu);
     });
-  })();
-
-  /* ---------- Waitlist counter ----------
-     Fetches real registrant count from the Worker's /count endpoint.
-     Behaviour: hidden while count < 15; 15-49 shows "X vietų iš 50" + progress;
-     >= 50 shows a plain "50+" count. Any failure => stays hidden (page unaffected).
-     NOTE: requires a GET /count route on the Worker returning { count: <int> } from Brevo.
-  */
-  (function () {
-    var TOTAL = 50, SHOW_FROM = 15;
-    var el = document.getElementById('wl-counter');
-    if (!el) return;
-    var lead = document.getElementById('wl-counter-lead');
-    var meta = document.getElementById('wl-counter-meta');
-    var fill = document.getElementById('wl-counter-fill');
-    var bar = el.querySelector('.wl-counter-bar');
-
-    function isEn() { return document.documentElement.lang === 'en'; }
-    // Lithuanian noun form for "vieta" after a number: 1->vieta, 2-9->vietos, 0/11-19->vietų
-    function vietaForm(n) {
-      var t = n % 10, h = n % 100;
-      if (t === 1 && h !== 11) return 'vieta';
-      if (t >= 2 && t <= 9 && !(h >= 11 && h <= 19)) return 'vietos';
-      return 'vietų';
-    }
-
-    function render(count) {
-      if (typeof count !== 'number' || count < SHOW_FROM) { el.hidden = true; return; }
-      if (count >= TOTAL) {
-        lead.textContent = isEn() ? TOTAL + '+ landlords already on the list' : TOTAL + '+ nuomotojų jau sąraše';
-        meta.textContent = '';
-        if (bar) bar.style.display = 'none';
-      } else {
-        var left = TOTAL - count;
-        lead.innerHTML = isEn()
-          ? '<b>' + left + '</b> of ' + TOTAL + ' early-access ' + (left === 1 ? 'spot' : 'spots') + ' left'
-          : 'Liko <b>' + left + '</b> ' + vietaForm(left) + ' iš ' + TOTAL;
-        meta.textContent = isEn() ? count + ' taken' : count + ' užimta';
-        if (bar) bar.style.display = '';
-        fill.style.width = Math.round((count / TOTAL) * 100) + '%';
-      }
-      el.hidden = false;
-    }
-
-    fetch(WORKER_ENDPOINT.replace(/\/?$/, '/') + 'count', { method: 'GET' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) { if (d && typeof d.count === 'number') render(d.count); })
-      .catch(function () { /* stay hidden */ });
   })();
 
   /* ---------- Hero word-rise ----------
