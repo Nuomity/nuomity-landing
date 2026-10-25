@@ -1,0 +1,11 @@
+NUOMITY · ROCKIT PITCH  (works offline, nothing to install)
+
+1. Copy this whole "Nuomity pitch" folder to the presentation PC (keep files together).
+2. Double-click "Open presentation.html"  (opens in Chrome or Edge).
+3. Press F for fullscreen.
+
+Next:      Right arrow / Space / Enter / PageDown / click   (clickers work)
+Back:      Left arrow / Backspace / PageUp
+First/last: Home / End        Exit fullscreen: Esc
+
+22 steps across 9 slides. Slide 2 plays the 21-second product video by itself; click on when it ends. Speaker notes: open "Speaker notes.html" (print it or keep it on your phone).
