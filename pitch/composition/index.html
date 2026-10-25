@@ -244,8 +244,10 @@
       .fcard .facts { position: absolute; left: 44px; right: 44px; top: 420px; list-style: none; }
       .fcard .facts li { display: flex; align-items: center; gap: 22px; height: 66px; font-weight: 500; font-size: 31px; color: var(--navy); white-space: nowrap; }
       .fcard .facts li + li { border-top: 2px solid #edf1f9; }
+      .fcard .facts li.two { height: auto; padding: 9px 0; line-height: 1.2; white-space: normal; }
+      .fcard .facts li.two i { align-self: flex-start; margin-top: 13px; }
       .fcard .facts i { width: 12px; height: 12px; border-radius: 50%; background: var(--royal); flex: none; }
-      .prev { position: absolute; left: 44px; right: 44px; bottom: 36px; height: 82px; z-index: 1; padding-top: 22px; border-top: 2px solid #edf1f9; display: flex; align-items: center; gap: 34px; }
+      .prev { position: absolute; left: 44px; right: 44px; bottom: 26px; height: 76px; z-index: 1; padding-top: 18px; border-top: 2px solid #edf1f9; display: flex; align-items: center; gap: 34px; }
       .prev .mono { font-size: 20px; color: var(--ink); white-space: nowrap; }
       .prev img { display: block; opacity: 0.85; }
       .fcard li .check { width: 40px; height: 40px; margin-top: 1px; }
@@ -371,7 +373,7 @@
       "fragments": [
         61.2
       ],
-      "notes": "~20 s. \"Why us? I'm Dmitrijus: 7+ years in finance and business processes, at McKesson and Danske Bank. I cut reporting data prep from 8 hours to 15 minutes. Edvin, 6+ years as a software engineer at Adform, built and ran distributed services handling up to 200,000 requests an hour with 24/7 availability, and ran rentals day to day as a rental administrator. We know the work, and how to automate it.\""
+      "notes": "~20 s. \"Why us? I'm Dmitrijus: 7+ years in finance and business processes, at McKesson and Danske Bank. I cut reporting data prep from 8 hours to 15 minutes. Edvin, 6+ years as a software engineer at Adform, built services handling 150,000 requests an hour with 24/7 uptime, and ran 5 apartments day to day as a rental administrator. We know the work, and how to automate it.\""
     },
     {
       "sceneId": "ask",
@@ -609,10 +611,10 @@
           <div class="fcard card team-card" style="left: 980px">
             <img src="assets/founder-edvin.jpg" alt="Edvin Dičkanec" />
             <div class="who"><div class="name">Edvin Dičkanec</div><div class="role">Co-founder · Technology &amp; Product</div></div>
-            <div class="hl"><p>Ran rentals day to day as a <b>rental administrator</b></p></div>
+            <div class="hl"><p>Ran <b>5 apartments</b> day to day<br />as a rental administrator</p></div>
             <ul class="facts">
               <li><i></i>6+ years as a software engineer</li>
-              <li><i></i>Ran 24/7 services at 200,000 requests/hour</li>
+              <li class="two"><i></i><span>Built services handling 150,000<br />requests/hour with 24/7 uptime</span></li>
             </ul>
             <div class="prev"><span class="mono">Previously at</span><img src="assets/co-adform.png" alt="Adform" style="height: 44px" /></div>
           </div>
